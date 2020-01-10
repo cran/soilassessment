@@ -9,7 +9,6 @@ This function enables development of own function for converting soil assessment
 \usage{
 ECconversion3(x, A, B, method)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{x}{
 input predictor value
@@ -21,11 +20,11 @@ A location parameter representing the value of target variable when the predicto
 Rate parameter representing the rate of change of the target variable with the predictor (or the slope)
 }
  \item{method}{
-model trend for the relationship between target and predictor variables.
+model relationship between target and predictor variables
 }
 }
 \details{
-model trend for the relationship between target and predictor variables can be "linear", "power", "exponential", "log". Default is "linear"
+model for the relationship between target and predictor variables can be "linear", "power", "exponential", "log". Default is "linear"
 }
 \value{
 model object containing predictive parameters of the conversion model
@@ -40,7 +39,7 @@ Sudduth KA, Kitchen RN, Wiebold WJ, Batchelor W. 2005. Relating apparent electri
 Christian Thine Omuto
 }
 \seealso{
-ECconversion1, ECconversion2, salinityRating1
+ECconversion1, ECconversion2, saltRating
 }
 \examples{
 x=as.vector(c(0.800,2.580,0.980,0.532,1.870, 18.500,0.430,0.302,0.345,2.700))

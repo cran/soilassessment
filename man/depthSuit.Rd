@@ -11,10 +11,10 @@ depthSuit(value, crop)
 }
 \arguments{
   \item{value}{
-Input soil depth in cm.
+Input soil depth in cm
 }
 \item{crop}{
-The crop of interest for which soil depth suitability class is sought.
+The crop of interest for which soil depth suitability class is sought
 }
 }
 \details{

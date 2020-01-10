@@ -1,33 +1,27 @@
 \name{pedoTrasnfer}
 \alias{pedoTrasnfer}
 \title{
-A pedotransfer function to predict electrical conductivity using texture, organic carbon and pH
+A pedotransfer function to predict electrical conductivity or any other soil property using other soil properties
 }
 \description{
-This generic pedo-transfer function which can be used to get approximate EC values of existing soil data that do not have the EC measurements
+This generic pedo-transfer function is used to approximate EC values from other existing and easy-to-measure soil data
 }
 \usage{
-pedoTrasnfer(clay, sand, silt, oc, ph)
+pedoTrasnfer(method="linear", df, ...)
 }
 \arguments{
-  \item{clay}{
-clay content in percent
+  \item{method}{
+modelling method to link EC and other soil predictors (properties). Default method is linear
 }
-  \item{sand}{
-sand content in percent
+  \item{df}{
+dataframe containing measured EC and predictors of soil properies
 }
-  \item{silt}{
-silt content in percent
+  \item{...}{
+names of measured EC and list of predictors (soil properties) seperated by comma. The names should match the variables in the accompanying dataframe
 }
-  \item{oc}{
-organic carbon content in percent
-}
-  \item{ph}{
-soil reaction (pH)
-}
-}
+ }
 \details{
-This generic model can be used even with other soil properties expected to influence EC. For example, instead of clay, one can put calcium carbonate; instead of sand, one can put exchangeable acidity, etc. The model needs training data to establish the exact predictive model for other applications
+This generic model can be used even with other soil properties. For example, it can be used to predict porosity from bulk density, carbon, and texture components as long as they are in the database and have known/suspected relationship
 }
 \value{
 model for predicting EC given similar input data
@@ -48,16 +42,21 @@ This function can also be used to predict EC from apparent electrical conductivi
 ECconversion1, ECconversion2, SalinityRating1, SalinityRating2
 }
 \examples{
-clay=as.data.frame(runif(20, 1,100))
-silt=as.data.frame (runif(20,20,70))
-sand=as.data.frame(runif(20,10.1,50.5))
-pH=as.data.frame(runif(20,1,14))
-EC=as.data.frame(runif(20,0.5,20.5))
-OC=as.data.frame(runif(20,0.1,1.25))
-newsoil=cbind(EC,clay,silt,sand,OC,pH)
-names(newsoil)=c("EC","clay","silt","sand","OC","pH")
-EC1.lm=lm(EC~pedoTrasnfer(clay,sand,silt,OC,pH),data=newsoil)
-cor(newsoil$EC,fitted(EC1.lm))^2
-plot(newsoil$EC~fitted(EC1.lm))
+library(caret)
+clay=as.data.frame(runif(120, 1,100))
+silt=as.data.frame (runif(120,20,70))
+sand=as.data.frame(runif(120,10.1,50.5))
+pH=as.data.frame(runif(120,1,14))
+EC=as.data.frame(runif(120,0.5,20.5))
+OC=as.data.frame(runif(120,0.1,1.25))
+soil4=cbind(EC,clay,silt,sand,OC,pH)
+names(soil4)=c("EC","clay","silt","sand","OC","pH")
+bound <- floor((nrow(soil4)/4)*3)
+df.train <- soil4[sample(nrow(soil4)), ][1:bound, ]
+df.test <- soil4[sample(nrow(soil4)), ][(bound+1):nrow(soil4[sample(nrow(soil4)), ]), ]
+EC1.lm=pedoTrasnfer("randomforest",df.train,EC, clay,sand,silt,OC,pH)
+df.test$EC1=predict(EC1.lm,newdata = df.test)
+cor(df.test$EC,df.test$EC1)^2
+plot(df.test$EC~df.test$EC1)
 abline(1,1)
 }

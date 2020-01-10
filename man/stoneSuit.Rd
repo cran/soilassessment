@@ -14,14 +14,14 @@ stoneSuit(value, crop)
 Input level of stoniness in percent.
 }
 \item{crop}{
-The crop of interest for stoniness suitability class is sought.
+The crop of interest for which stoniness suitability class is sought.
 }
 }
 \details{
 The input value can be map or just a numerical entry of stoniness in percent
 }
 \value{
-The output is stoniness suitability class for the crop. The output is integer value for suitability class: 1- highly suitable; 2 - moderately suitable; 3 - marginally suitable; 4 - currently not suitable; 5 - not suitable
+The output is stoniness suitability class for the crop. The output is an integer value for suitability class: 1- highly suitable; 2 - moderately suitable; 3 - marginally suitable; 4 - currently not suitable; 5 - not suitable
 }
 \references{
 Sys, C., Van Ranst, E., Debaveye, J. and Beerneaert, F.1993. Land evaluation: Part III: Crop requirements.
@@ -35,7 +35,7 @@ FAO Crop Suitability Requirements: http://ecocrop.fao.org/ecocrop/srv/en/home
 Christian Thine Omuto
 }
 \note{
-If the input value is raster map, then the output will also be a raster map of stoniness for the crop of interest
+Output raster map of stoniness for the crop of interest is given if the input value is raster map
 }
 
 \seealso{

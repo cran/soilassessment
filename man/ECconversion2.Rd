@@ -21,7 +21,7 @@ method for converting electrical conductivity of the soil:water mix to that of t
 }
 }
 \details{
-This function assumes no influence of texture, clay content, etc on the conversion of electrical conductivities.
+This function assumes no influence of texture, clay content, etc on the conversion of electrical conductivities
 }
 \value{
 electrical conductivity equivalent for saturated soil extract in dS/m
@@ -35,7 +35,7 @@ Kargas G, Chatzigiakoumis I, Kollias A, Spiliotis D, Massas I, Kerkides P. 2018.
 Christian Thine Omuto
 }
 \seealso{
-ECconversion1, salinityRating1, salinityRating2
+ECconversion1, saltClass, saltRating
 }
 \examples{
 library(sp)

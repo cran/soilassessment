@@ -1,40 +1,41 @@
 \name{regmodelSuit}
 \alias{regmodelSuit}
 \title{
-A function for guiding regression model selection in soil condition modelling
+A function for guiding selection of regression model for modelling soil condition
 }
 \description{
-This function evaluates seven regression models for their suitability in mapping soil condition using a set of predictors
+This function evaluates suitability of most regression models in mapping soil condition using a set of predictors
 }
 \usage{
-regmodelSuit(...)
+regmodelSuit(df, ...)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
+  \item{df}{
+a dataframe of target soil property and its predictors
+}
   \item{...}{
-a set of target soil property and predictor vectors or columns of variables in a database
+name of the target soil variable to predict and names of its predictors
 }
 }
 \details{
-The target soil property and predictor vectors are seperated by commas. For example, in a soil database, the variable x = soil$EC, soil$landcover,soil$DEM, etc. The first vector set contains the target variable (e.g. EC in soil$EC) and the subsequent vectors contain the predictors. The vectors must be the columns of a complete database.
+The name of the target soil variable to predict and names of its predictors are seperated by commas and are similar to column names of the corresponding variables in the supplied dataframe. The name of the target soil variable starts the list and followed by the names of its predictors. For example, if the dataframe has EC, landcover,DEM, Slope,  NDVI, etc., then the input could be (soil,EC,landcover,Slope,DEM).
 }
 \value{
-A table of model statistics such as root mean square error (RMSE), mean absolute error (MAE), r-squared (R2) and Nash-Sutcliffe coefficient of efficiency (NSE) for the seven popular models in digital soil mapping
+A table of model statistics such as root mean square error (RMSE), mean absolute error (MAE), r-squared (R2) and Nash-Sutcliffe coefficient of efficiency (NSE) for the popular models in digital soil mapping
 }
 \references{
-Yigini, Y., Olmedo, G.F., Reiter, S., Baritz, R., Viatkin, K. and Vargas, R. (eds). 2018. Soil Organic Carbon Mapping Cookbook 2nd edition. Rome, FAO. 220 pp
-
 Nash, J. E.; Sutcliffe, J. V. 1970. River flow forecasting through conceptual models part I — A discussion of principles. Journal of Hydrology. 10 (3): 282–290
 }
 \author{
 Christian Thine Omuto
 }
 \note{
-The function carries 5-fold cross-validation. Sometimes it may give warning of missing resample performance with cubist or CART models
+The function carries 5-fold cross-validation. Sometimes it may give a warning of missing resample performance with some models. It's important to ensure no NA in the data used for modelling
 }
 
 \seealso{
-suitability, pedoTransfer
+suitability, pedoTransfer, pedoTransfer, predUncertain
 }
 \examples{
 library(caret)
@@ -45,7 +46,8 @@ overlay.ov=over(soil1, suitabinput)
 soil1$dem=overlay.ov$dem
 soil1$rain=overlay.ov$rain
 soil1$texture=overlay.ov$texture
+soil2=soil1@data[,c("EC","dem","rain","texture")]
 \donttest{
-regmodelSuit(soil1$EC,soil1$dem,soil1$rain,soil1$PH,soil1$Clay)
+regmodelSuit(soil2,EC,dem,rain,texture)
 }
 }

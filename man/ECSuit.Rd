@@ -1,10 +1,10 @@
 \name{ECSuit}
 \alias{ECSuit}
 \title{
-A function for assessing salinity suitability requirements for certain crops
+A function for assessing Electrical Conductivity suitability requirements for certain crops
 }
 \description{
-This function determines the suitability classes for salinity requirements of selected agricultural crops
+This function determines the suitability classes for Electrical Conductivity requirements of selected agricultural crops
 }
 \usage{
 ECSuit(value, crop)
@@ -14,7 +14,7 @@ ECSuit(value, crop)
 Input electrical conductivity in dS/m.
 }
 \item{crop}{
-The crop of interest for which salinity suitability class is sought.
+The crop of interest for which Electrical Conductivity suitability class is sought.
 }
 }
 \details{
@@ -35,7 +35,7 @@ FAO Crop Suitability Requirements: http://ecocrop.fao.org/ecocrop/srv/en/home
 Christian Thine Omuto
 }
 \note{
-If the input value is raster map, then the output will also be a raster map of salinity suitability for the crop of interest
+If the input value is raster map, then the output will also be a raster map of Electrical Conductivity suitability for the crop of interest
 }
 
 \seealso{

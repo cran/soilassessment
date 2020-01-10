@@ -4,7 +4,7 @@
 A function for creating spatial dataframe of normalized soil texture proportions
 }
 \description{
-The function creates spatial dataframe of normalized soil texture proportions. They are normalized so that they sum up to 100 per cent.
+The function creates spatial dataframe of normalized soil texture proportions. They are normalized to 100 percent
 }
 \usage{
 createTexturedata(clay,silt,sand)
@@ -12,17 +12,17 @@ createTexturedata(clay,silt,sand)
 
 \arguments{
   \item{clay}{
-clay proportion of soil texture in per cent
+clay proportion of soil texture in percent
 }
  \item{silt}{
-silt proportion of soil texture in per cent
+silt proportion of soil texture in percent
 }
  \item{sand}{
-sand proportion of soil texture in per cent
+sand proportion of soil texture in percent
 }
 }
 \details{
-the input data of soil texture proportions are imported into R as spatial raster or dataframe. If in raster map, they need to have uniform coordinate reference system (CRS), same pixel size (resolution). The sum of the proportions should be close to 100 per cent for each row
+the input data of soil texture proportions are imported into R as spatial raster or dataframe. They need to have uniform coordinate reference system (CRS) and same pixel size (resolution) if in raster map format. The sum of the proportions should be close to 100 per cent for each row
 }
 \value{
 The output is a spatial pixel dataframe of normalized soil texture proportions (for each pixel)
@@ -35,7 +35,7 @@ It's important to ensure the input data does not have negative values nor add up
 }
 
 \seealso{
-textureclassLUT, textureLevels,appendTextureclass
+classLUT, appendTextureclass, createTexturedata
 }
 \examples{
 #data(textureinput)

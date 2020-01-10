@@ -1,6 +1,6 @@
 imageIndices=function(blue, green,red,nir,swir1,swir2,index="NDVI"){
 
-  if(index=="NSI"){ratio=(swir1-swir2)/(swir1-nir)}
+  if(index=="NSI"){ratio=(swir1-swir2)/(swir1-nir+0.001)}
   else if(index=="SI1"){ratio=sqrt(green*red)}
   else if(index=="SI2"){ratio=sqrt(blue*red)}
   else if(index=="SI3"){ratio=sqrt((green)^2+(red)^2)}
@@ -12,7 +12,7 @@ imageIndices=function(blue, green,red,nir,swir1,swir2,index="NDVI"){
   else if(index=="NDSI"){ratio=(red-nir/(red+nir))}
   else if(index=="NDVI"){ratio=(nir-red)/(nir+red)}
   else if(index=="SR"){ratio=(green-red)/(blue+red)}
-  else if(index=="CRSI"){ratio=sqrt((nir*red-blue*green)/(nir*green+blue*green))}
+  else if(index=="CRSI"){ratio=ifelse((nir*red-blue*green)<=0,0,ifelse((nir*red+blue*green)<=0,1,(sqrt((nir*red-blue*green)/(nir*green+blue*green)))))}
   else if(index=="BI"){ratio=sqrt(green^2+red^2+nir^2)}
   else if(index=="NDSnI"){ratio=(green-swir1)/(green+swir1)}#Snow index
   else if(index=="ROCK"){ratio=nir/swir1}

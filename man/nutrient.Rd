@@ -9,10 +9,10 @@ This is an 11-factor table of decision ranking of soil nutrient indicators
 }
 \usage{data("nutrient")}
 \format{
-  A data frame with 11 factors for pairwise decision ranking between soil nutrient indicators.
+  A dataframe with 11 factors for pairwise decision ranking of soil nutrient indicators.
    }
 \details{
-The ranks range between 1 and 9 and their reciprocals
+The ranks are the recipricals of Saaty's scale of relative importance which are between 1 and 9
 }
 \source{
 Hypothetical data of rank between soil nutrient indicators

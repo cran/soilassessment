@@ -1,31 +1,31 @@
 \name{classCode}
 \alias{classCode}
 \title{
-A function to displaying names of corresponding class codes in soilassessment package
+A function for displaying names of class codes of soil conditions in the soilassessment package
 }
 \description{
-This function displays character names of numerical classes (or levels) of derived codes for the soil condition
+This function displays names of integer classes (or levels) of derived codes of soil conditions produced in the package
 }
 \usage{
 classCode(value, indicator)
 }
 \arguments{
   \item{value}{
-Numerical value of the soil condition indicator
+Integer value of the soil condition indicator
 }
  \item{indicator}{
-Soil condition indicator whose class (x) is sought. The default = "fertility" if fertility is the soil condition
+Soil condition whose class (x) is sought. The default = "fertility" if fertility is the soil condition
 }
 }
 \details{
-This is for interpretation of what the numerical value (x) means for the soil condition indicator.
+This is for interpretation of the integer codes of the soil conditions generated in the package
 }
 \value{
-Output character for the level of soil condition indicator
+Name of the level of soil condition
 }
 
 \seealso{
-textureclassLUT, textureLevels, erodFUN
+classLUT, erodFUN, classnames
 }
 \examples{
 classCode(2,"texture")

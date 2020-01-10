@@ -5,7 +5,7 @@
 A grid stack map of indicators for crop fertility requirements
 }
 \description{
-A grid stack map of thirteen variables for assessing soil fertility
+A grid stack map of eleven variables for assessing soil fertility
 }
 \usage{data("nutrindicator")}
 \format{

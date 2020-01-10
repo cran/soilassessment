@@ -1,10 +1,10 @@
 \name{fertilityRating}
 \alias{fertilityRating}
 \title{
-A function for determining soil fertility level for given values of a soil property (fertility indicator)
+A function for determining soil fertility levels for given soil property (fertility indicator)
 }
 \description{
-This function determines the fertility level of given values of a soil property
+This function determines the fertility levels given values of a soil property
 }
 \usage{
 fertilityRating(value, indicator = "nitrogen")
@@ -21,7 +21,7 @@ soil property as fertility indicator
 The units for input values are: nitrogen (percent), phosphorus (mg/kg); potassium (cmol(+)/kg);carbon(percent);iron(mg/kg);zinc(mg/kg);manganese(mg/kg);boron(mg/kg);copper(mg/kg);sulfur(mg/kg); CEC(cmol(+)/kg)
 }
 \value{
-soil fertility class for the given soil property (fertility indicator)
+soil fertility class code for the given soil property (fertility indicator)
 }
 \references{
 FAO, 1976. A framework for land evaluation. FAO Soils Bulletin 32
@@ -34,7 +34,7 @@ Christian Thine Omuto
 }
 
 \seealso{
-ECconversion1,ECconversion2,salinityRating1,suitability
+ECconversion1,ECconversion2, saltRating,suitability
 }
 \examples{
 library(sp)

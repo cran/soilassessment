@@ -1,10 +1,10 @@
 \name{imageIndices}
 \alias{imageIndices}
 \title{
-A function for deriving remote sensing indices for soil assessment
+A function for developing remote sensing indices for soil assessment
 }
 \description{
-The function determines commonly used remote sensing indices with some relationship with soil surface or vegetation cover.
+The function determines commonly used remote sensing indices with relationship with soil surface or vegetation cover characteristics.
 }
 \usage{
 imageIndices(blue, green,red,nir,swir1,swir2,index)
@@ -33,7 +33,7 @@ index from combination of image bands such as NDVI, SAVI, SI, etc. The default i
 }
 }
 \details{
-The indices included in the package are: NDVI, NDSI (for salinity), NDSnI (for snow), SI1, SI2, SI3, SI4, SI5, si6, savi, vssi,ndsi, ndvi, SR, CRSI, BI, NDSnI, ROCK
+The indices included in the package are: NDVI, NDSI (for salinity), NDSnI (for snow), SI1, SI2, SI3, SI4, SI5, SI6, SAVI, VSSI, NDSI, SR, CRSI, BI, ROCK
 }
 \value{
 dimensionless remote sensing index

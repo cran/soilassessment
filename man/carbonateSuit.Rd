@@ -11,17 +11,17 @@ carbonateSuit(value, crop)
 }
 \arguments{
   \item{value}{
-Input calcium carbonate content in percent.
+Input calcium carbonate content in percent
 }
 \item{crop}{
-The crop of interest for which calcium carbonate suitability class is sought.
+The crop of interest for which calcium carbonate suitability class is sought
 }
 }
 \details{
 The input value can be map or just a numerical entry of calcium carbonate in percent
 }
 \value{
-The output is calcium carbonate suitability class for the crop. The output is integer value for suitability class: 1- highly suitable; 2 - moderately suitable; 3 - marginally suitable; 4 - currently not suitable; 5 - not suitable
+The output is calcium carbonate suitability class for the crop. The output is an integer value for suitability class: 1- highly suitable; 2 - moderately suitable; 3 - marginally suitable; 4 - currently not suitable; 5 - not suitable
 }
 \references{
 Sys, C., Van Ranst, E., Debaveye, J. and Beerneaert, F.1993. Land evaluation: Part III: Crop requirements.

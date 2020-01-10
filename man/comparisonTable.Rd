@@ -11,7 +11,7 @@ comparisonTable(df)
 }
 \arguments{
   \item{df}{
-A matrix of rank decisions complete with column names.
+A matrix of rank decisions with complete column names.
 }
 }
 \details{

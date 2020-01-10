@@ -16,7 +16,7 @@ soil textural class code
 }
 }
 \details{
-Soil textural class code can be obtained using classnames("texture")
+Soil textural class code is obtained using classnames("texture")
 }
 \value{
 permeability class code
@@ -31,7 +31,7 @@ Christian Thine Omuto
 }
 
 \seealso{
-drainageClass, erodFUN, erosivFUN
+drainageSuit, erodFUN, erosivFUN
 }
 \examples{
 library(sp)

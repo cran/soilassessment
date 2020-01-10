@@ -1,10 +1,10 @@
 classLUT=function(fgrid, indicator="salinity"){
   total <- 20
-  if(indicator=="salinity"){
+  if(indicator=="saltseverity"){
 
     fgrid@data$value=as.character(fgrid@data[,1])
     fgrid@data$mapvalue=as.factor(fgrid@data$value)
-    fgrid@data$classcode=as.numeric(fgrid@data$map)
+    fgrid@data$classcode=as.numeric(fgrid@data[,1])
     for(i in 1:12){
       Sys.sleep(0.5)
       setTxtProgressBar(txtProgressBar(min = 0, max = total, style = 3), i)
@@ -21,7 +21,7 @@ classLUT=function(fgrid, indicator="salinity"){
 
     fgrid@data$value=as.character(fgrid@data[,1])
     fgrid@data$mapvalue=as.factor(fgrid@data$value)
-    fgrid@data$classcode=as.numeric(fgrid@data$map)
+    fgrid@data$classcode=as.numeric(fgrid@data[,1])
     for(i in 1:12){
       Sys.sleep(0.5)
       setTxtProgressBar((txtProgressBar(min = 0, max = total, style = 3)), i)
@@ -38,7 +38,7 @@ classLUT=function(fgrid, indicator="salinity"){
 
     fgrid@data$value=as.character(fgrid@data[,1])
     fgrid@data$mapvalue=as.factor(fgrid@data$value)
-    fgrid@data$classcode=as.numeric(fgrid@data$map)
+    fgrid@data$classcode=as.numeric(fgrid@data[,1])
     for(i in 1:12){
       Sys.sleep(0.5)
       setTxtProgressBar((txtProgressBar(min = 0, max = total, style = 3)), i)
@@ -55,7 +55,7 @@ classLUT=function(fgrid, indicator="salinity"){
 
     fgrid@data$value=as.character(fgrid@data[,1])
     fgrid@data$mapvalue=as.factor(fgrid@data$value)
-    fgrid@data$classcode=as.numeric(fgrid@data$map)
+    fgrid@data$classcode=as.numeric(fgrid@data[,1])
     for(i in 1:12){
       Sys.sleep(0.5)
       setTxtProgressBar((txtProgressBar(min = 0, max = total, style = 3)), i)
@@ -72,7 +72,7 @@ classLUT=function(fgrid, indicator="salinity"){
 
     fgrid@data$value=as.character(fgrid@data[,1])
     fgrid@data$mapvalue=as.factor(fgrid@data$value)
-    fgrid@data$classcode=as.numeric(fgrid@data$map)
+    fgrid@data$classcode=as.numeric(fgrid@data[,1])
     for(i in 1:12){
       Sys.sleep(0.5)
       setTxtProgressBar((txtProgressBar(min = 0, max = total, style = 3)), i)
@@ -89,7 +89,7 @@ classLUT=function(fgrid, indicator="salinity"){
 
     fgrid@data$value=as.character(fgrid@data[,1])
     fgrid@data$mapvalue=as.factor(fgrid@data$value)
-    fgrid@data$classcode=as.numeric(fgrid@data$map)
+    fgrid@data$classcode=as.numeric(fgrid@data[,1])
     for(i in 1:12){
       Sys.sleep(0.5)
       setTxtProgressBar((txtProgressBar(min = 0, max = total, style = 3)), i)
@@ -104,4 +104,3 @@ classLUT=function(fgrid, indicator="salinity"){
   }
   return(LUT)
 }
-

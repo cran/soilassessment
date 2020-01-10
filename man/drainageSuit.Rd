@@ -11,17 +11,17 @@ drainageSuit(value, crop)
 }
 \arguments{
   \item{value}{
-Input drainage class code.
+Input drainage class code
 }
 \item{crop}{
 The crop of interest for which drainage suitability class is sought.
 }
 }
 \details{
-The input value can be map or just a numerical entry of drainage class code. The textural class code is obtained using classCode("drainage")
+The input value can be map or an integer of drainage class code. The textural class code is obtained using classCode("drainage")
 }
 \value{
-The output is drainage suitability class for the crop. The output is integer value for suitability class: 1- highly suitable; 2 - moderately suitable; 3 - marginally suitable; 4 - currently not suitable; 5 - not suitable
+The output is drainage suitability class for the crop. The output is an integer value for suitability class: 1- highly suitable; 2 - moderately suitable; 3 - marginally suitable; 4 - currently not suitable; 5 - not suitable
 }
 \references{
 Sys, C., Van Ranst, E., Debaveye, J. and Beerneaert, F.1993. Land evaluation: Part III: Crop requirements.

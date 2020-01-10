@@ -4,7 +4,7 @@
 A function to assess how well landscape features have been sampled
 }
 \description{
-This function establishes the representation of the landscape feature on the sample points graphically. An approximation of Kolmogorov-Smirnov similarity test (D-statistic) between the sampled feature distribution and the population feature distribution.
+This function establishes graphical representation of the landscape feature in the sample points. An approximation of Kolmogorov-Smirnov similarity test (D-statistic) between the sampled feature distribution and the population feature distribution is also given.
 }
 \usage{
 featureRep(fgrid,df )
@@ -14,11 +14,11 @@ featureRep(fgrid,df )
 raster grid of the landscape feature
 }
   \item{df}{
-dataframe of sampled locations containing the landscape feature values at the sampling points
+dataframe of sampled locations with similar coordinate reference system (CRS) as the input raster map
 }
 }
 \details{
-The sampled points must should have the same coordinate system as the landscape feature (raster map). The function extracts the raster map values, attaches them to the sample points, and creates histogram distributions: one for the feature map as contained in the sample points and another as contained in the raster map.
+The sampled points should have the same coordinate system as the landscape feature (raster map). The function extracts the raster map values, attaches them to the sample points, and creates histogram distributions: one for the feature map as contained in the sample points and another as contained in the raster map.
 }
 \value{
 Histograms on back-to-back showing distribution of the landscape feature in the sampled points and on the map for similarity comparison
@@ -36,7 +36,7 @@ The input points dataframe and raster map must have similar coordinate reference
 }
 
 \seealso{
-pointDensity, ECConversion1
+imageIndices, regmodelSuit
 }
 \examples{
 library(Hmisc)

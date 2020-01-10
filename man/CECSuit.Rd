@@ -14,14 +14,14 @@ CECSuit(value, crop)
 Input cation Exchange Capacity (Cmol(+)/kg).
 }
 \item{crop}{
-The crop of interest for which CEC suitability class is sought.
+The crop of interest for which CEC suitability class is sought
 }
 }
 \details{
-The input value can be map or just a numerical entry of CEC (cmol(+)/kg)
+The input value can be a map or just a numerical entry of CEC (cmol(+)/kg)
 }
 \value{
-The output is CEC suitability class for the crop. The output is integer value for suitability class: 1- highly suitable; 2 - moderately suitable; 3 - marginally suitable; 4 - currently not suitable; 5 - not suitable
+The output is CEC suitability class for the crop. The output is an integer value for suitability class: 1- highly suitable; 2 - moderately suitable; 3 - marginally suitable; 4 - currently not suitable; 5 - not suitable
 }
 \references{
 Sys, C., Van Ranst, E., Debaveye, J. and Beerneaert, F.1993. Land evaluation: Part III: Crop requirements.
@@ -35,7 +35,7 @@ FAO Crop Suitability Requirements: http://ecocrop.fao.org/ecocrop/srv/en/home
 Christian Thine Omuto
 }
 \note{
-If the input value is raster map, then the output will also be a raster map of CEC suitability for the crop of interest
+The output raster map of CEC suitability is given if the input value is raster map
 }
 
 \seealso{

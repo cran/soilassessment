@@ -18,10 +18,10 @@ The crop of interest for which rainfall suitability class is sought.
 }
 }
 \details{
-The input value can be map or just a numerical entry of rainfall amounts in mm
+The input value can be map or just numerical entry of annual rainfall amount in mm
 }
 \value{
-The output is rainfall suitability class for the crop. The output is integer value for suitability class: 1- highly suitable; 2 - moderately suitable; 3 - marginally suitable; 4 - currently not suitable; 5 - not suitable
+The output is rainfall suitability class for the crop. The output is an integer for suitability class: 1- highly suitable; 2 - moderately suitable; 3 - marginally suitable; 4 - currently not suitable; 5 - not suitable
 }
 \references{
 Sys, C., Van Ranst, E., Debaveye, J. and Beerneaert, F.1993. Land evaluation: Part III: Crop requirements.

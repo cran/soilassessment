@@ -4,7 +4,7 @@
 A function to estimate soil erodibility factor
 }
 \description{
-A function to determine soil erodibility factor from a choice of different models
+A function to determine soil erodibility factor from a choice of different erodibility models
 }
 \usage{
 erodFUN(sand,silt,clay,OC,texture,Struct,method)
@@ -29,11 +29,11 @@ soil texture code representing the USDA soil textural class. Use classnames("tex
 soil structure code representing the soil structure class. Use classnames("structure") to insert the correct structure code
 }
 \item{method}{
-method for determining soil erodibility. The following methods are included: WSmith, Yang, Renard, Bouyoucos, Denardin,Wang,Wisch1,Wisch2,Sharpley,cheng,Auer.
+method for determining soil erodibility. The following methods are included: WSmith,Yang,Renard,Bouyoucos,Denardin,Wang,Wisch1,Wisch2,Sharpley,Cheng,Auer.
 }
 }
 \value{
-soil erodibility factor between 0 and 1
+soil erodibility factor ranging between 0 and 1
 }
 \references{
 Benavidez R, Bethana J, Maxwell D, Norton K. 2018. A review of the (Revised) Universal Soil Loss Equation ((R)USLE): with a view to increasing its global applicability and improving soil loss estimates. Hydrol. Earth Syst. Sci., 22, 6059–6086
@@ -45,7 +45,7 @@ Christian Thine Omuto
 }
 
 \seealso{
-erosivFUN, erodibilityClass, slopelenFUN, fertilityRating, classCode, classnames
+erosivFUN, erodibilityRisk, slopelenFUN, permeabilityClass, classCode, classnames
 }
 \examples{
 library(sp)

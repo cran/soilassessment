@@ -4,7 +4,7 @@
 A function for estimating slope-length factor for soil erosion
 }
 \description{
-Function for estimating the slope length factor used in erosion risk assessment
+Th function estimates slope length factor for erosion risk assessment. It has options for choosing different algorithms
 }
 \usage{
 sloplenFUN(ls,slope,method)
@@ -21,7 +21,7 @@ method for deriving slope-length factor. The methods included are: WSmith, Renar
 }
 }
 \details{
-Slope (degrees) and length of slope (metres) are erosion inputs that are combined in this function to produce slope-length factor of soil erosion.
+Slope (degrees) and length of slope (metres) are relief parameters in erosion risk assessment.
 }
 \value{
 a dimensionless quantity of slope-length factor of erosion risk

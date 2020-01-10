@@ -4,7 +4,7 @@
 A function for assessing pH suitability requirements for certain crops
 }
 \description{
-This function determines the suitability classes for soil pH requirements of selected agricultural crops
+This function determines the suitability classes for soil pH requirements for selected agricultural crops
 }
 \usage{
 PHSuit(value, crop)
@@ -18,10 +18,10 @@ The crop of interest for which soil pH suitability class is sought.
 }
 }
 \details{
-The input value can be map or just a numerical entry of soil pH of saturated paste extract
+The input value can be map or just a numerical entry of soil pH of a saturated paste extract
 }
 \value{
-The output is pH suitability class for the crop. The output is integer value for suitability class: 1- highly suitable; 2 - moderately suitable; 3 - marginally suitable; 4 - currently not suitable; 5 - not suitable
+The output is pH suitability class for the crop. The output is integer value of suitability class: 1- highly suitable; 2 - moderately suitable; 3 - marginally suitable; 4 - currently not suitable; 5 - not suitable
 }
 \references{
 Sys, C., Van Ranst, E., Debaveye, J. and Beerneaert, F.1993. Land evaluation: Part III: Crop requirements.
