@@ -43,12 +43,10 @@ erosivFUN, erodFUN, slopeSuit
 }
 \examples{
 library(sp)
-library(raster)
 sloplenFUN(60,14.88,"Renard")
-dem=raster(suitabinput["dem"])
-slope=terrain(dem,opt='slope')*180/pi
-slope=as(slope,"SpatialGridDataFrame")
-slope$LSrenard=sloplenFUN(60,slope$slope,"Renard")
-summary(slope$LSrenard)
-spplot(slope["LSrenard"])
+newmap=suitabinput["slope"]
+newmap$LSrenard=sloplenFUN(60,(newmap$slope),"Renard")
+newmap$LSwsmith=sloplenFUN(60,(newmap$slope),"WSmith")
+spplot(newmap["LSrenard"])
+spplot(newmap["LSwsmith"])
 }

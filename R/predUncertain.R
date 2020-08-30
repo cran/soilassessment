@@ -1,4 +1,4 @@
-predUncertain=function(indata,fgrid, k, z, model="randomforest"){
+predUncertain=function(indata,fgrid, k, z, model="rf"){
   total <- 20
   pb = txtProgressBar(min = 0, max = total, style = 3)
   for(j in 1:5){
@@ -11,16 +11,16 @@ predUncertain=function(indata,fgrid, k, z, model="randomforest"){
     y <- sapply(x, function(xx)any(is.na(xx)))
     names(y[y])
   })
-  if(any(is.na(indata))){stop(paste("Remove NA in columns: ", paste(na.cols(indata), collapse=", ")))}
+  if(any(is.na(data.frame(indata)))){stop(paste("Remove NA in columns: ", paste(na.cols(indata), collapse=", ")))}
   if(class(fgrid)[1]=="RasterStack"){{
   stack1=(fgrid)
   rasvali=extract(stack1,indata)
   rasvali=cbind(indata,rasvali)
-  dfram=data.frame(rasvali)[,1:(ncol(rasvali)-3)]
+  dfram=data.frame(rasvali)[,1:(ncol(rasvali))]
   for(j in 5:10){
     Sys.sleep(0.5)
     setTxtProgressBar(pb, j)}
-if(model=="qrandomforest") {
+if(model=="qrf") {
   nn <- ncol(dfram)
   colnames(dfram)<-sub(".*\\$", "",colnames(dfram))
   faw=c(colnames(dfram)[2:nn])
@@ -37,7 +37,7 @@ if(model=="qrandomforest") {
 pred_width = (pred_interval[[2]] - pred_interval[[1]])
 pred_out=stack(pred_width,pred_sd)
 }
- else if(model=="linear"){
+ else if(model=="lm"){
    nn <- ncol(dfram)
    colnames(dfram)<-sub(".*\\$", "",colnames(dfram))
    faw=c(colnames(dfram)[2:nn])
@@ -54,7 +54,7 @@ pred_out=stack(pred_width,pred_sd)
    pred_width = (pred_interval[[2]] - pred_interval[[1]])
    pred_out=stack(pred_width,pred_sd)
  }
-  else if(model=="randomforest"){
+  else if(model=="rf"){
     nn <- ncol(dfram)
     colnames(dfram)<-sub(".*\\$", "",colnames(dfram))
     faw=c(colnames(dfram)[2:nn])
@@ -105,7 +105,7 @@ pred_out=stack(pred_width,pred_sd)
     pred_width = (pred_interval[[2]] - pred_interval[[1]])
     pred_out=stack(pred_width,pred_sd)
   }
-  else if(model=="cart"){
+  else if(model=="rpart"){
     nn <- ncol(dfram)
     colnames(dfram)<-sub(".*\\$", "",colnames(dfram))
     faw=c(colnames(dfram)[2:nn])
@@ -122,7 +122,7 @@ pred_out=stack(pred_width,pred_sd)
     pred_width = (pred_interval[[2]] - pred_interval[[1]])
     pred_out=stack(pred_width,pred_sd)
   }
-  else if(model=="baggedcart"){
+  else if(model=="treebag"){
     nn <- ncol(dfram)
     colnames(dfram)<-sub(".*\\$", "",colnames(dfram))
     faw=c(colnames(dfram)[2:nn])
@@ -139,7 +139,7 @@ pred_out=stack(pred_width,pred_sd)
     pred_width = (pred_interval[[2]] - pred_interval[[1]])
     pred_out=stack(pred_width,pred_sd)
   }
-  else if(model=="svm"){
+  else if(model=="svmLinear"){
     nn <- ncol(dfram)
     colnames(dfram)<-sub(".*\\$", "",colnames(dfram))
     faw=c(colnames(dfram)[2:nn])
@@ -156,7 +156,7 @@ pred_out=stack(pred_width,pred_sd)
     pred_width = (pred_interval[[2]] - pred_interval[[1]])
     pred_out=stack(pred_width,pred_sd)
   }
-  else if(model=="glm"){
+  else if(model=="bayesglm"){
     nn <- ncol(dfram)
     colnames(dfram)<-sub(".*\\$", "",colnames(dfram))
     faw=c(colnames(dfram)[2:nn])
@@ -173,7 +173,7 @@ pred_out=stack(pred_width,pred_sd)
     pred_width = (pred_interval[[2]] - pred_interval[[1]])
     pred_out=stack(pred_width,pred_sd)
   }
-  else if(model=="qneuralnetwork"){
+  else if(model=="qrnn"){
     nn <- ncol(dfram)
     colnames(dfram)<-sub(".*\\$", "",colnames(dfram))
     faw=c(colnames(dfram)[2:nn])
@@ -203,11 +203,11 @@ pred_out=stack(pred_width,pred_sd)
       stack1=raster::stack(fgrid)
       rasvali=extract(stack1,indata)
       rasvali=cbind(indata,rasvali)
-      dfram=data.frame(rasvali)[,1:(ncol(rasvali)-3)]
+      dfram=data.frame(rasvali)[,1:(ncol(rasvali))]
       for(j in 5:10){
         Sys.sleep(0.5)
         setTxtProgressBar(pb, j)}
-      if(model=="qrandomforest") {
+      if(model=="qrf") {
         nn <- ncol(dfram)
         colnames(dfram)<-sub(".*\\$", "",colnames(dfram))
         faw=c(colnames(dfram)[2:nn])
@@ -224,7 +224,7 @@ pred_out=stack(pred_width,pred_sd)
         pred_width = (pred_interval[[2]] - pred_interval[[1]])
         pred_out=stack(pred_width,pred_sd)
       }
-      else if(model=="linear"){
+      else if(model=="lm"){
         nn <- ncol(dfram)
         colnames(dfram)<-sub(".*\\$", "",colnames(dfram))
         faw=c(colnames(dfram)[2:nn])
@@ -241,7 +241,7 @@ pred_out=stack(pred_width,pred_sd)
         pred_width = (pred_interval[[2]] - pred_interval[[1]])
         pred_out=stack(pred_width,pred_sd)
       }
-      else if(model=="randomforest"){
+      else if(model=="rf"){
         nn <- ncol(dfram)
         colnames(dfram)<-sub(".*\\$", "",colnames(dfram))
         faw=c(colnames(dfram)[2:nn])
@@ -292,7 +292,7 @@ pred_out=stack(pred_width,pred_sd)
         pred_width = (pred_interval[[2]] - pred_interval[[1]])
         pred_out=stack(pred_width,pred_sd)
       }
-      else if(model=="cart"){
+      else if(model=="rpart"){
         nn <- ncol(dfram)
         colnames(dfram)<-sub(".*\\$", "",colnames(dfram))
         faw=c(colnames(dfram)[2:nn])
@@ -309,7 +309,7 @@ pred_out=stack(pred_width,pred_sd)
         pred_width = (pred_interval[[2]] - pred_interval[[1]])
         pred_out=stack(pred_width,pred_sd)
       }
-      else if(model=="baggedcart"){
+      else if(model=="treebag"){
         nn <- ncol(dfram)
         colnames(dfram)<-sub(".*\\$", "",colnames(dfram))
         faw=c(colnames(dfram)[2:nn])
@@ -326,7 +326,7 @@ pred_out=stack(pred_width,pred_sd)
         pred_width = (pred_interval[[2]] - pred_interval[[1]])
         pred_out=stack(pred_width,pred_sd)
       }
-      else if(model=="svm"){
+      else if(model=="svmLinear"){
         nn <- ncol(dfram)
         colnames(dfram)<-sub(".*\\$", "",colnames(dfram))
         faw=c(colnames(dfram)[2:nn])
@@ -343,7 +343,7 @@ pred_out=stack(pred_width,pred_sd)
         pred_width = (pred_interval[[2]] - pred_interval[[1]])
         pred_out=stack(pred_width,pred_sd)
       }
-      else if(model=="glm"){
+      else if(model=="bayesglm"){
         nn <- ncol(dfram)
         colnames(dfram)<-sub(".*\\$", "",colnames(dfram))
         faw=c(colnames(dfram)[2:nn])
@@ -360,7 +360,7 @@ pred_out=stack(pred_width,pred_sd)
         pred_width = (pred_interval[[2]] - pred_interval[[1]])
         pred_out=stack(pred_width,pred_sd)
       }
-      else if(model=="qneuralnetwork"){
+      else if(model=="qrnn"){
         nn <- ncol(dfram)
         colnames(dfram)<-sub(".*\\$", "",colnames(dfram))
         faw=c(colnames(dfram)[2:nn])

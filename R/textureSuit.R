@@ -12,6 +12,7 @@ textureSuit=function(value,crop="wheat"){
   else if (crop=="groundnut"){suitclass=ifelse(value==11,1,ifelse(value==5,1,ifelse(value==9,1,ifelse(value==7,1,ifelse(value==8,1,ifelse(value==10,2,ifelse(value==2,2,ifelse(value==3,2,ifelse(value==1,2,ifelse(value==16,3,4))))))))))}
   else if (crop=="gram"){suitclass=ifelse(value==11,1,ifelse(value==4,1,ifelse(value==7,1,ifelse(value==9,1,ifelse(value==2,2,ifelse(value==3,2,ifelse(value==1,2,ifelse(value==5,3,ifelse(value==16,3,4)))))))))}
   else if(crop=="pea"){suitclass=ifelse(value==5,1,ifelse(value==4,1,ifelse(value==7,1,ifelse(value==9,1,ifelse(value==2,2,ifelse(value==3,2,ifelse(value==1,2,ifelse(value==10,3,4))))))))}
+  else if(crop=="bean"){suitclass=ifelse(value==11,1,ifelse(value==4,1,ifelse(value==7,1,ifelse(value==9,1,ifelse(value==2,2,ifelse(value==3,2,ifelse(value==1,2,ifelse(value==5,2,ifelse(value==16,3,ifelse(value==10,3,4))))))))))}
   else if(crop=="soybean"){suitclass=ifelse(value==11,1,ifelse(value==4,1,ifelse(value==7,1,ifelse(value==9,1,ifelse(value==2,2,ifelse(value==3,2,ifelse(value==1,2,ifelse(value==5,2,ifelse(value==16,3,ifelse(value==10,3,4))))))))))}
   else if(crop=="lentil"){suitclass=ifelse(value==11,1,ifelse(value==4,1,ifelse(value==7,1,ifelse(value==9,1,ifelse(value==2,2,ifelse(value==3,2,ifelse(value==1,2,ifelse(value==5,2,ifelse(value==16,3,ifelse(value==10,3,4))))))))))}
 

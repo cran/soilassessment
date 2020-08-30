@@ -4,7 +4,7 @@
 A function for classifying salt-affected soils using EC and PH only
 }
 \description{
-This function determines classes of salt-affected soils using Electrical Conductivity and pH according to FAO (2006) or USDA classification schemes
+This function determines classes of salt-affected soils using Electrical Conductivity and pH according to FAO or USDA salt classification schemes
 }
 \usage{
 saltRating(ec,ph,criterion="FAO")
@@ -53,6 +53,6 @@ newmap$ECe=ECconversion1(ec$ec,soc$soc,clay$clay,texture$texture,"1:1", "FAO")
 newmap$salinity=saltRating(newmap$ECe,newmap$ph,"FAO")
 newmap$salineclass=classCode(newmap$salinity,"saltclass")
 newmap$salineclass1=as.factor(newmap$salineclass)
-spplot(newmap["salineclass"], main="Salinity Code")
+spplot(newmap["salineclass"], main="Soil Salinity Class")
 summary(newmap$salinity)
 }

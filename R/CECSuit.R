@@ -13,7 +13,7 @@ CECSuit=function(value,crop="wheat"){
   else if(crop=="groundnut"){suitclass=ifelse(value>24,1,ifelse(value>16,2,ifelse(value>8,3,4)))}
   else if(crop=="pea"){suitclass=ifelse(value>24,1,ifelse(value>16,2,ifelse(value>8,3,4)))}
   else if(crop=="gram"){suitclass=ifelse(value>24,1,ifelse(value>16,2,ifelse(value>8,3,4)))}
-  else if(crop=="lintel"){suitclass=ifelse(value>24,1,ifelse(value>16,2,ifelse(value>8,3,4)))}
+  else if(crop=="lentil"){suitclass=ifelse(value>24,1,ifelse(value>16,2,ifelse(value>8,3,4)))}
   else if(crop=="soybean"){suitclass=ifelse(value>24,1,ifelse(value>16,2,ifelse(value>8,3,4)))}
 
   #Soil CEC (Cmol/kg) suitability classes for oilcrops

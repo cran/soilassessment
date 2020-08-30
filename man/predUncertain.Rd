@@ -7,7 +7,7 @@ Function to develop spatial map of modelling uncertainty using bootstrap approac
 This functions uses bootstrap approach to estimate spatial maps of modelling prediction interval width and standard deviation
 }
 \usage{
-predUncertain(indata,fgrid, k, z, model="randomforest")
+predUncertain(indata,fgrid, k, z, model="rf")
 }
 \arguments{
   \item{indata}{
@@ -47,10 +47,12 @@ The input dataframe and predictors need to have similar coordinate reference sys
 regmodelSuit, pedoTransfer, imageIndices
 }
 \examples{
-soil1=soil[,"OC"]
+library(raster)
+library(caret)
+soil1=soil[,c("OC")]
 predictere=suitabinput[c("depthcodes","rain","texture","dem")]
 \donttest{
-pred_uncert=predUncertain(soil1,predictere,5,90,"cubist")
+pred_uncert=predUncertain(soil1,predictere,3,90,"rf")
 plot(pred_uncert)
 }
 }

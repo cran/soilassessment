@@ -41,7 +41,7 @@ textureclassLUT, textureLevels, createTexturedata
 library(soiltexture)
 newtxt=textureinput
 \donttest{texturedata=createTexturedata(newtxt$clay, newtxt$silt, newtxt$sand)
-newtxt1=appendTextureclass(texturedata, method = "USDA")
-levels(newtxt1$TEXCLASS)
+newtxt1=appendTextureclass(as.data.frame(texturedata), method = "USDA")
+levels(as.factor(newtxt1$TEXCLASS))
 }
 }

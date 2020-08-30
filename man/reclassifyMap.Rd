@@ -34,10 +34,10 @@ depthSuit, classCode, rainSuit
 }
 \examples{
 library(sp)
-library(raster)
 LUT=data.frame(map=c(1,2,3,4,5,6),new=c(100,20,30,40,60,80))
-newmap=as(suitabinput["depthcodes"],"RasterLayer")
-newmap$depth=reclassifyMap(newmap$depthcodes,LUT)
+newmap=(suitabinput["depthcodes"])
+newmap$depth=reclassifyMap(newmap["depthcodes"],LUT)
+newmap$melon=depthSuit(newmap$depth,"melon")
 summary(newmap$depth)
-spplot(newmap$depth)
+spplot(newmap["depth"])
 }

@@ -1,5 +1,5 @@
-\name{pedoTrasnfer}
-\alias{pedoTrasnfer}
+\name{pedoTransfer}
+\alias{pedoTransfer}
 \title{
 A pedotransfer function to predict electrical conductivity or any other soil property using other soil properties
 }
@@ -7,7 +7,7 @@ A pedotransfer function to predict electrical conductivity or any other soil pro
 This generic pedo-transfer function is used to approximate EC values from other existing and easy-to-measure soil data
 }
 \usage{
-pedoTrasnfer(method="linear", df, ...)
+pedoTransfer(method="linear", df, ...)
 }
 \arguments{
   \item{method}{
@@ -39,7 +39,7 @@ This function can also be used to predict EC from apparent electrical conductivi
 }
 
 \seealso{
-ECconversion1, ECconversion2, SalinityRating1, SalinityRating2
+ECconversion1, ECconversion2, ECconversion4
 }
 \examples{
 library(caret)
@@ -54,7 +54,7 @@ names(soil4)=c("EC","clay","silt","sand","OC","pH")
 bound <- floor((nrow(soil4)/4)*3)
 df.train <- soil4[sample(nrow(soil4)), ][1:bound, ]
 df.test <- soil4[sample(nrow(soil4)), ][(bound+1):nrow(soil4[sample(nrow(soil4)), ]), ]
-EC1.lm=pedoTrasnfer("randomforest",df.train,EC, clay,sand,silt,OC,pH)
+EC1.lm=pedoTransfer("randomforest",df.train,EC, clay,sand,silt,OC,pH)
 df.test$EC1=predict(EC1.lm,newdata = df.test)
 cor(df.test$EC,df.test$EC1)^2
 plot(df.test$EC~df.test$EC1)

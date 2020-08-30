@@ -21,14 +21,13 @@ classnames=function(indicator="texture"){
   }
   if(indicator=="erodibility"){
     classcodes=matrix(c(1,"High",2,"Moderate",3,"Low",4,"VeryLow"),nrow = 2,ncol = 4,byrow = FALSE)
-
-    if(indicator=="permeability"){
+}
+  if(indicator=="permeability"){
       classcodes=matrix(c(1,"VerySlow",2,"Slow", 3,"ModeratelySlow", 4,"Moderate", 5,"ModeratelyRapid",6,"Rapid",7,"VeryRapid"),nrow = 2,ncol = 7,byrow = FALSE)
     }
-    if(indicator=="structure"){
+  if(indicator=="structure"){
       classcodes=matrix(c(1,"Granular",2,"Crumby", 3,"AngularBlocky", 4,"Columnar", 5,"SubAngularBlocky",6,"Platty",7,"SingleGrain",8,"Massive",9,"Prismatic",10,"Cloddy"),nrow = 2,ncol = 10,byrow = FALSE)
     }
 
-  }
 return(classcodes)
 }

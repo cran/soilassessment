@@ -42,13 +42,11 @@ The input slope value must be in degrees
 LGPSuit, tempSuit, suitability
 }
 \examples{
-library(sp)
-library(raster)
 slopeSuit(23.4,"carrot")
-dem=raster(suitabinput["dem"])
-slope=terrain(dem,opt='slope')*180/pi
-slope$tea=slopeSuit(values(slope),"tea")
-slope=as(slope,"SpatialGridDataFrame")
+library(sp)
+slopeSuit(23.4,"carrot")
+slope=suitabinput["slope"]
+slope$tea=slopeSuit(slope$slope,"tea")
 slope$carrot=slopeSuit(slope$slope,"carrot")
 summary(slope$carrot)
 spplot(slope["carrot"])

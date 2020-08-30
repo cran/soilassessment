@@ -1,15 +1,14 @@
 \name{regmodelSuit}
 \alias{regmodelSuit}
 \title{
-A function for guiding selection of regression model for modelling soil condition
+A function for guiding selection of predition model for modelling soil condition
 }
 \description{
-This function evaluates suitability of most regression models in mapping soil condition using a set of predictors
+This function evaluates suitability of most predition models in mapping soil condition using a set of predictors
 }
 \usage{
 regmodelSuit(df, ...)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{df}{
 a dataframe of target soil property and its predictors
@@ -41,13 +40,14 @@ suitability, pedoTransfer, pedoTransfer, predUncertain
 library(caret)
 library(sp)
 data(soil)
-soil1=subset(soil,!is.na(soil$EC))
+soil1=soil[,c("EC")]
+soil1=subset(soil1,!is.na(soil1$EC))
 overlay.ov=over(soil1, suitabinput)
 soil1$dem=overlay.ov$dem
 soil1$rain=overlay.ov$rain
-soil1$texture=overlay.ov$texture
-soil2=soil1@data[,c("EC","dem","rain","texture")]
+soil1$ph=overlay.ov$ph
+soil2=soil1@data[,c("EC","dem","rain","ph")]
 \donttest{
-regmodelSuit(soil2,EC,dem,rain,texture)
+regmodelSuit(soil2,EC,dem,rain,ph)
 }
 }

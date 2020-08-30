@@ -46,9 +46,7 @@ suitability,slopeSuit, tempSuit
 library(sp)
 library(raster)
 suitabilityClass(20.14,"saffron","slope")
-dem=raster(suitabinput["dem"])
-slope=terrain(dem,opt='slope')*180/pi
-slope=as(slope,"SpatialGridDataFrame")
+slope=suitabinput["slope"]
 slope$tea=slopeSuit(slope$slope,"tea")
 slope$saffron=suitabilityClass(slope$slope,"saffron","slope")
 summary(slope$saffron)

@@ -42,5 +42,5 @@ library(sp)
 newmap=suitabinput
 newmap$saffron=carbonateSuit(newmap$cac03,"saffron")
 summary(newmap$saffron)
-spplot(newmap["saffron"])
+spplot(newmap,"saffron")
 }

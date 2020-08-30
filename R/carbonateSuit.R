@@ -14,7 +14,7 @@ carbonateSuit=function(value, crop="wheat"){
   else if(crop=="pea"){suitclass=ifelse(value>25,4,ifelse(value>15,3,ifelse(value>6,2,1)))}
   else if(crop=="gram"){suitclass=ifelse(value>30,4,ifelse(value>20,3,ifelse(value>10,2,1)))}
   else if(crop=="soybean"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>6,2,1)))}
-  else if(crop=="lintel"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>6,2,1)))}
+  else if(crop=="lentil"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>6,2,1)))}
 
   #Soil carbonate (%) suitability classes for oil crop
   else if(crop=="sesame"){suitclass=ifelse(value>25,4,ifelse(value>15,3,ifelse(value>6,2,1)))}

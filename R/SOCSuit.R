@@ -13,7 +13,7 @@ SOCSuit=function(value,crop="wheat"){
   else if(crop=="groundnut"){suitclass=ifelse(value>1.2,1,ifelse(value>0.8,2,ifelse(value>0.3,3,4)))}
   else if(crop=="pea"){suitclass=ifelse(value>1.2,1,ifelse(value>0.8,2,ifelse(value>0.3,3,4)))}
   else if(crop=="soybean"){suitclass=ifelse(value>1.2,1,ifelse(value>0.8,2,ifelse(value>0.3,3,4)))}
-  else if(crop=="lintel"){suitclass=ifelse(value>1.2,1,ifelse(value>0.8,2,ifelse(value>0.3,3,4)))}
+  else if(crop=="lentil"){suitclass=ifelse(value>1.2,1,ifelse(value>0.8,2,ifelse(value>0.3,3,4)))}
   else if(crop=="gram"){suitclass=ifelse(value>1.2,1,ifelse(value>0.8,2,ifelse(value>0.3,3,4)))}
 
   #Soil organic carbon % suitability classes for oilcrops

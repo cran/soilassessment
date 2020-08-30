@@ -62,6 +62,5 @@ newmap$ph=ph$ph
 newmap$ECe=ECconversion1(ec$ec*0.1,soc$soc,clay$clay,texture$texture,"1:5", "FAO")
 newmap$salt=saltSeverity(newmap$ECe,newmap$ph,0.84,"FAO")
 newmap$salineclass=classCode(newmap$salt,"saltseverity")
-newmap$salineclass1=as.factor(newmap$salineclass)
 spplot(newmap["salineclass"], main="Salinity Code")
 }

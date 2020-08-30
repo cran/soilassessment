@@ -39,7 +39,7 @@ Formal class 'SpatialPointsDataFrame' [package "sp"] with 5 slots
   .. .. ..$ : chr [1:2] "coords.x1" "coords.x2"
   .. .. ..$ : chr [1:2] "min" "max"
   ..@ proj4string:Formal class 'CRS' [package "sp"] with 1 slot
-  .. .. ..@ projargs: chr "+proj=utm +zone=41 +datum=WGS84 +units=m +no_defs +ellps=WGS84 +towgs84=0,0,0"
+  .. .. ..@ projargs: chr "+proj=utm +zone=41 +datum=WGS84 +units=m +no_defs"
 }
 \details{
 A dataset with 87 points of soil horizons for mapping salinity

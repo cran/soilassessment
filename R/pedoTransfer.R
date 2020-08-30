@@ -1,4 +1,4 @@
-pedoTrasnfer=function(method="linear", df, ...){
+pedoTransfer=function(method="linear", df, ...){
   dv=as.character(sapply(substitute(list(...))[-1], deparse))
   fml <- as.formula(paste(dv[1],paste((dv[2:length(dv)]),collapse="+"),sep="~"))
   names(fml)<-sub(".*\\$", "",names(fml))

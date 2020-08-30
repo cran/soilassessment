@@ -25,7 +25,7 @@ Formal class 'SpatialGridDataFrame' [package "sp"] with 4 slots
   .. .. ..$ : chr [1:2] "x" "y"
   .. .. ..$ : chr [1:2] "min" "max"
   ..@ proj4string:Formal class 'CRS' [package "sp"] with 1 slot
-  .. .. ..@ projargs: chr "+proj=utm +zone=41 +datum=WGS84 +units=m +no_defs +ellps=WGS84 +towgs84=0,0,0"
+  .. .. ..@ projargs: chr "+proj=utm +zone=41 +datum=WGS84 +units=m +no_defs"
 }
 \examples{
 data(textureinput)

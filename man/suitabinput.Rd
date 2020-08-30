@@ -11,7 +11,7 @@ A grid stack map of nine variables for assessing crop suitabilities
 \format{
   The format is:
 Formal class 'SpatialGridDataFrame' [package "sp"] with 4 slots
-  ..@ data       :'data.frame':	16900 obs. of  10 variables:
+  ..@ data       :'data.frame':	16900 obs. of  11 variables:
   .. ..$ cac03     : num [1:16900] 21.8 20.6 21.2 22 22.3 ...
   .. ..$ ec        : num [1:16900] 2.5 2.38 2.15 2.36 2.24 ...
   .. ..$ depthcodes: num [1:16900] 3 1 3 3 3 3 3 3 1 1 ...
@@ -22,7 +22,8 @@ Formal class 'SpatialGridDataFrame' [package "sp"] with 4 slots
   .. ..$ stones    : num [1:16900] 6 9 6 6 6 6 6 9 9 9 ...
   .. ..$ structure : int [1:16900] 3 8 7 5 5 5 7 5 9 9 ...
   .. ..$ ph        : num [1:16900] 8.76 8.83 8.73 8.71 8.69 ...
-  ..@ grid       :Formal class 'GridTopology' [package "sp"] with 3 slots
+  .. ..$ slope     : num [1:16900] 0.969 0.969 0.969 0.969 0.969 ...
+ ..@ grid       :Formal class 'GridTopology' [package "sp"] with 3 slots
   .. .. ..@ cellcentre.offset: Named num [1:2] 383216 3341506
   .. .. .. ..- attr(*, "names")= chr [1:2] "x" "y"
   .. .. ..@ cellsize         : num [1:2] 357 357
@@ -32,7 +33,7 @@ Formal class 'SpatialGridDataFrame' [package "sp"] with 4 slots
   .. .. ..$ : chr [1:2] "x" "y"
   .. .. ..$ : chr [1:2] "min" "max"
   ..@ proj4string:Formal class 'CRS' [package "sp"] with 1 slot
-  .. .. ..@ projargs: chr "+proj=utm +zone=41 +datum=WGS84 +units=m +no_defs +ellps=WGS84 +towgs84=0,0,0"
+  .. .. ..@ projargs: chr "+proj=utm +zone=41 +datum=WGS84 +units=m +no_defs"
 }
 \examples{
 data(suitabinput)

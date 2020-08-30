@@ -4,7 +4,7 @@
 A function for assessing Electrical Conductivity suitability requirements for certain crops
 }
 \description{
-This function determines the suitability classes for Electrical Conductivity requirements of selected agricultural crops
+This function determines the suitability classes for Electrical Conductivity requirements for selected agricultural crops
 }
 \usage{
 ECSuit(value, crop)
@@ -44,10 +44,10 @@ tempSuit, PHSuit, rainSuit
 \examples{
 library(sp)
 ECSuit(0.78,"yam")
-ec=suitabinput["ec"]
-soc=nutrindicator["soc"]
-clay=textureinput["clay"]
-texture=suitabinput["texture"]
+ec=(suitabinput["ec"])
+soc=(nutrindicator["soc"])
+clay=(textureinput["clay"])
+texture=(suitabinput["texture"])
 newmap=ec
 newmap$ECe=ECconversion1(ec$ec,soc$soc,clay$clay,texture$texture,"1:2.5", "FAO")
 newmap$wheat=ECSuit(newmap$ECe,"wheat")

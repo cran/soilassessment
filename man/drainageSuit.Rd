@@ -4,7 +4,7 @@
 A function for assessing drainage suitability requirements for certain crops
 }
 \description{
-This function determines the suitability classes for drainage requirements of selected agricultural crops
+This function determines the suitability classes for drainage requirements for selected agricultural crops
 }
 \usage{
 drainageSuit(value, crop)
@@ -18,7 +18,7 @@ The crop of interest for which drainage suitability class is sought.
 }
 }
 \details{
-The input value can be map or an integer of drainage class code. The textural class code is obtained using classCode("drainage")
+The input value can be a map or an integer of drainage class code. The textural class code is obtained using classCode("drainage")
 }
 \value{
 The output is drainage suitability class for the crop. The output is an integer value for suitability class: 1- highly suitable; 2 - moderately suitable; 3 - marginally suitable; 4 - currently not suitable; 5 - not suitable
