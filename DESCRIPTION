@@ -2,15 +2,16 @@ Package: soilassessment
 Type: Package
 Title: Assessment Models for Agriculture Soil Conditions and Crop
         Suitability
-Version: 0.2.1
+Version: 0.2.2
 Depends: R (>= 3.5.0)
 Imports: arm, caret, Cubist, deSolve, e1071, FuzzyAHP, Hmisc, kernlab,
-        maptools, methods, nnet, quantregForest, qrnn,randomForest,
-        ranger,raster, rgdal, rpart, soiltexture, sp, stats, utils
+        maptools, methods, nlme,nnet, quantregForest,
+        qrnn,randomForest, ranger,raster, rgdal, rpart, soiltexture,
+        sp, stats, utils
 Author: Christian Thine Omuto
 Maintainer: Christian Thine Omuto <thineomuto@yahoo.com>
 Description: Soil assessment builds information for improved decision in soil management. It analyzes soil conditions with regard to agriculture 
-        crop suitability requirements [such as those given by FAO <http://www.fao.org/land-water/databases-and-software/crop-information/en/>] soil fertility classes, 
+        crop suitability requirements [such as those given by FAO <https://www.fao.org/land-water/databases-and-software/crop-information/en/>] soil fertility classes, 
         soil erosion models and soil salinity classification. Suitability requirements are for crops  grouped into cereal crops, nuts, legumes, fruits, vegetables, 
         industrial crops, and root crops.  
 License: GPL
@@ -18,6 +19,6 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.1
 NeedsCompilation: no
-Packaged: 2020-08-30 19:00:39 UTC; Cthin
+Packaged: 2022-01-18 07:47:20 UTC; Cthine
 Repository: CRAN
-Date/Publication: 2020-08-30 20:00:03 UTC
+Date/Publication: 2022-01-18 08:10:02 UTC

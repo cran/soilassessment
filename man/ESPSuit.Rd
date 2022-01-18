@@ -1,10 +1,10 @@
 \name{ESPSuit}
 \alias{ESPSuit}
 \title{
-A function for assessing Exchangeable Sodium Percent (ESP) suitability requirements for certain crops
+A function for assessing Exchangeable Sodium Percent (ESP) suitability requirements for certain crops and trees
 }
 \description{
-This function determines the suitability classes for ESP requirements of selected agricultural crops
+This function determines the suitability classes for ESP requirements of selected agricultural crops and forest trees
 }
 \usage{
 ESPSuit(value, crop)

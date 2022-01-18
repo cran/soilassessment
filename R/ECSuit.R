@@ -16,6 +16,19 @@ ECSuit=function(value, crop="wheat"){
   else if(crop=="soybean"){suitclass=ifelse(value>4,4,ifelse(value>2,3,ifelse(value>1,2,1)))}
   else if(crop=="lentil"){suitclass=ifelse(value>4,4,ifelse(value>2,3,ifelse(value>1,2,1)))}
 
+  #Soil EC(dS/m)  suitability classes for Forests
+  else if(crop=="poplar"){suitclass=ifelse(value>8,4,ifelse(value>4,3,ifelse(value>2,2,1)))}
+  else if(crop=="grevillea"){suitclass=ifelse(value>4,4,ifelse(value>2,3,ifelse(value>1,2,1)))}
+  else if(crop=="sesbania"){suitclass=ifelse(value>2,4,ifelse(value>1,3,ifelse(value>0.5,2,1)))}
+  else if(crop=="gram"){suitclass=ifelse(value>2,4,ifelse(value>1,3,ifelse(value>0.5,2,1)))}
+  else if(crop=="calliandra"){suitclass=ifelse(value>4,4,ifelse(value>2,3,ifelse(value>1,2,1)))}
+  else if(crop=="leucaena"){suitclass=ifelse(value>4,4,ifelse(value>2,3,ifelse(value>1,2,1)))}
+  else if(crop=="acacia"){suitclass=ifelse(value>4,4,ifelse(value>2,3,ifelse(value>1,2,1)))}
+  else if(crop=="eucalyptus"){suitclass=ifelse(value>4,4,ifelse(value>2,3,ifelse(value>1,2,1)))}
+  else if(crop=="teak"){suitclass=ifelse(value>4,4,ifelse(value>2,3,ifelse(value>1,2,1)))}
+  else if(crop=="maple"){suitclass=ifelse(value>4,4,ifelse(value>2,3,ifelse(value>1,2,1)))}
+  else if(crop=="ash"){suitclass=ifelse(value>4,4,ifelse(value>2,3,ifelse(value>1,2,1)))}
+  
   #Soil EC(dS/m) suitability classes for oil crop
   else if(crop=="sesame"){suitclass=ifelse(value>4,4,ifelse(value>2,3,ifelse(value>1,2,1)))}
   else if(crop=="sunflower"){suitclass=ifelse(value>4,4,ifelse(value>2,3,ifelse(value>1,2,1)))}

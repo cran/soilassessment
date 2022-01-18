@@ -15,6 +15,19 @@ carbonateSuit=function(value, crop="wheat"){
   else if(crop=="gram"){suitclass=ifelse(value>30,4,ifelse(value>20,3,ifelse(value>10,2,1)))}
   else if(crop=="soybean"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>6,2,1)))}
   else if(crop=="lentil"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>6,2,1)))}
+  
+  #Soil carbonate (%) suitability classes for Forest
+  else if(crop=="poplar"){suitclass=ifelse(value>35,4,ifelse(value>25,3,ifelse(value>12,2,1)))}
+  else if(crop=="grevillea"){suitclass=ifelse(value>30,4,ifelse(value>25,3,ifelse(value>15,2,1)))}
+  else if(crop=="sesbania"){suitclass=ifelse(value>25,4,ifelse(value>15,3,ifelse(value>6,2,1)))}
+  else if(crop=="calliandra"){suitclass=ifelse(value>30,4,ifelse(value>20,3,ifelse(value>10,2,1)))}
+  else if(crop=="leucaena"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>6,2,1)))}
+  else if(crop=="acacia"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>6,2,1)))}
+  else if(crop=="eucalyptus"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>6,2,1)))}
+  else if(crop=="teak"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>6,2,1)))}
+  else if(crop=="maple"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>6,2,1)))}
+  else if(crop=="ash"){suitclass=ifelse(value>35,4,ifelse(value>30,3,ifelse(value>20,2,1)))}
+  
 
   #Soil carbonate (%) suitability classes for oil crop
   else if(crop=="sesame"){suitclass=ifelse(value>25,4,ifelse(value>15,3,ifelse(value>6,2,1)))}

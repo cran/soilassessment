@@ -1,10 +1,10 @@
 \name{rainSuit}
 \alias{rainSuit}
 \title{
-A function for assessing rainfall suitability requirements for certain crops
+A function for assessing rainfall suitability requirements for certain crops and trees
 }
 \description{
-This function determines the suitability classes for rainfall requirements of selected agricultural crops
+This function determines the suitability classes for rainfall requirements of selected agricultural crops and forest trees
 }
 \usage{
 rainSuit(value, crop)

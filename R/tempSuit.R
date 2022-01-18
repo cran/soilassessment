@@ -16,6 +16,18 @@ tempSuit=function(value,crop="wheat"){
   else if(crop=="soybean"){suitclass=ifelse(value>36,4,ifelse(value>33,3,ifelse(value>28,2,ifelse(value>25,1,ifelse(value>15,2,ifelse(value>10,3,4))))))}
   else if(crop=="lentil"){suitclass=ifelse(value>30,4,ifelse(value>27,3,ifelse(value>20,2,ifelse(value>18,1,ifelse(value>12,2,ifelse(value>10,3,4))))))}
 
+  #Temperature suitability requirements for forests
+  else if(crop=="poplar"){suitclass=ifelse(value>40,4,ifelse(value>34,3,ifelse(value>31,2,ifelse(value>24,1,ifelse(value>22,2,ifelse(value>20,3,4))))))}
+  else if(crop=="grevillea"){suitclass=ifelse(value>40,4,ifelse(value>38,3,ifelse(value>34,2,ifelse(value>28,1,ifelse(value>25,2,ifelse(value>20,3,4))))))}
+  else if(crop=="sesbania"){suitclass=ifelse(value>40,4,ifelse(value>30,3,ifelse(value>26,2,ifelse(value>20,1,ifelse(value>15,2,ifelse(value>5,3,4))))))}
+  else if(crop=="calliandra"){suitclass=ifelse(value>45,4,ifelse(value>41,3,ifelse(value>36,2,ifelse(value>20,1,ifelse(value>18,2,ifelse(value>15,3,4))))))}
+  else if(crop=="leucaena"){suitclass=ifelse(value>36,4,ifelse(value>33,3,ifelse(value>28,2,ifelse(value>25,1,ifelse(value>15,2,ifelse(value>10,3,4))))))}
+  else if(crop=="acacia"){suitclass=ifelse(value>30,4,ifelse(value>27,3,ifelse(value>20,2,ifelse(value>18,1,ifelse(value>12,2,ifelse(value>10,3,4))))))}
+  else if(crop=="eucalyptus"){suitclass=ifelse(value>30,4,ifelse(value>27,3,ifelse(value>20,2,ifelse(value>18,1,ifelse(value>12,2,ifelse(value>10,3,4))))))}
+  else if(crop=="teak"){suitclass=ifelse(value>30,4,ifelse(value>27,3,ifelse(value>20,2,ifelse(value>18,1,ifelse(value>12,2,ifelse(value>10,3,4))))))}
+  else if(crop=="maple"){suitclass=ifelse(value>30,4,ifelse(value>27,3,ifelse(value>20,2,ifelse(value>18,1,ifelse(value>12,2,ifelse(value>10,3,4))))))}
+  else if(crop=="ash"){suitclass=ifelse(value>30,4,ifelse(value>27,3,ifelse(value>20,2,ifelse(value>18,1,ifelse(value>12,2,ifelse(value>10,3,4))))))}
+  
 
   #Temperature suitability requirements for oil crops
   if(crop=="sesame"){suitclass=ifelse(value>40,4,ifelse(value>38,3,ifelse(value>34,2,ifelse(value>30,1,ifelse(value>24,2,ifelse(value>20,3,4))))))}

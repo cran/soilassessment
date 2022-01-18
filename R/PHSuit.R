@@ -16,6 +16,18 @@ PHSuit=function(value, crop="wheat"){
   else if(crop=="soybean"){suitclass=ifelse(value>9,4,ifelse(value>8.5,3,ifelse(value>7.6,2,ifelse(value>6.5,1,ifelse(value>6.0,2,ifelse(value>5.5,3,4))))))}
   else if(crop=="lentil"){suitclass=ifelse(value>10,4,ifelse(value>8.6,3,ifelse(value>7.5,2,ifelse(value>6.5,1,ifelse(value>5.4,2,ifelse(value>4.5,3,4))))))}
 
+  #Soil pH suitability classes for forests
+  else if(crop=="poplar"){suitclass=ifelse(value>10,4,ifelse(value>8.6,3,ifelse(value>7.5,2,ifelse(value>5.5,1,ifelse(value>6.4,2,ifelse(value>4.5,3,4))))))}
+  else if(crop=="grevillea"){suitclass=ifelse(value>9.5,4,ifelse(value>9.1,3,ifelse(value>8.5,2,ifelse(value>5.0,1,ifelse(value>6.5,2,ifelse(value>5,3,4))))))}
+  else if(crop=="sesbania"){suitclass=ifelse(value>9,4,ifelse(value>8.1,3,ifelse(value>7.5,2,ifelse(value>5.0,1,ifelse(value>6.4,2,ifelse(value>4.5,3,4))))))}
+  else if(crop=="calliandra"){suitclass=ifelse(value>10,4,ifelse(value>8.6,3,ifelse(value>7.5,2,ifelse(value>5.5,1,ifelse(value>6.4,2,ifelse(value>4.5,3,4))))))}
+  else if(crop=="leucaena"){suitclass=ifelse(value>9,4,ifelse(value>8.5,3,ifelse(value>7.6,2,ifelse(value>5.5,1,ifelse(value>6.0,2,ifelse(value>5.5,3,4))))))}
+  else if(crop=="acacia"){suitclass=ifelse(value>10,4,ifelse(value>8.6,3,ifelse(value>7.5,2,ifelse(value>5.5,1,ifelse(value>6.4,2,ifelse(value>4.5,3,4))))))}
+  else if(crop=="eucalyptus"){suitclass=ifelse(value>10,4,ifelse(value>8.6,3,ifelse(value>7.5,2,ifelse(value>5.5,1,ifelse(value>6.4,2,ifelse(value>4.5,3,4))))))}
+  else if(crop=="teak"){suitclass=ifelse(value>10,4,ifelse(value>8.6,3,ifelse(value>7.5,2,ifelse(value>5.5,1,ifelse(value>6.4,2,ifelse(value>4.5,3,4))))))}
+  else if(crop=="maple"){suitclass=ifelse(value>10,4,ifelse(value>8.6,3,ifelse(value>7.5,2,ifelse(value>5.5,1,ifelse(value>6.4,2,ifelse(value>4.5,3,4))))))}
+  else if(crop=="ash"){suitclass=ifelse(value>10,4,ifelse(value>8.6,3,ifelse(value>7.5,2,ifelse(value>5.5,1,ifelse(value>6.4,2,ifelse(value>4.5,3,4))))))}
+
   #Soil EC(dS/m) suitability classes for oil crops
   else if(crop=="sesame"){suitclass=ifelse(value>9,4,ifelse(value>8.1,3,ifelse(value>7.5,2,ifelse(value>5.5,1,ifelse(value>5.0,2,ifelse(value>4.5,3,4))))))}
   else if(crop=="sunflower"){suitclass=ifelse(value>9,4,ifelse(value>8.0,3,ifelse(value>8.0,2,ifelse(value>6.5,1,ifelse(value>5.5,2,ifelse(value>4.5,3,4))))))}

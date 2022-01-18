@@ -4,10 +4,10 @@ classCode=function(value,indicator="fertility"){
   }
   else if(indicator=="saltseverity"){
     #Salinity classes: 1-None; 2-Slight; 7-Very Slight; 3-Moderate; 4-Strong; 5-Very Strong; 6 - Extreme; 8 - Sodic; 9-Saline_sodic; 10-Alkaline
-   class0=ifelse(value>4,"Alkaline",ifelse(value>3,"Sodic",ifelse(value<4,"saline_sodic",ifelse(value>2,"saline",ifelse(value>0,"None","Class not included")))))
-   class01 =ifelse(value>11,"ExtremeSalinity",ifelse(value>10,"VeryStrongSalinity",ifelse(value>9,"StrongSalinity",ifelse(value>8,"ModerateSalinity",ifelse(value>7,"SlightSalinity", ifelse(value>6,"VerySlightSalinity",ifelse(value>5,"None",class0)))))))
+   class0=ifelse(value>4,"Alkaline",ifelse(value>3,"Sodic",ifelse(value>2,"saline_sodic",ifelse(value>1,"saline",ifelse(value>0,"None","Class not included")))))
+   class01 =ifelse(value>11,"ExtremeSalinity",ifelse(value>10,"VeryStrongSalinity",ifelse(value>9,"StrongSalinity",ifelse(value>8,"ModerateSalinity",ifelse(value>7,"SlightSalinity", ifelse(value>6,"SlightSalinity",ifelse(value>5,"None",class0)))))))
    class02=ifelse(value>16,"VeryStrongSodicity",ifelse(value>15,"StrongSodicity",ifelse(value>14,"ModerateSodicity",ifelse(value>13,"SlightSodicity",ifelse(value>12,"None",class01)))))
-   classcode=ifelse(value>17,"class not included",class02)
+   classcode=ifelse(value>17,"None",ifelse(value>18,"class not included",class02))
    }
   else if(indicator=="texture"){
     classcode=ifelse(value==1,"Cl",ifelse(value==2,"SiCl",ifelse(value==3,"SiClLo",ifelse(value==4,"SiLo",

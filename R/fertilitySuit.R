@@ -16,6 +16,18 @@ fertilitySuit=function(value,crop="wheat"){
   else if(crop=="soybean"){suitclass=ifelse(value>3.49,4,ifelse(value>2.49,3,ifelse(value>1.49,2,1)))}
   else if(crop=="lentil"){suitclass=ifelse(value>3.49,4,ifelse(value>2.49,3,ifelse(value>1.49,2,1)))}
 
+  #fertility suitability rating for forests crops
+  else if(crop=="poplar"){suitclass=ifelse(value>3.49,4,ifelse(value>2.49,3,ifelse(value>1.49,2,1)))}
+  else if(crop=="grevillea"){suitclass=ifelse(value>3.49,4,ifelse(value>2.49,3,ifelse(value>1.49,2,1)))}
+  else if(crop=="sesbania"){suitclass=ifelse(value>3.49,4,ifelse(value>2.49,3,ifelse(value>1.49,2,1)))}
+  else if(crop=="calliandra"){suitclass=ifelse(value>3.49,4,ifelse(value>2.49,3,ifelse(value>1.49,2,1)))}
+  else if(crop=="leucaena"){suitclass=ifelse(value>3.49,4,ifelse(value>2.49,3,ifelse(value>1.49,2,1)))}
+  else if(crop=="acacia"){suitclass=ifelse(value>3.49,4,ifelse(value>2.49,3,ifelse(value>1.49,2,1)))}
+  else if(crop=="eucalyptus"){suitclass=ifelse(value>3.49,4,ifelse(value>2.49,3,ifelse(value>1.49,2,1)))}
+  else if(crop=="teak"){suitclass=ifelse(value>3.49,4,ifelse(value>2.49,3,ifelse(value>1.49,2,1)))}
+  else if(crop=="maple"){suitclass=ifelse(value>3.49,4,ifelse(value>2.49,3,ifelse(value>1.49,2,1)))}
+  else if(crop=="ash"){suitclass=ifelse(value>3.49,4,ifelse(value>2.49,3,ifelse(value>1.49,2,1)))}
+  
   #Fertility suitability rating for oilcrop
   else if(crop=="sesame"){suitclass=ifelse(value>3.49,4,ifelse(value>2.49,3,ifelse(value>1.49,2,1)))}
   else if(crop=="sunflower"){suitclass=ifelse(value>3.49,4,ifelse(value>2.49,3,ifelse(value>1.49,2,1)))}
@@ -46,7 +58,7 @@ fertilitySuit=function(value,crop="wheat"){
   else if(crop=="tea"){suitclass=ifelse(value>3.49,4,ifelse(value>2.49,3,ifelse(value>1.49,2,1)))}
   else if(crop=="coffee"){suitclass=ifelse(value>3.49,4,ifelse(value>2.49,3,ifelse(value>1.49,2,1)))}
   else if(crop=="rubber"){suitclass=ifelse(value>3.49,4,ifelse(value>2.49,3,ifelse(value>1.49,2,1)))}
-  else if(crop=="safron"){suitclass=ifelse(value>3.49,4,ifelse(value>2.49,3,ifelse(value>1.49,2,1)))}
+  else if(crop=="saffron"){suitclass=ifelse(value>3.49,4,ifelse(value>2.49,3,ifelse(value>1.49,2,1)))}
   else if(crop=="pyrethrum"){suitclass=ifelse(value>3.49,4,ifelse(value>2.49,3,ifelse(value>1.49,2,1)))}
   else if(crop=="jute"){suitclass=ifelse(value>3.49,4,ifelse(value>2.49,3,ifelse(value>1.49,2,1)))}
   else if(crop=="tobacco"){suitclass=ifelse(value>3.49,4,ifelse(value>2.49,3,ifelse(value>1.49,2,1)))}

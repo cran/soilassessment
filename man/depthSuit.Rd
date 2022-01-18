@@ -1,10 +1,10 @@
 \name{depthSuit}
 \alias{depthSuit}
 \title{
-A function for assessing soil depth suitability requirements for certain crops
+A function for assessing soil depth suitability requirements for certain crops and trees
 }
 \description{
-This function determines the suitability classes for soil depth requirements of selected agricultural crops
+This function determines the suitability classes for soil depth requirements of selected agricultural crops and forest trees
 }
 \usage{
 depthSuit(value, crop)

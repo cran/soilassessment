@@ -16,6 +16,18 @@ textureSuit=function(value,crop="wheat"){
   else if(crop=="soybean"){suitclass=ifelse(value==11,1,ifelse(value==4,1,ifelse(value==7,1,ifelse(value==9,1,ifelse(value==2,2,ifelse(value==3,2,ifelse(value==1,2,ifelse(value==5,2,ifelse(value==16,3,ifelse(value==10,3,4))))))))))}
   else if(crop=="lentil"){suitclass=ifelse(value==11,1,ifelse(value==4,1,ifelse(value==7,1,ifelse(value==9,1,ifelse(value==2,2,ifelse(value==3,2,ifelse(value==1,2,ifelse(value==5,2,ifelse(value==16,3,ifelse(value==10,3,4))))))))))}
 
+  #soil texture suitability ratings for forests
+  else if (crop=="poplar"){suitclass=ifelse(value==11,1,ifelse(value==5,1,ifelse(value==9,1,ifelse(value==7,1,ifelse(value==8,1,ifelse(value==10,2,ifelse(value==2,2,ifelse(value==3,2,ifelse(value==1,2,ifelse(value==16,3,4))))))))))}
+  else if (crop=="grevillea"){suitclass=ifelse(value==11,1,ifelse(value==4,1,ifelse(value==7,1,ifelse(value==9,1,ifelse(value==2,2,ifelse(value==3,2,ifelse(value==1,2,ifelse(value==5,3,ifelse(value==16,3,4)))))))))}
+  else if(crop=="sesbania"){suitclass=ifelse(value==5,1,ifelse(value==4,1,ifelse(value==7,1,ifelse(value==9,1,ifelse(value==2,2,ifelse(value==3,2,ifelse(value==1,2,ifelse(value==10,3,4))))))))}
+  else if(crop=="calliandra"){suitclass=ifelse(value==11,1,ifelse(value==4,1,ifelse(value==7,1,ifelse(value==9,1,ifelse(value==2,2,ifelse(value==3,2,ifelse(value==1,2,ifelse(value==5,2,ifelse(value==16,3,ifelse(value==10,3,4))))))))))}
+  else if(crop=="leucaena"){suitclass=ifelse(value==11,1,ifelse(value==4,1,ifelse(value==7,1,ifelse(value==9,1,ifelse(value==2,2,ifelse(value==3,2,ifelse(value==1,2,ifelse(value==5,2,ifelse(value==16,3,ifelse(value==10,3,4))))))))))}
+  else if(crop=="acacia"){suitclass=ifelse(value==11,1,ifelse(value==4,1,ifelse(value==7,1,ifelse(value==9,1,ifelse(value==2,2,ifelse(value==3,2,ifelse(value==1,2,ifelse(value==5,2,ifelse(value==16,3,ifelse(value==10,3,4))))))))))}
+  else if(crop=="eucalyptus"){suitclass=ifelse(value==11,1,ifelse(value==4,1,ifelse(value==7,1,ifelse(value==9,1,ifelse(value==2,2,ifelse(value==3,2,ifelse(value==1,2,ifelse(value==5,2,ifelse(value==16,3,ifelse(value==10,3,4))))))))))}
+  else if(crop=="teak"){suitclass=ifelse(value==11,1,ifelse(value==4,1,ifelse(value==7,1,ifelse(value==9,1,ifelse(value==2,2,ifelse(value==3,2,ifelse(value==1,2,ifelse(value==5,2,ifelse(value==16,3,ifelse(value==10,3,4))))))))))}
+  else if(crop=="maple"){suitclass=ifelse(value==11,1,ifelse(value==4,1,ifelse(value==7,1,ifelse(value==9,1,ifelse(value==2,2,ifelse(value==3,2,ifelse(value==1,2,ifelse(value==5,2,ifelse(value==16,3,ifelse(value==10,3,4))))))))))}
+  else if(crop=="ash"){suitclass=ifelse(value==11,1,ifelse(value==4,1,ifelse(value==7,1,ifelse(value==9,1,ifelse(value==2,2,ifelse(value==3,2,ifelse(value==1,2,ifelse(value==5,2,ifelse(value==16,3,ifelse(value==10,3,4))))))))))}
+  
   #SOil texture suitability rating for oilcrops
   else if(crop=="sesame"){suitclass=ifelse(value==3,1,ifelse(value==11,1,ifelse(value==4,1,ifelse(value==7,1,ifelse(value==5,1,ifelse(value==2,2,ifelse(value==8,2,ifelse(value==1,2,ifelse(value==10,3,ifelse(value==16,3,4))))))))))}
   else if(crop=="sunflower"){suitclass=ifelse(value==11,1,ifelse(value==7,1,ifelse(value==4,1,ifelse(value==8,1,ifelse(value==9,2,ifelse(value==2,2,ifelse(value==1,2,ifelse(value==16,3,ifelse(value==5,3,4)))))))))}
@@ -34,14 +46,14 @@ textureSuit=function(value,crop="wheat"){
 
   #soil texture suitability rating for industrial crops
   else if(crop=="cotton"){suitclass=ifelse(value==2,1,ifelse(value==1,1,ifelse(value==3,2,ifelse(value==7,2,ifelse(value==6,3,ifelse(value==4,3,ifelse(value==8,3,ifelse(value==9,3,ifelse(value==11,3,4)))))))))}
-  else if(crop=="sugarcane"){suitcalss=ifelse(value==11,1,ifelse(value==7,1,ifelse(value==4,1,ifelse(value==3,1,ifelse(value==8,1,ifelse(value==9,1,ifelse(value==1,2,ifelse(value==5,2,ifelse(value==16,3,4)))))))))}
-  else if(crop=="tea"){suitcalss=ifelse(value==11,1,ifelse(value==7,1,ifelse(value==4,1,ifelse(value==5,1,ifelse(value==3,2,ifelse(value==9,1,ifelse(value==1,2,ifelse(value==2,2,ifelse(value==16,3,ifelse(value==10,3,ifelse(value==12,3,4)))))))))))}
-  else if(crop=="coffee"){suitcalss=ifelse(value==11,1,ifelse(value==7,1,ifelse(value==8,1,ifelse(value==1,1,ifelse(value==3,1,ifelse(value==9,1,ifelse(value==5,3,ifelse(value==2,2,ifelse(value==16,3,4)))))))))}
-  else if(crop=="rubber"){suitcalss=ifelse(value==11,1,ifelse(value==9,1,ifelse(value==4,2,ifelse(value==3,2,ifelse(value==8,3,ifelse(value==1,3,4))))))}
-  else if(crop=="jute"){suitcalss=ifelse(value==11,1,ifelse(value==7,1,ifelse(value==5,1,ifelse(value==8,2,ifelse(value==3,2,ifelse(value==9,1,ifelse(value==1,3,ifelse(value==2,2,ifelse(value==10,3,4)))))))))}
-  else if(crop=="saffron"){suitcalss=ifelse(value==4,1,ifelse(value==5,1,ifelse(value==9,2,ifelse(value==8,2,ifelse(value==1,2,ifelse(value==16,3,4))))))}
-  else if(crop=="tobacco"){suitcalss=ifelse(value==11,1,ifelse(value==7,1,ifelse(value==4,1,ifelse(value==5,1,ifelse(value==3,1,ifelse(value==9,1,ifelse(value==1,3,ifelse(value==2,2,ifelse(value==16,2,ifelse(value==10,1,ifelse(value==12,1,4)))))))))))}
-  else if(crop=="pyrethrum"){suitcalss=ifelse(value==1,1,ifelse(value==11,1,ifelse(value==9,2,ifelse(value==16,2,ifelse(value==5,3,ifelse(value==10,3,4))))))}
+  else if(crop=="sugarcane"){suitclass=ifelse(value==11,1,ifelse(value==7,1,ifelse(value==4,1,ifelse(value==3,1,ifelse(value==8,1,ifelse(value==9,1,ifelse(value==1,2,ifelse(value==5,2,ifelse(value==16,3,4)))))))))}
+  else if(crop=="tea"){suitclass=ifelse(value==11,1,ifelse(value==7,1,ifelse(value==4,1,ifelse(value==5,1,ifelse(value==3,2,ifelse(value==9,1,ifelse(value==1,2,ifelse(value==2,2,ifelse(value==16,3,ifelse(value==10,3,ifelse(value==12,3,4)))))))))))}
+  else if(crop=="coffee"){suitclass=ifelse(value==11,1,ifelse(value==7,1,ifelse(value==8,1,ifelse(value==1,1,ifelse(value==3,1,ifelse(value==9,1,ifelse(value==5,3,ifelse(value==2,2,ifelse(value==16,3,4)))))))))}
+  else if(crop=="rubber"){suitclass=ifelse(value==11,1,ifelse(value==9,1,ifelse(value==4,2,ifelse(value==3,2,ifelse(value==8,3,ifelse(value==1,3,4))))))}
+  else if(crop=="jute"){suitclass=ifelse(value==11,1,ifelse(value==7,1,ifelse(value==5,1,ifelse(value==8,2,ifelse(value==3,2,ifelse(value==9,1,ifelse(value==1,3,ifelse(value==2,2,ifelse(value==10,3,4)))))))))}
+  else if(crop=="saffron"){suitclass=ifelse(value==4,1,ifelse(value==5,1,ifelse(value==9,2,ifelse(value==8,2,ifelse(value==1,2,ifelse(value==16,3,4))))))}
+  else if(crop=="tobacco"){suitclass=ifelse(value==11,1,ifelse(value==7,1,ifelse(value==4,1,ifelse(value==5,1,ifelse(value==3,1,ifelse(value==9,1,ifelse(value==1,3,ifelse(value==2,2,ifelse(value==16,2,ifelse(value==10,1,ifelse(value==12,1,4)))))))))))}
+  else if(crop=="pyrethrum"){suitclass=ifelse(value==1,1,ifelse(value==11,1,ifelse(value==9,2,ifelse(value==16,2,ifelse(value==5,3,ifelse(value==10,3,4))))))}
 
   #soil texture suitability rating for tuber crops
   else if(crop=="sweetpotato"){suitcalss=ifelse(value==2,1,ifelse(value==3,1,ifelse(value==6,1,ifelse(value==11,1,ifelse(value==9,1,ifelse(value==8,1,ifelse(value==1,2,ifelse(value==5,2,ifelse(value==10,3,ifelse(value==12,3,4))))))))))}

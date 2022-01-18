@@ -14,8 +14,20 @@ ESPSuit=function(value, crop="wheat"){
   else if(crop=="pea"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>5,2,1)))}
   else if(crop=="gram"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>5,2,1)))}
   else if(crop=="soybean"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>5,2,1)))}
-  else if(crop=="lintel"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>5,2,1)))}
+  else if(crop=="lentil"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>5,2,1)))}
 
+  #ESP suitability rating for forests
+  else if(crop=="poplar"){suitclass=ifelse(value>20,4,ifelse(value>15,3,ifelse(value>10,2,1)))}
+  else if(crop=="grevillea"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>5,2,1)))}
+  else if(crop=="sesbania"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>5,2,1)))}
+  else if(crop=="calliandra"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>5,2,1)))}
+  else if(crop=="leucaena"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>5,2,1)))}
+  else if(crop=="acacia"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>5,2,1)))}
+  else if(crop=="eucalyptus"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>5,2,1)))}
+  else if(crop=="teak"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>5,2,1)))}
+  else if(crop=="maple"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>5,2,1)))}
+  else if(crop=="ash"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>5,2,1)))}
+  
   #ESP suitability rating for tuber crops
   else if(crop=="potato"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>5,2,1)))}
   else if(crop=="sweetpotato"){suitclass=ifelse(value>10,4,ifelse(value>6,3,ifelse(value>1,2,1)))}

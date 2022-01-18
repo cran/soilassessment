@@ -11,7 +11,7 @@ ECconversion1(ec,oc,clay,texture,soilsolution, method)
 }
 \arguments{
   \item{ec}{
-measured electrical conductivity of the soil solution in dS/m
+measured electrical conductivity of the soil solution
 }
  \item{oc}{
 organic matter content of the soil in percent
@@ -33,7 +33,7 @@ method for converting electrical conductivity of the soil:water mix to that of t
 This function considers the influence of texture, clay content, organic matter content, and soil-water solution on conversion of electrical conductivities
 }
 \value{
-electrical conductivity equivalent for saturated soil extract in dS/m
+electrical conductivity equivalent for saturated soil extract
 }
 \references{
 

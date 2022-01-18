@@ -14,8 +14,20 @@ drainageSuit=function(value,crop="wheat"){
   else if(crop=="gram"){suitclass=ifelse(value==5,1,ifelse(value==1,4,ifelse(value==2,3,ifelse(value==7,3,2))))}
   else if(crop=="groundnut"){suitclass=ifelse(value==5,1,ifelse(value==2,4,ifelse(value==3,3,2)))}
   else if(crop=="soybean"){suitclass=ifelse(value==5,1,ifelse(value==2,4,ifelse(value==3,3,2)))}
-  else if(crop=="lintel"){suitclass=ifelse(value==5,1,ifelse(value==2,4,ifelse(value==3,3,2)))}
+  else if(crop=="lentil"){suitclass=ifelse(value==5,1,ifelse(value==2,4,ifelse(value==3,3,2)))}
 
+    #drainage suitability for Forests
+  else if(crop=="poplar"){suitclass=ifelse(value==1,4,ifelse(value==2,3,ifelse(value==3,2,1)))}
+  else if(crop=="grevillea"){suitclass=ifelse(value==5,1,ifelse(value==1,4,ifelse(value==2,3,ifelse(value==7,3,2))))}
+  else if(crop=="sesbania"){suitclass=ifelse(value==5,1,ifelse(value==1,4,ifelse(value==2,3,ifelse(value==7,3,2))))}
+  else if(crop=="calliandra"){suitclass=ifelse(value==5,1,ifelse(value==2,4,ifelse(value==3,3,2)))}
+  else if(crop=="leucaena"){suitclass=ifelse(value==5,1,ifelse(value==2,4,ifelse(value==3,3,2)))}
+  else if(crop=="acacia"){suitclass=ifelse(value==5,1,ifelse(value==2,4,ifelse(value==3,3,2)))}
+  else if(crop=="eucalyptus"){suitclass=ifelse(value==5,1,ifelse(value==2,4,ifelse(value==3,3,2)))}
+  else if(crop=="teak"){suitclass=ifelse(value==5,1,ifelse(value==2,4,ifelse(value==3,3,2)))}
+  else if(crop=="maple"){suitclass=ifelse(value==5,1,ifelse(value==2,4,ifelse(value==3,3,2)))}
+  else if(crop=="ash"){suitclass=ifelse(value==5,1,ifelse(value==2,4,ifelse(value==3,3,2)))}
+  
   #drainage suitability for oilcrops
   else if(crop=="sesame"){suitclass=ifelse(value==5,1,ifelse(value==1,4,ifelse(value==4,2,3)))}
   else if(crop=="sunflower"){suitclass=ifelse(value==5,1,ifelse(value==2,4,ifelse(value==3,3,2)))}

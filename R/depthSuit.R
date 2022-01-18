@@ -8,6 +8,17 @@ depthSuit=function(value, crop="wheat"){
   else if(crop=="millet"){suitclass=ifelse(value>75,1,ifelse(value>50,2,ifelse(value>30,3,4)))}
   else if(crop=="oat"){suitclass=ifelse(value>75,1,ifelse(value>50,2,ifelse(value>30,3,4)))}
 
+  #Soil depth (cm) suitability classes for forests
+  else if(crop=="poplar"){suitclass=ifelse(value>175,1,ifelse(value>150,2,ifelse(value>105,3,4)))}
+  else if(crop=="grevillea"){suitclass=ifelse(value>175,1,ifelse(value>150,2,ifelse(value>75,3,4)))}
+  else if(crop=="sesbania"){suitclass=ifelse(value>100,1,ifelse(value>85,2,ifelse(value>40,3,4)))}
+  else if(crop=="calliandra"){suitclass=ifelse(value>175,1,ifelse(value>150,2,ifelse(value>125,3,4)))}
+  else if(crop=="leucaena"){suitclass=ifelse(value>175,1,ifelse(value>100,2,ifelse(value>80,3,4)))}
+  else if(crop=="eucalyptus"){suitclass=ifelse(value>275,1,ifelse(value>100,2,ifelse(value>80,3,4)))}
+  else if(crop=="teak"){suitclass=ifelse(value>275,1,ifelse(value>100,2,ifelse(value>80,3,4)))}
+  else if(crop=="maple"){suitclass=ifelse(value>275,1,ifelse(value>150,2,ifelse(value>100,3,4)))}
+  else if(crop=="ash"){suitclass=ifelse(value>275,1,ifelse(value>150,2,ifelse(value>100,3,4)))}
+  
   #Soil depth (cm) suitability classes for legumes
   else if(crop=="groundnut"){suitclass=ifelse(value>75,1,ifelse(value>50,2,ifelse(value>25,3,4)))}
   else if(crop=="bean"){suitclass=ifelse(value>75,1,ifelse(value>50,2,ifelse(value>25,3,4)))}
@@ -15,7 +26,7 @@ depthSuit=function(value, crop="wheat"){
   else if(crop=="gram"){suitclass=ifelse(value>75,1,ifelse(value>50,2,ifelse(value>25,3,4)))}
   else if(crop=="soybean"){suitclass=ifelse(value>75,1,ifelse(value>50,2,ifelse(value>30,3,4)))}
   else if(crop=="lentil"){suitclass=ifelse(value>75,1,ifelse(value>50,2,ifelse(value>30,3,4)))}
-
+  
   #Soil depth (cm) suitability classes for oil crops
   else if(crop=="sesame"){suitclass=ifelse(value>75,1,ifelse(value>50,2,ifelse(value>25,3,4)))}
   else if(crop=="sunflower"){suitclass=ifelse(value>100,1,ifelse(value>75,2,ifelse(value>50,3,4)))}

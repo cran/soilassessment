@@ -8,7 +8,7 @@ saltSeverity=function(ec,ph,ESP,method="FAO"){
     bb1=ifelse(ec<0.75,6,ifelse(ec<2,8,ifelse(ec<4,9,ifelse(ec<8,10,ifelse(ec<15,11,12)))))
     #sodicity
     bb2=ifelse(esp<15,13,ifelse(esp<30,14,ifelse(esp<50,15,ifelse(esp<70,16,17))))
-    saltclass=ifelse(salt1<3,bb1,ifelse(salt1<4,3,ifelse(salt1<5,bb2,14)))
+    saltclass=ifelse(salt1<3,bb1,ifelse(salt1<4,3,ifelse(salt1<5,bb2,18)))
 
   }
   else if(method=="USDA"){

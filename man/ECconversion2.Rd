@@ -17,7 +17,7 @@ measured electrical conductivity of the soil solution in dS/m
 ratio of soil:water mix when electrical conductivity was measured. Example is 1:1, 1:2, etc. The default is 1:1
 }
  \item{method}{
-method for converting electrical conductivity of the soil:water mix to that of the soil paste extract. The methods included are USDA, landon, kargas, ozkan, and hogg. The default is USDA
+method for converting electrical conductivity of the soil:water mix to that of the soil paste extract. The methods included are USDA, landon, kargas, ozkan, hogg, park, visconti, korsandi, shahid, klaustermeier, and he. The default is USDA
 }
 }
 \details{
@@ -33,6 +33,9 @@ Kargas G, Chatzigiakoumis I, Kollias A, Spiliotis D, Massas I, Kerkides P. 2018.
 }
 \author{
 Christian Thine Omuto
+}
+\note{
+Models that work with soil solutions in 1:1 soil-water mix are: USDA, landon, kargas, ozkan,hogg, and zhang. Models for 1:2 solutions are: USDA and hogg. Models for 1:2.5 are: ozkan and shahid. landon model also works for 1:3 soil solution. Models for 1:5 are: USDA, landon, kargas, ozkan, chi, park, visconti, korsandi, klaustermeier, and he. The function only works for soil solution mix ratio handled by the respective model.
 }
 \seealso{
 ECconversion1, saltClass, saltRating

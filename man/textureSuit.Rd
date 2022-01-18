@@ -1,10 +1,10 @@
 \name{textureSuit}
 \alias{textureSuit}
 \title{
-A function for assessing texture suitability requirements for certain crops
+A function for assessing texture suitability requirements for certain crops and trees
 }
 \description{
-This function determines the suitability classes for texture requirements of selected agricultural crops
+This function determines the suitability classes for texture requirements of selected agricultural crops and forest trees
 }
 \usage{
 textureSuit(value, crop)

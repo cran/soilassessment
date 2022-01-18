@@ -16,6 +16,18 @@ LGPSuit=function(value,crop="wheat"){
   else if(crop=="soybean"){suitclass=ifelse(value>120,1,ifelse(value>100,2,ifelse(value>85,3,4)))}
   else if(crop=="lentil"){suitclass=ifelse(value>120,1,ifelse(value>100,2,ifelse(value>80,3,4)))}
 
+  #lgp (length of growing season/period) suitability requirements for forests
+  else if(crop=="poplar"){suitclass=ifelse(value>100,1,ifelse(value>90,2,ifelse(value>75,3,4)))}
+  else if(crop=="grevillea"){suitclass=ifelse(value>120,1,ifelse(value>90,2,ifelse(value>70,3,4)))}
+  else if(crop=="sesbania"){suitclass=ifelse(value>110,1,ifelse(value>90,2,ifelse(value>70,3,4)))}
+  else if(crop=="calliandra"){suitclass=ifelse(value>120,1,ifelse(value>100,2,ifelse(value>80,3,4)))}
+  else if(crop=="leucaena"){suitclass=ifelse(value>120,1,ifelse(value>100,2,ifelse(value>85,3,4)))}
+  else if(crop=="acacia"){suitclass=ifelse(value>120,1,ifelse(value>100,2,ifelse(value>80,3,4)))}
+  else if(crop=="eucalyptus"){suitclass=ifelse(value>120,1,ifelse(value>100,2,ifelse(value>80,3,4)))}
+  else if(crop=="teak"){suitclass=ifelse(value>120,1,ifelse(value>100,2,ifelse(value>80,3,4)))}
+  else if(crop=="maple"){suitclass=ifelse(value>120,1,ifelse(value>100,2,ifelse(value>80,3,4)))}
+  else if(crop=="ash"){suitclass=ifelse(value>120,1,ifelse(value>100,2,ifelse(value>80,3,4)))}
+  
   #lgp (length of growing season/period) suitability requirements for oil crops
   else if(crop=="sesame"){suitclass=ifelse(value>90,1,ifelse(value>70,2,ifelse(value>60,3,4)))}
   else if(crop=="oilpalm"){suitclass=ifelse(value>120,4,ifelse(value>100,3,ifelse(value>90,2,1)))}

@@ -16,6 +16,18 @@ SOCSuit=function(value,crop="wheat"){
   else if(crop=="lentil"){suitclass=ifelse(value>1.2,1,ifelse(value>0.8,2,ifelse(value>0.3,3,4)))}
   else if(crop=="gram"){suitclass=ifelse(value>1.2,1,ifelse(value>0.8,2,ifelse(value>0.3,3,4)))}
 
+  #Soil organic carbon % suitability classes for forest
+  else if(crop=="poplar"){suitclass=ifelse(value>1.2,1,ifelse(value>0.8,2,ifelse(value>0.3,3,4)))}
+  else if(crop=="grevillea"){suitclass=ifelse(value>1.2,1,ifelse(value>0.8,2,ifelse(value>0.3,3,4)))}
+  else if(crop=="sesbania"){suitclass=ifelse(value>1.2,1,ifelse(value>0.8,2,ifelse(value>0.3,3,4)))}
+  else if(crop=="calliandra"){suitclass=ifelse(value>1.2,1,ifelse(value>0.8,2,ifelse(value>0.3,3,4)))}
+  else if(crop=="leucaena"){suitclass=ifelse(value>1.2,1,ifelse(value>0.8,2,ifelse(value>0.3,3,4)))}
+  else if(crop=="acacia"){suitclass=ifelse(value>1.2,1,ifelse(value>0.8,2,ifelse(value>0.3,3,4)))}
+  else if(crop=="eucalyptus"){suitclass=ifelse(value>1.2,1,ifelse(value>0.8,2,ifelse(value>0.3,3,4)))}
+  else if(crop=="teak"){suitclass=ifelse(value>1.2,1,ifelse(value>0.8,2,ifelse(value>0.3,3,4)))}
+  else if(crop=="maple"){suitclass=ifelse(value>1.2,1,ifelse(value>0.8,2,ifelse(value>0.3,3,4)))}
+  else if(crop=="ash"){suitclass=ifelse(value>1.2,1,ifelse(value>0.8,2,ifelse(value>0.3,3,4)))}
+  
   #Soil organic carbon % suitability classes for oilcrops
   else if(crop=="sesame"){suitclass=ifelse(value>1.2,1,ifelse(value>0.8,2,ifelse(value>0.3,3,4)))}
   else if(crop=="sunflower"){suitclass=ifelse(value>1.2,1,ifelse(value>0.8,2,ifelse(value>0.3,3,4)))}

@@ -1,10 +1,10 @@
 \name{slopeSuit}
 \alias{slopeSuit}
 \title{
-A function for assessing slope suitability requirements for certain crops
+A function for assessing slope suitability requirements for certain crops and trees
 }
 \description{
-This function determines the suitability classes for slope requirements of selected agricultural crops
+This function determines the suitability classes for slope requirements of selected agricultural crops and forest trees
 }
 \usage{
 slopeSuit(value, crop)

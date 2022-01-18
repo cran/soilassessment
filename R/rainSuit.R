@@ -16,6 +16,18 @@ rainSuit=function(value,crop="wheat"){
   else if(crop=="soybean"){suitclass=ifelse(value>1900,4,ifelse(value>1600,3,ifelse(value>1100,2,ifelse(value>600,1,ifelse(value>350,2,ifelse(value>250,3,4))))))}
   else if(crop=="lentil"){suitclass=ifelse(value>1000,4,ifelse(value>800,3,ifelse(value>700,2,ifelse(value>450,1,ifelse(value>350,2,ifelse(value>300,3,4))))))}
 
+  #rainfed crop suitability requirements for forests
+  else if(crop=="poplar"){suitclass=ifelse(value>1500,1,ifelse(value>1000,2,ifelse(value>700,3,4)))}
+  else if(crop=="grevillea"){suitclass=ifelse(value>1250,1,ifelse(value>800,2,ifelse(value>600,3,4)))}
+  else if(crop=="sesbania"){suitclass=ifelse(value>1250,1,ifelse(value>800,2,ifelse(value>600,3,ifelse(value>400,3,4))))}
+  else if(crop=="calliandra"){suitclass=ifelse(value>1300,1,ifelse(value>1000,2,ifelse(value>750,3,4)))}
+  else if(crop=="leucaena"){suitclass=ifelse(value>1000,1,ifelse(value>900,2,ifelse(value>600,3,4)))}
+  else if(crop=="acacia"){suitclass=ifelse(value>1200,1,ifelse(value>600,2,ifelse(value>400,3,4)))}
+  else if(crop=="eucalyptus"){suitclass=ifelse(value>1500,1,ifelse(value>1200,2,ifelse(value>900,3,4)))}
+  else if(crop=="teak"){suitclass=ifelse(value>1800,1,ifelse(value>1200,2,ifelse(value>1000,3,4)))}
+  else if(crop=="maple"){suitclass=ifelse(value>1400,1,ifelse(value>1100,2,ifelse(value>900,3,4)))}
+  else if(crop=="ash"){suitclass=ifelse(value>1400,1,ifelse(value>1100,2,ifelse(value>900,3,4)))}
+  
   #rainfed crop suitability requirements for oil crops
   if(crop=="sesame"){suitclass=ifelse(value>600,3,ifelse(value>500,1,ifelse(value>400,2,ifelse(value>300,3,4))))}
   else if(crop=="sunflower"){suitclass=ifelse(value>700,3,ifelse(value>600,1,ifelse(value>500,2,ifelse(value>400,3,4))))}

@@ -21,5 +21,6 @@ import(qrnn)
 import(quantregForest)
 importFrom(nnet,"nnet")
 importFrom(deSolve,"ode")
+importFrom(nlme,"nlme")
 
 

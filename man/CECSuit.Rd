@@ -1,10 +1,10 @@
 \name{CECSuit}
 \alias{CECSuit}
 \title{
-A function for assessing Cation Exchange Capacity (CEC) suitability requirements for certain crops
+A function for assessing Cation Exchange Capacity (CEC) suitability requirements for certain crops and trees
 }
 \description{
-This function determines the suitability classes for Cation Exchange Capacity (CEC) requirements of selected agricultural crops
+This function determines the suitability classes for Cation Exchange Capacity (CEC) requirements of selected agricultural crops and forest trees
 }
 \usage{
 CECSuit(value, crop)

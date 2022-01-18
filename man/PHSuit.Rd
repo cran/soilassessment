@@ -1,10 +1,10 @@
 \name{PHSuit}
 \alias{PHSuit}
 \title{
-A function for assessing pH suitability requirements for certain crops
+A function for assessing pH suitability requirements for certain crops and trees
 }
 \description{
-This function determines the suitability classes for soil pH requirements for selected agricultural crops
+This function determines the suitability classes for soil pH requirements for selected agricultural crops and forest trees
 }
 \usage{
 PHSuit(value, crop)
