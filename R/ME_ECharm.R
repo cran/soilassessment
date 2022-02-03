@@ -8,7 +8,6 @@ ME_ECharm=function(EC,TEXCLASS, model="polynomial", soilsolution="1:2"){
 
   if (soilsolution=="1:2"){
     dfm=data.frame(EC2=c(EC),TEXCLASS1=c(TEXCLASS2))
-    ME_ECharmserve <- NULL
     if(model=="polynomial"){ECharm=predict(ME_ECharmserve[[1]],dfm)}
     else if(model=="sigmoid"){ECharm=predict(ME_ECharmserve[[2]],dfm)}
     else if(model=="spherical"){ECharm=predict(ME_ECharmserve[[3]],dfm)}

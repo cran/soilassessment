@@ -48,6 +48,6 @@ ME_PHharm, ME_ECharm, ECconversion1
 }
 \examples{
 testdata=data.frame(PHKC=c(6.45,8.34,5.07,12.17, 4.219),TEX=c("Cl","SaCl","LoSa", "Si","SaClLo"))
-testdata$PHs1=PHConversion(testdata$PHKC,"kabala","KCl")
+testdata$PHs1=PHConversion(testdata$PHKC,"kabala","kcl")
 
 }

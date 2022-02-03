@@ -42,6 +42,6 @@ ME_ECharm, ECconversion1
 }
 \examples{
 newdata=data.frame(ph=c(1,0.34,5.07,12.17, 2.219),tex=c("Cl","SaCl","LoSa", "Si","SaClLo"))
-newdata$pH2=ME_PHharm(newdata$ph,newdata$tex,"exponential","KCl")
+newdata$pH2=ME_PHharm(newdata$ph,newdata$tex,"exponential","kcl")
 
 }

@@ -2,7 +2,7 @@ appendTextureclass=function(df, method="USDA"){
   if(class(df)[1]=="SpatialPointsDataFrame"){
     soilp=df
     total <- 20
-    pb = txtProgressBar(min = 0, max = total, style = 3)#pb <- winProgressBar(title = "Model processing", min = 0, max = total, width = 300)
+    pb = txtProgressBar(min = 0, max = total, style = 3)
 
     if(method=="USDA"){soilp@data =cbind(soilp@data, "TEXCLASS" = TT.points.in.classes(tri.data  = soilp@data[, c('CLAY_n', 'SILT_n',  'SAND_n')],css.names = c('CLAY_n', 'SILT_n', 'SAND_n'),class.sys = "USDA.TT", PiC.type  = "t",collapse  = ', '))
     texclass=levels(soilp@data$TEXCLASS)}
@@ -30,7 +30,7 @@ appendTextureclass=function(df, method="USDA"){
     }
     for(i in 1:total){
       Sys.sleep(0.5)
-      setTxtProgressBar(pb, i)   #setWinProgressBar(pb, i, title=paste( round(i/total*100, 0),"% done"))
+      setTxtProgressBar(pb, i)   
     }
   }
   else{

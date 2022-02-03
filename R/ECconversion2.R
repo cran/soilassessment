@@ -32,10 +32,10 @@ ECconversion2=function(ec,soilsolution="1:1", method="USDA"){
   else if(method=="park") {
     if(soilsolution=="1:5"){ElectConduct=ec*8.7}
   }
-  else if(method=="visconti") {
+  else if(method=="viscounti") {
     if(soilsolution=="1:5"){ElectConduct=ec*6.53-0.108}
   }
-  else if(method=="korsandi") {
+  else if(method=="khorsandi") {
     if(soilsolution=="1:5"){ElectConduct=ec*5.4-0.61}
   }
   else if(method=="shahid") {
@@ -46,6 +46,12 @@ ECconversion2=function(ec,soilsolution="1:1", method="USDA"){
   }
   else if(method=="he") {
     if(soilsolution=="1:5"){ElectConduct=exp(0.7*log(ec)+1.78)}
+  }
+  else if(method=="aboukila") {
+    if(soilsolution=="1:5"){ElectConduct=11.74*ec-6.15}
+  }
+  else if(method=="halder") {
+    if(soilsolution=="1:5"){ElectConduct=4.834*ec+0.437}
   }
 
   return(ElectConduct)
