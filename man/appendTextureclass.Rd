@@ -4,7 +4,7 @@
 A function for attaching soil textural classes
 }
 \description{
-This function attaches soil textural classes according to the different soil texture classification systems
+This function attaches soil textural classes according to different soil texture classification systems
 }
 \usage{
 appendTextureclass(df, method)
@@ -13,7 +13,7 @@ appendTextureclass(df, method)
   \item{df}{
 spatial pixel dataframe with columns of soil textural proportions clay, silt, and sand in percentages
 }
-\item{method}{
+  \item{method}{
 soil texture classification method for calculating soil texture. Default=USDA method
 }
 }
@@ -33,14 +33,14 @@ Christian Thine Omuto
 \note{
 This function can sometimes return double classes such as "SaLo, Lo" implying possibility of a tie for two classes.
 }
-
 \seealso{
-textureclassLUT, textureLevels, createTexturedata
+\code{\link{textureSuit}}, \code{\link{createTexturedata}}
 }
 \examples{
 library(soiltexture)
 newtxt=textureinput
-\donttest{texturedata=createTexturedata(newtxt$clay, newtxt$silt, newtxt$sand)
+\donttest{
+texturedata=createTexturedata(newtxt$clay, newtxt$silt, newtxt$sand)
 newtxt1=appendTextureclass(as.data.frame(texturedata), method = "USDA")
 levels(as.factor(newtxt1$TEXCLASS))
 }

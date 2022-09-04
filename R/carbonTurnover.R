@@ -15,7 +15,7 @@ carbonTurnover=function(tt,clay,C0,In, Dr=1.44, effcts, solver="lsoda"){
      stat1=c(C1=C0[1],C2=C0[2],C3=C0[3],C4=C0[4],C5=C0[5])}
     if(length(effcts)==1)
       func1=function(tt){effcts}
-    if(class(effcts)=="data.frame"){
+    if(is(effcts,"data.frame")){
       uu1=effcts[,1]
       uu2=effcts[,2]
       func1=splinefun(uu1,uu2)
@@ -23,7 +23,7 @@ carbonTurnover=function(tt,clay,C0,In, Dr=1.44, effcts, solver="lsoda"){
 
    if (length(In) == 1)
      func2=function(tt){In}
-    if (class(In)=="data.frame"){
+    if (is(In,"data.frame")){
       uu3=In[,1]
       uu4=In[,2]
       func2=splinefun(uu3,uu4)

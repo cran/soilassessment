@@ -13,22 +13,22 @@ erodFUN(sand,silt,clay,OC,texture,Struct,method)
   \item{sand}{
 sand proportion (percent) of the soil texture
 }
-\item{silt}{
+  \item{silt}{
 silt proportion (percent) of the soil texture
 }
-\item{clay}{
+  \item{clay}{
 clay proportion (percent) of the soil texture
 }
-\item{OC}{
+  \item{OC}{
 soil carbon content (percent)
 }
-\item{texture}{
+  \item{texture}{
 soil texture code representing the USDA soil textural class. Use classnames("texture") to insert the correct texture code
 }
-\item{Struct}{
+  \item{Struct}{
 soil structure code representing the soil structure class. Use classnames("structure") to insert the correct structure code
 }
-\item{method}{
+  \item{method}{
 method for determining soil erodibility. The following methods are included: WSmith,Yang,Renard,Bouyoucos,Denardin,Wang,Wisch1,Wisch2,Sharpley,Cheng,Auer.
 }
 }
@@ -43,9 +43,8 @@ Omuto CT and Vargas R. 2009. Combining pedometrics, remote sensing and field obs
 \author{
 Christian Thine Omuto
 }
-
 \seealso{
-erosivFUN, erodibilityRisk, slopelenFUN, permeabilityClass, classCode, classnames
+\code{\link{erosivFUN}}, \code{\link{erodibilityRisk}}, \code{\link{sloplenFUN}}
 }
 \examples{
 library(sp)

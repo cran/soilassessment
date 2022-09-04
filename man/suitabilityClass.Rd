@@ -13,10 +13,10 @@ suitabilityClass(value,crop,factor)
   \item{value}{
 Input indicator value.
 }
-\item{crop}{
+  \item{crop}{
 The crop of interest for which suitability is determined.
 }
-\item{factor}{
+  \item{factor}{
 The suitability factor for crop requirement. Example factors include: rain, slope, carbonate, EC, ESP, depth, ph, temperature,
 }
 }
@@ -34,11 +34,9 @@ FAO Crop Suitability Requirements: http://ecocrop.fao.org/ecocrop/srv/en/home
 \author{
 Christian Thine Omuto
 }
-
 \note{
 This function assumes rainfall as the source of water for crop development. The input slope value must be in degrees
 }
-
 \seealso{
 suitability,slopeSuit, tempSuit
 }

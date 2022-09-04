@@ -13,19 +13,19 @@ RotCmoistcorrection(P, E, S.Thick, clay, pE, fk)
   \item{P}{
  the total rainfall amount in mm
 }
- \item{E}{
+  \item{E}{
  the total evapotranspiration amounts in mm. It can be pan evapotranspiration or potential evapotranspiration rate
 }
- \item{S.Thick}{
+  \item{S.Thick}{
  thickness of soil depth in cm (measured from the soil surface)
 }
-\item{clay}{
+  \item{clay}{
  clay content in percent
 }
-\item{pE}{
+  \item{pE}{
  proportion of pan evapotranspiration representing potential evapotranspiration rate.
 }
-\item{fk}{
+  \item{fk}{
  A constant to correct for soil cover. For bare soil, fk=1.8 and for soil with cover, fk=1
 }
 }
@@ -41,7 +41,6 @@ Burke, I., Kaye, J., Bird, S., Hall, S., McCulley, R., Sommerville, G. 2003. Eva
 Adair, E., Parton, W., Del Grosso, S., Silver, W., Harmon, M.,Hall, S., Burke, I., and Hart, S. 2008. Simple three-pool model accurately describes patterns of long-term litter decomposition in diverse climates, Global Change Biology, 14: 2636–2660
 
 Coleman, K. and Jenkinson, D. 2014. ROTHC-26.3 A model for the turnover of carbon in soils: Model description and users guide (Windows version). Rothamsted Research Harpenden Herts AL5 2JQ
-
 }
 \author{
 Christian Thine Omuto
@@ -49,9 +48,8 @@ Christian Thine Omuto
 \note{
 This function can be used with monthly or annual input data to produce time-dependent scalars
 }
-
 \seealso{
-RotCtempcorrection, NPPmodel, carbonTurnover
+\code{\link{carbonTurnover}}, \code{\link{RotCtempcorrection}}, \code{\link{NPPmodel}}
 }
 \examples{
 clay=34.5

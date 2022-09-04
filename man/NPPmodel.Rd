@@ -13,10 +13,10 @@ NPPmodel(rain,temperature,model)
   \item{rain}{
 total annual rainfall amount in mm
 }
-\item{temperature}{
+  \item{temperature}{
 average annual air temperature amount in degrees Celsius
 }
-\item{model}{
+  \item{model}{
 model for calculating net primary production. Included models in the function are Miami, Schurr, and NCEAS
 }
 }
@@ -32,7 +32,6 @@ Schuur, E. A. G. 2003. Productivity and global climate revisited: the sensitivit
 Lieth, H. 1975. Modeling the primary productivity of the world. Pages 237–264 in H. Lieth and R. H. Whittaker, editors. Primary productivity of the biosphere. Springer-Verlag, New York, New York, USA
 
 Del Grosso, S., Parton, W., Stohlgren, T., Zheng, D., Bachelef, D., Prince, S., Hibbard, K., Olson, R. 2008. Global potential net primary production predicted from vegetation class, precipitation, and temperature. Ecology, 89(8): 2117-2126
-
 }
 \author{
 Christian Thine Omuto
@@ -40,9 +39,8 @@ Christian Thine Omuto
 \note{
 This empirical function estimates annual NPP in g/m2/year. It is a general model for all land cover types. It may be necessary to adjust it for certain cover types or geolocations
 }
-
 \seealso{
-RotCmoistcorrection, RotCtempcorrection, carbonTurnover
+\code{\link{carbonTurnover}}, \code{\link{RotCmoistcorrection}}
 }
 \examples{
 NPPmodel(800,23,"miami")

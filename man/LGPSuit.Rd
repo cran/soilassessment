@@ -13,8 +13,8 @@ LGPSuit(value, crop)
   \item{value}{
 Input length of growing period (LGP) in days.
 }
-\item{crop}{
-The crop of interest for which length of growing period (LGP) suitability class is sought.
+  \item{crop}{
+The crop of interest for which length of growing period (LGP) suitability class is sought
 }
 }
 \details{
@@ -37,9 +37,8 @@ Christian Thine Omuto
 \note{
 If the input value is raster map, then the output will also be a raster map of LGP suitability for the crop of interest
 }
-
 \seealso{
-tempSuit, PHSuit, rainSuit
+\code{\link{suitability}}, \code{\link{PHSuit}}, \code{\link{fertilitySuit}}
 }
 \examples{
 library(sp)

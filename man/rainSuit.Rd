@@ -13,7 +13,7 @@ rainSuit(value, crop)
   \item{value}{
 Input rainfall amounts in mm.
 }
-\item{crop}{
+  \item{crop}{
 The crop of interest for which rainfall suitability class is sought.
 }
 }
@@ -37,9 +37,8 @@ Christian Thine Omuto
 \note{
 This function assumes rainfall as the source of water for crop development
 }
-
 \seealso{
-tempSuit, ESPSuit, classCode
+\code{\link{suitability}}, \code{\link{ESPSuit}}, \code{\link{fertilitySuit}}
 }
 \examples{
 library(sp)

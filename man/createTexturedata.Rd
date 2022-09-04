@@ -9,15 +9,14 @@ The function creates spatial dataframe of normalized soil texture proportions. T
 \usage{
 createTexturedata(clay,silt,sand)
 }
-
 \arguments{
   \item{clay}{
 clay proportion of soil texture in percent
 }
- \item{silt}{
+  \item{silt}{
 silt proportion of soil texture in percent
 }
- \item{sand}{
+  \item{sand}{
 sand proportion of soil texture in percent
 }
 }
@@ -33,9 +32,8 @@ Christian Thine Omuto
 \note{
 It's important to ensure the input data does not have negative values nor add up to far below or above 100 per cent. It's also important to adhere to the order of the input data: clay, silt, sand
 }
-
 \seealso{
-classLUT, appendTextureclass, createTexturedata
+\code{\link{createTexturedata}}, \code{\link{appendTextureclass}}
 }
 \examples{
 #data(textureinput)

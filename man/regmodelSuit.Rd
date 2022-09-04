@@ -1,10 +1,10 @@
 \name{regmodelSuit}
 \alias{regmodelSuit}
 \title{
-A function for guiding selection of predition model for modelling soil condition
+A function for guiding selection of a predition model for modelling soil properties
 }
 \description{
-This function evaluates suitability of most predition models in mapping soil condition using a set of predictors
+This function evaluates suitability of most predition models in mapping soil properties using a set of predictors
 }
 \usage{
 regmodelSuit(df, ...)
@@ -32,9 +32,8 @@ Christian Thine Omuto
 \note{
 The function carries 5-fold cross-validation. Sometimes it may give a warning of missing resample performance with some models. It's important to ensure no NA in the data used for modelling
 }
-
 \seealso{
-suitability, pedoTransfer, pedoTransfer, predUncertain
+\code{\link{pedoTransfer}}, \code{\link{predUncertain}}, \code{\link{ECconversion3}}
 }
 \examples{
 library(caret)

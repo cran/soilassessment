@@ -32,9 +32,8 @@ Sanchez PA, Palm CA, Buol SW. 2003. Fertility capability soil classification: a 
 \author{
 Christian Thine Omuto
 }
-
 \seealso{
-ECconversion1,ECconversion2, saltRating,suitability
+\code{\link{suitability}}, \code{\link{saltRating}}, \code{\link{fertilitySuit}}
 }
 \examples{
 library(sp)

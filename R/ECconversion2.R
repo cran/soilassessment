@@ -1,57 +1,57 @@
-ECconversion2=function(ec,soilsolution="1:1", method="USDA"){
+ECconversion2=function(ec,extract="1:1", method="USDA"){
 
   if(method=="landon"){
-    if(soilsolution=="1:1"){ElectConduct=ec*2.2}
-    else if(soilsolution=="1:5"){ElectConduct=ec*6.4}
-    else if(soilsolution=="1:3"){ElectConduct=ec*3.81}
+    if(extract=="1:1"){ElectConduct=harmonization(ec,2.2,0)}
+    else if(extract=="1:5"){ElectConduct=harmonization(ec,6.4,0)}
+    else if(extract=="1:3"){ElectConduct=harmonization(ec,3.81,0)}
   }
   else if(method=="kargas"){
-    if(soilsolution=="1:1"){ElectConduct=ec*1.83+0.117}
-    else if(soilsolution=="1:5"){ElectConduct=ec*6.53-0.108}
+    if(extract=="1:1"){ElectConduct=harmonization(ec,1.83,0.117)}
+    else if(extract=="1:5"){ElectConduct=harmonization(ec,6.53,-0.108)}
   }
   else if(method=="ozkan"){
-    if(soilsolution=="1:1"){ElectConduct=ec*1.93-0.57}
-    else if(soilsolution=="1:2.5"){ElectConduct=ec*3.3-0.2}
-    else if(soilsolution=="1:5"){ElectConduct=ec*5.97-1.17}
+    if(extract=="1:1"){ElectConduct=harmonization(ec,1.93,-0.57)}
+    else if(extract=="1:2.5"){ElectConduct=harmonization(ec,3.3,-0.2)}
+    else if(extract=="1:5"){ElectConduct=harmonization(ec,5.97,-1.17)}
   }
   else if(method=="USDA") {
-    if(soilsolution=="1:1"){ElectConduct=ec*3}
-    else if(soilsolution=="1:5"){ElectConduct=ec*4.5}
-    else if(soilsolution=="1:2"){ElectConduct=ec*5}
+    if(extract=="1:1"){ElectConduct=harmonization(ec,3,0)}
+    else if(extract=="1:5"){ElectConduct=harmonization(ec,4.5,0)}
+    else if(extract=="1:2"){ElectConduct=harmonization(ec,5,0)}
   }
   else if(method=="hogg") {
-    if(soilsolution=="1:1"){ElectConduct=ec*1.75-0.37}
-    else if(soilsolution=="1:2"){ElectConduct=ec*1.38-0.14}
+    if(extract=="1:1"){ElectConduct=harmonization(ec,1.75,-0.37)}
+    else if(extract=="1:2"){ElectConduct=harmonization(ec,1.38,-0.14)}
   }
   else if(method=="zhang") {
-    if(soilsolution=="1:1"){ElectConduct=ec*1.79+1.46}
-      }
+    if(extract=="1:1"){ElectConduct=harmonization(ec,1.79,1.46)}
+  }
   else if(method=="chi") {
-    if(soilsolution=="1:5"){ElectConduct=ec*11.68-5.77}
+    if(extract=="1:5"){ElectConduct=harmonization(ec,11.68,-5.77)}
   }
   else if(method=="park") {
-    if(soilsolution=="1:5"){ElectConduct=ec*8.7}
+    if(extract=="1:5"){ElectConduct=harmonization(ec,8.7,0)}
   }
   else if(method=="viscounti") {
-    if(soilsolution=="1:5"){ElectConduct=ec*6.53-0.108}
+    if(extract=="1:5"){ElectConduct=harmonization(ec,6.53,-0.108)}
   }
   else if(method=="khorsandi") {
-    if(soilsolution=="1:5"){ElectConduct=ec*5.4-0.61}
+    if(extract=="1:5"){ElectConduct=harmonization(ec,5.4,-0.61)}
   }
   else if(method=="shahid") {
-    if(soilsolution=="1:2.5"){ElectConduct=ec*4.77}
+    if(extract=="1:2.5"){ElectConduct=harmonization(ec,4.77,0)}
   }
   else if(method=="klaustermeier") {
-    if(soilsolution=="1:5"){ElectConduct=10^(1.256*log10(ec) +0.766)}
+    if(extract=="1:5"){ElectConduct=10^(1.256*log10(ec) +0.766)}
   }
   else if(method=="he") {
-    if(soilsolution=="1:5"){ElectConduct=exp(0.7*log(ec)+1.78)}
+    if(extract=="1:5"){ElectConduct=exp(0.7*log(ec)+1.78)}
   }
   else if(method=="aboukila") {
-    if(soilsolution=="1:5"){ElectConduct=11.74*ec-6.15}
+    if(extract=="1:5"){ElectConduct=harmonization(ec,11.74,-6.15)}
   }
   else if(method=="halder") {
-    if(soilsolution=="1:5"){ElectConduct=4.834*ec+0.437}
+    if(extract=="1:5"){ElectConduct=harmonization(ec,4.834,0.437)}
   }
 
   return(ElectConduct)

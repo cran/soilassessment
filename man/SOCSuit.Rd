@@ -13,7 +13,7 @@ SOCSuit(value, crop)
   \item{value}{
 Input soil organic carbon content in percent.
 }
-\item{crop}{
+  \item{crop}{
 The crop of interest for which soil organic carbon suitability class is sought.
 }
 }

@@ -13,13 +13,13 @@ surveyPoints(soilmap,scorpan,conditionclass,mapproportion)
   \item{soilmap}{
 input classified map of soil condition
 }
-\item{scorpan}{
+  \item{scorpan}{
 number of scorpan factors that generated teh soil condition map. The range is 1-5
 }
-\item{conditionclass}{
+  \item{conditionclass}{
 reference class in the soil condition map to be monitored. The class code should be in the map
 }
-\item{mapproportion}{
+  \item{mapproportion}{
 Proportion in percent of the reference class in the soil condition map to be monitored.
 }
 }
@@ -32,13 +32,11 @@ A spatial points dataframe with projection similar to the soil condition map pro
 \author{
 Christian Thine Omuto
 }
-
 \seealso{
 featureRep, imageIndices, pedoTransfer, classCode
 }
 \examples{
 library(sp)
-library(rgdal)
 library(raster)
 ec=suitabinput["ec"]
 ph=suitabinput["ph"]

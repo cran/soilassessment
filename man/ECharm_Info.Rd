@@ -1,7 +1,7 @@
 \name{ECharm_Info}
 \alias{ECharm_Info}
 \title{
-Performance information for soil electrical conductivity (EC) harmonization models
+Information on performance of soil electrical conductivity (EC) harmonization models
 }
 \description{
 Information index for relative predictive performance of soil EC harmonization models
@@ -26,9 +26,8 @@ Christian Thine Omuto
 \note{
 The function currently works for 1:2, 1:2.5, and 1:5. These ratios must be entered in quotation marks.Due to periodic update,internet connectivity is needed for the function to work.
 }
-
 \seealso{
-PHharm_Info, SASdata_densityInfo
+\code{\link{PHharm_Info}}, \code{\link{SASdata_densityInfo}}
 }
 \examples{
 ECharm_Info("1:2")

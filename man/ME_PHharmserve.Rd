@@ -9,3 +9,6 @@ Mixed effects models for harmonizing soil pH
 \details{
 Suit of mixed-effects models
 }
+\note{
+Internet connectivity is needed for the function to work.
+}

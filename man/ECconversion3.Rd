@@ -1,10 +1,10 @@
 \name{ECconversion3}
 \alias{ECconversion3}
 \title{
-A function for developing own conversion model
+A function for developing own harmonization model
 }
 \description{
-This function enables development of own function for converting soil assessment indicators to those determined from the standard saturated soil paste
+This function enables development of own function for harmonizing soil indicators to standard values
 }
 \usage{
 ECconversion3(x, A, B, method)
@@ -13,10 +13,10 @@ ECconversion3(x, A, B, method)
   \item{x}{
 input predictor value
 }
-\item{A}{
-A location parameter representing the value of target variable when the predictors are minimal (or the y-intercept)
+  \item{A}{
+location parameter representing the value of target variable when the predictors are minimal (or the y-intercept)
 }
- \item{B}{
+  \item{B}{
 Rate parameter representing the rate of change of the target variable with the predictor (or the slope)
 }
  \item{method}{
@@ -33,13 +33,12 @@ model object containing predictive parameters of the conversion model
 van Looy k,  Bouma  J, Herbst M,  Koestel J, Minasny B,  Mishra U, Montzka C,  Nemes A,  Pachepsky AY,  Padarian J,  Schaap MG,  Tóth B,  Verhoef A, Jan Vanderborght,  van der Ploeg MJ,  Weihermüller L,   Zacharias S,  Zhang Y,  Vereecken H. 2017. Pedotransfer functions in Earth System Science: Challenges and Perspectives. Reviews of Geophysics 55(4): 1199-1256.
 
 Sudduth KA, Kitchen RN, Wiebold WJ, Batchelor W. 2005. Relating apparent electrical conductivity to soil properties across the North-Central USA. Computers and Electronics in Agriculture, 46(1-3):263-283
-
 }
 \author{
 Christian Thine Omuto
 }
 \seealso{
-ECconversion1, ECconversion2, saltRating
+\code{\link{ECconversion1}}, \code{\link{ECconversion2}}, \code{\link{ECconversion4}}
 }
 \examples{
 x=as.vector(c(0.800,2.580,0.980,0.532,1.870, 18.500,0.430,0.302,0.345,2.700))

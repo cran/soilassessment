@@ -1,6 +1,5 @@
 exportPattern("^[[:alpha:]]+")
 import(sp)
-import(rgdal)
 import(raster)
 importFrom(utils,"txtProgressBar","setTxtProgressBar","read.csv","unzip")
 importFrom(soiltexture,"TT.points.in.classes","TT.normalise.sum")

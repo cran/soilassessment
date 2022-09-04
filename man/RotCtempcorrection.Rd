@@ -38,7 +38,7 @@ The function works with temperatures greater than -18.2 degrees Celsius
 }
 
 \seealso{
-RotCmoistcorrection, NPPmode, carbonTurnover
+\code{\link{carbonTurnover}}, \code{\link{RotCmoistcorrection}}, \code{\link{NPPmodel}}
 }
 \examples{
 airTemp=22.1

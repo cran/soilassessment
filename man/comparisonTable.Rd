@@ -20,7 +20,6 @@ The column names of the rank-decision table should correspond with the names of 
 \value{
 nmtx: a normalized pairwise comparison matrix
 crt: consistency index and message on whether the input decisions are consistent for analysis
-
 }
 \references{
 Barzilai J. and Golany B., 1990. Deriving Weights from Pairwise Comparison Matrices: the Additive Case. Operations Research Letters 9: 407–410.
@@ -28,9 +27,8 @@ Barzilai J. and Golany B., 1990. Deriving Weights from Pairwise Comparison Matri
 \author{
 Christian Thine Omuto
 }
-
 \seealso{
-suitability
+\code{\link{suitability}}, \code{\link{fertilitySuit}}
 }
 \examples{
 data(nutrient)

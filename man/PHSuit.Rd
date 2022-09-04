@@ -13,7 +13,7 @@ PHSuit(value, crop)
   \item{value}{
 Input soil pH.
 }
-\item{crop}{
+  \item{crop}{
 The crop of interest for which soil pH suitability class is sought.
 }
 }
@@ -37,9 +37,8 @@ Christian Thine Omuto
 \note{
 If the input value is raster map, then the output will also be a raster map of pH suitability for the crop of interest
 }
-
 \seealso{
-tempSuit, ECSuit, rainSuit
+\code{\link{suitability}}, \code{\link{ECSuit}}, \code{\link{fertilitySuit}}
 }
 \examples{
 PHSuit(8.4,"cauliflower")

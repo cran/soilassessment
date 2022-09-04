@@ -1,5 +1,5 @@
 surveyPoints=function(soilmap,scorpan,conditionclass,mapproportion){
-  if(class(soilmap)=="RasterLayer"){
+  if(is(soilmap,"RasterLayer")){
   map=soilmap;
   w=scorpan;
   b=conditionclass;

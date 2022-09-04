@@ -13,7 +13,7 @@ stoneSuit(value, crop)
   \item{value}{
 Input level of stoniness in percent.
 }
-\item{crop}{
+  \item{crop}{
 The crop of interest for which stoniness suitability class is sought.
 }
 }
@@ -37,7 +37,6 @@ Christian Thine Omuto
 \note{
 Output raster map of stoniness for the crop of interest is given if the input value is raster map
 }
-
 \seealso{
 tempSuit, PHSuit, rainSuit
 }

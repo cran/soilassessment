@@ -28,7 +28,7 @@ Benavidez R, Bethana J, Maxwell D, Norton K. 2018. A review of the (Revised) Uni
 Christian Thine Omuto
 }
 \seealso{
-erosivFUN, erodFUN, slopelenFUN
+\code{\link{erosivFUN}}, \code{\link{erodFUN}}, \code{\link{sloplenFUN}}
 }
 \examples{
 library(sp)

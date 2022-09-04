@@ -13,8 +13,8 @@ ECSuit(value, crop)
   \item{value}{
 Input electrical conductivity in dS/m.
 }
-\item{crop}{
-The crop of interest for which Electrical Conductivity suitability class is sought.
+ \item{crop}{
+The crop of interest for which EC suitability class is sought.
 }
 }
 \details{
@@ -35,11 +35,10 @@ FAO Crop Suitability Requirements: http://ecocrop.fao.org/ecocrop/srv/en/home
 Christian Thine Omuto
 }
 \note{
-If the input value is raster map, then the output will also be a raster map of Electrical Conductivity suitability for the crop of interest
+Should the input value be raster map, then the output will also be a raster map of Electrical Conductivity suitability for the crop of interest
 }
-
 \seealso{
-tempSuit, PHSuit, rainSuit
+\code{\link{suitability}}, \code{\link{PHSuit}}, \code{\link{fertilitySuit}}
 }
 \examples{
 library(sp)

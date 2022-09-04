@@ -17,7 +17,6 @@ normalized pairwise decision (nxn) matrix for comparing n soil suitability (cond
 a (nxm) matrix of n suitability (condition) factors for m locations (pixels)
 }
 }
-
 \value{
 A vector of soil suitability (condition) class between 0 and 5.
 }
@@ -32,7 +31,6 @@ Christian Thine Omuto
 \note{
 It's important to normalize and assess the adequacy of the decision matrix before using this function
 }
-
 \seealso{
 fertilityRating, suitabilityClass
 }

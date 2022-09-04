@@ -13,7 +13,7 @@ slopeSuit(value, crop)
   \item{value}{
 Input land slope in degrees.
 }
-\item{crop}{
+  \item{crop}{
 The crop of interest for which slope suitability class is sought.
 }
 }
@@ -37,7 +37,6 @@ Christian Thine Omuto
 \note{
 The input slope value must be in degrees
 }
-
 \seealso{
 LGPSuit, tempSuit, suitability
 }

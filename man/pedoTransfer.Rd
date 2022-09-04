@@ -37,9 +37,8 @@ Christian Thine Omuto
 \note{
 This function can also be used to predict EC from apparent electrical conductivity of bulk soil, texture, and other important soil properties
 }
-
 \seealso{
-ECconversion1, ECconversion2, ECconversion4
+\code{\link{ECconversion4}}, \code{\link{ECconversion3}}
 }
 \examples{
 library(caret)

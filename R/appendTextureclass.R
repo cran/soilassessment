@@ -1,5 +1,5 @@
 appendTextureclass=function(df, method="USDA"){
-  if(class(df)[1]=="SpatialPointsDataFrame"){
+  if(is((df)[1],"SpatialPointsDataFrame")){
     soilp=df
     total <- 20
     pb = txtProgressBar(min = 0, max = total, style = 3)
@@ -30,7 +30,7 @@ appendTextureclass=function(df, method="USDA"){
     }
     for(i in 1:total){
       Sys.sleep(0.5)
-      setTxtProgressBar(pb, i)   
+      setTxtProgressBar(pb, i)
     }
   }
   else{

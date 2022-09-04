@@ -13,7 +13,7 @@ depthSuit(value, crop)
   \item{value}{
 Input soil depth in cm
 }
-\item{crop}{
+  \item{crop}{
 The crop of interest for which soil depth suitability class is sought
 }
 }
@@ -35,7 +35,7 @@ FAO Crop Suitability Requirements: http://ecocrop.fao.org/ecocrop/srv/en/home
 Christian Thine Omuto
 }
 \seealso{
-tempSuit, ESPSuit, classCode
+\code{\link{suitability}}, \code{\link{tempSuit}}, \code{\link{fertilitySuit}}
 }
 \examples{
 #data(suitabinput)

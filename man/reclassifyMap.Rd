@@ -13,7 +13,7 @@ reclassifyMap(fgrid,df)
   \item{fgrid}{
 Input raster map to be reclassified
 }
-\item{df}{
+  \item{df}{
 Input look-up table for re-classification
 }
 }
@@ -30,7 +30,7 @@ Robert Hijman. Raster Package in R. https://www.rdocumentation.org/packages/rast
 Christian Thine Omuto
 }
 \seealso{
-depthSuit, classCode, rainSuit
+\code{\link{classCode}}, \code{\link{classLUT}}, \code{\link{classnames}}
 }
 \examples{
 library(sp)

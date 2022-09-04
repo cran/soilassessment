@@ -34,9 +34,8 @@ Christian Thine Omuto
 \note{
 This function gives approximate classification. A better classification is achieved when indicator of sodium ions is included (e.g. ESP)
 }
-
 \seealso{
-saltClass, saltSeverity, classCode
+\code{\link{saltClass}}, \code{\link{saltSeverity}}, \code{\link{classCode}}
 }
 \examples{
 library(sp)

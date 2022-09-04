@@ -1,7 +1,7 @@
 \name{classnames}
 \alias{classnames}
 \title{
-A function to display the class names and codes as used in the soilassessment package
+A function to display class names and codes as used in the soilassessment package
 }
 \description{
 This is a database function for displaying the class names and codes used in the soil assessment package
@@ -17,9 +17,8 @@ indicator of soil condition group of interest. Example: texture, suitability, dr
 \value{
 Table of soil condition code and name
 }
-
 \seealso{
-classCode, classLUT
+\code{\link{classCode}}, \code{\link{classLUT}}
 }
 \examples{
 x="texture"

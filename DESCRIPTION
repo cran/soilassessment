@@ -1,24 +1,32 @@
-Package: soilassessment
 Type: Package
+Package: soilassessment
 Title: Assessment Models for Agriculture Soil Conditions and Crop
         Suitability
-Version: 0.2.3
-Depends: R (>= 3.5.0)
-Imports: arm, caret, Cubist,deSolve, e1071, FuzzyAHP, googledrive,
-        Hmisc, kernlab,methods,nnet,quantregForest, qrnn,randomForest,
-        ranger, raster,png, rgdal, rpart, soiltexture, sp,stats
-Suggests: maptools,nlme, aqp, plyr
-Author: Christian Thine Omuto
-Maintainer: Christian Thine Omuto <thineomuto@yahoo.com>
-Description: Soil assessment builds information for improved decision in soil management. It analyzes soil conditions with regard to agriculture 
-        crop suitability requirements [such as those given by FAO <https://www.fao.org/land-water/databases-and-software/crop-information/en/>] soil fertility classes, 
-        soil erosion models and soil salinity classification. Suitability requirements are for crops  grouped into cereal crops, nuts, legumes, fruits, vegetables, 
-        industrial crops, and root crops.  
+Version: 0.2.4
+Description: Soil assessment builds information for improved decision in
+    soil management. It analyzes soil conditions with regard to
+    agriculture crop suitability requirements [such as those given by FAO
+    <https://www.fao.org/land-water/databases-and-software/crop-information/en/>]
+    soil fertility classes, soil erosion, and soil salinity classification
+    [<doi:10.1002/ldr.4211>]. Suitability requirements are for
+    crops grouped into cereal crops, nuts, legumes, fruits, vegetables,
+    industrial crops, and root crops.
 License: GPL
+Depends: R (>= 3.5.0)
+Imports: arm, caret, Cubist, deSolve, e1071, FuzzyAHP, googledrive,
+        Hmisc, kernlab, methods, nnet, png, qrnn, quantregForest,
+        randomForest, ranger, raster, rpart, soiltexture, sp, stats
+Suggests: aqp, maptools, nlme, plyr
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.1
+Authors@R: 
+    person("Christian Thine", "Omuto", , "thineomuto@yahoo.com", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-5792-3485"))
 NeedsCompilation: no
-Packaged: 2022-02-03 04:29:04 UTC; Cthine
+Packaged: 2022-09-04 01:12:41 UTC; Cthine
+Author: Christian Thine Omuto [aut, cre]
+    (<https://orcid.org/0000-0002-5792-3485>)
+Maintainer: Christian Thine Omuto <thineomuto@yahoo.com>
 Repository: CRAN
-Date/Publication: 2022-02-03 07:40:02 UTC
+Date/Publication: 2022-09-04 02:40:02 UTC

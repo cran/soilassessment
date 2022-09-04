@@ -12,12 +12,22 @@ imageIndices=function(blue, green,red,nir,swir1,swir2,index="NDVI"){
   else if(index=="NDSI"){ratio=(red-nir/(red+nir))}
   else if(index=="NDVI"){ratio=(nir-red)/(nir+red)}
   else if(index=="SR"){ratio=(green-red)/(blue+red)}
-  else if(index=="CRSI"){ratio=ifelse((nir*red-blue*green)<=0,0,ifelse((nir*red+blue*green)<=0,1,(sqrt((nir*red-blue*green)/(nir*green+blue*green)))))}
+  else if(index=="CRSI"){
+    rat=(nir*red-blue*green)
+    if(rat<0){ratio=0}
+    else{ratio=sqrt(rat/(nir*green+blue*green))}}
   else if(index=="BI"){ratio=sqrt(green^2+red^2+nir^2)}
   else if(index=="NDSnI"){ratio=(green-swir1)/(green+swir1)}
   else if(index=="ROCK"){ratio=nir/swir1}
+  else if(index=="NDBI"){ratio=(swir1-nir)/(swir1+nir)}
+  else if(index=="NBR"){ratio=(swir1-swir2)/(swir1+swir2)}
   else if(index=="CLAY"){ratio=swir1/swir1}
   else if(index=="NDMI"){ratio=(nir-0.5*(swir1+swir2))/(nir+0.5*(swir1+swir2))}
   else if(index=="NDWI"){ratio=(green-nir)/(green+nir)}
+  else if(index=="TNDVI"){
+    rat=(nir-red)/(nir+red)
+    if(rat<(-0.5)){ratio=0}
+    else{ratio=sqrt(rat+0.5)}
+    }
   return(ratio)
 }

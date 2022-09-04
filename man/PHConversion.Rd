@@ -13,10 +13,10 @@ PHConversion(ph, model,phtype)
   \item{ph}{
 a vector or single value of soil ph in KCl or CaCl2 to be converted to ph (water)
 }
- \item{model}{
+  \item{model}{
 functional model for relating ph in KCl or CaCl to be converting and equivalent ph (water). Models considered are second order kabala, sadovski, davies, brennan functions. The default is kabala
 }
- \item{phtype}{
+  \item{phtype}{
 KCl or CaCl2 solution for ph. The default is CaCl2
 }
 }
@@ -34,7 +34,6 @@ Kabała, C., Musztyfaga, E., Gałka, B., Łabuńska, D., Mańczyńska, P. (2016)
 Miller, R.O., Kissel, D.E. (2010). Comparison of Soil pH Methods on Soils of North America. Soil Sci. Soc. Am. J. 74, 310–316. https://doi.org/10.2136/sssaj2008.0047
 
 Sadovski, A.N. (2019). Study on pH in water and potassium chloride for Bulgarian soils. EURASIAN JOURNAL OF SOIL SCIENCE (EJSS) 8, 11–16. https://doi.org/10.18393/ejss.477560
-
 }
 \author{
 Christian Thine Omuto
@@ -42,12 +41,10 @@ Christian Thine Omuto
 \note{
 ph ranges between 1 and 14
 }
-
 \seealso{
 ME_PHharm, ME_ECharm, ECconversion1
 }
 \examples{
 testdata=data.frame(PHKC=c(6.45,8.34,5.07,12.17, 4.219),TEX=c("Cl","SaCl","LoSa", "Si","SaClLo"))
 testdata$PHs1=PHConversion(testdata$PHKC,"kabala","kcl")
-
 }

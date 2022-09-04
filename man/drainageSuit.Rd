@@ -13,7 +13,7 @@ drainageSuit(value, crop)
   \item{value}{
 Input drainage class code
 }
-\item{crop}{
+  \item{crop}{
 The crop of interest for which drainage suitability class is sought.
 }
 }
@@ -37,9 +37,8 @@ Christian Thine Omuto
 \note{
 If the input value is raster map, then the output will also be a raster map of drainage suitability for the crop of interest
 }
-
 \seealso{
-tempSuit, PHSuit, rainSuit
+\code{\link{suitability}}, \code{\link{PHSuit}}, \code{\link{rainSuit}}
 }
 \examples{
 drainageSuit(6,"cassava")

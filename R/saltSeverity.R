@@ -1,30 +1,32 @@
-saltSeverity=function(ec,ph,ESP,method="FAO"){
-  esp=1*ESP
+saltSeverity=function(ec,ph,esp,criterion="FAO"){
+  esp=esp*1
   ec=ec*1
-  #None=1;Saline=2;Saline_sodic=3;Sodic=4;Alkaline=5
-  if(method=="FAO"){
-    salt1=saltClass(ec,ph,ESP,"FAO")
-    #salinity:1-6
-    bb1=ifelse(ec<0.75,6,ifelse(ec<2,8,ifelse(ec<4,9,ifelse(ec<8,10,ifelse(ec<15,11,12)))))
-    #sodicity
-    bb2=ifelse(esp<15,13,ifelse(esp<30,14,ifelse(esp<50,15,ifelse(esp<70,16,17))))
-    saltclass=ifelse(salt1<3,bb1,ifelse(salt1<4,3,ifelse(salt1<5,bb2,18)))
+  ph=round(ph*1,2)
+  salt1=saltClass(ec,ph,esp)
+  if(criterion=="FAO"){
+    sal=ifelse(ec<0.75,4,ifelse(ec<2,6,ifelse(ec<4,2,ifelse(ec<8,8,ifelse(ec<15,10,1)))))
+    sod=ifelse(esp<15,4,(ifelse(esp<30,7,ifelse(esp<50,3,ifelse(esp<70,9,11)))))
+    ww1=ifelse(negData("ph",ph)<8.2,sal,0)
+    ww2=ifelse(esp<15,4,(ifelse(esp<30,7,ifelse(esp<50,3,ifelse(esp<70,9,11)))))
+    ww3=ifelse(negData("ph",ph)<8.2,5,0)
+    intenclass=ifelse(salt1<5,ifelse(negData("ec",ec)<0.75,4,ww1),ifelse(salt1<6,ww3,ifelse(salt1<13,12,ifelse(salt1<14,ww2,ww1))))
+  }
+  if(criterion=="USDA"){
+    sal=ifelse(ec<0.75,4,ifelse(ec<2,6,ifelse(ec<4,2,ifelse(ec<8,8,ifelse(ec<15,10,1)))))
+    sod=ifelse(esp<15,4,(ifelse(esp<30,7,ifelse(esp<50,3,ifelse(esp<70,9,11)))))
+    ww1=ifelse(negData("ph",ph)<8.5,sal,0)
+    ww2=ifelse(esp<15,4,(ifelse(esp<30,7,ifelse(esp<50,3,ifelse(esp<70,9,11)))))
+    ww3=ifelse(negData("ph",ph)<8.5,5,0)
+    intenclass=ifelse(salt1<5,ifelse(negData("ec",ec)<0.75,4,ww1),ifelse(salt1<6,ww3,ifelse(salt1<13,12,ifelse(salt1<14,ww2,ww1))))
+  }
+  else if(criterion=="Amrhein"){
+    sal=ifelse(ec<0.75,4,ifelse(ec<2,6,ifelse(ec<4,2,ifelse(ec<8,8,ifelse(ec<15,10,1)))))
+    sod=ifelse(esp<15,4,(ifelse(esp<30,7,ifelse(esp<50,3,ifelse(esp<70,9,11)))))
+    ww1=ifelse(negData("ph",ph)<8.5,sal,0)
+    ww2=ifelse(esp<6,4,(ifelse(esp<10,7,ifelse(esp<15,3,ifelse(esp<25,9,11)))))
+    ww3=ifelse(negData("ph",ph)<8.5,5,0)
+    intenclass=ifelse(salt1<5,ifelse(negData("ec",ec)<0.75,4,ww1),ifelse(salt1<6,ww3,ifelse(salt1<13,12,ifelse(salt1<14,ww2,ww1))))
 
   }
-  else if(method=="USDA"){
-    #salinity:1-6
-    salt2=saltClass(ec,ph,ESP,"USDA")
-    bb1=ifelse(ec<2,6,ifelse(ec<4,7,ifelse(ec<8,9,ifelse(ec<16,10,11))))
-    #sodicity
-    bb2=ifelse(esp<15,13,ifelse(esp<30,14,ifelse(esp<50,15,ifelse(esp<70,16,17))))
-    saltclass=ifelse(salt2<3,bb1,ifelse(salt2<4,3,ifelse(salt2<5,bb2,14)))
-  }
-  else if(method=="Amrhein"){
-    #salinity:1-6
-    bb1=ifelse(ec<0.75,6,ifelse(ec<2,8,ifelse(ec<4,9,ifelse(ec<8,10,ifelse(ec<15,11,12)))))
-    #sodicity
-    bb2=ifelse(esp<6,13,ifelse(esp<10,14,ifelse(esp<15,15,ifelse(esp<25,16,17))))
-    saltclass=ifelse(salt1<3,bb1,ifelse(salt1<4,3,ifelse(salt1<5,bb2,14)))
-  }
-  return(saltclass)
+  return(intenclass)
 }

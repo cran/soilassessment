@@ -1,22 +1,22 @@
 \name{ECconversion2}
 \alias{ECconversion2}
 \title{
-A function for correcting electrical conductivity of soil solution to that of saturated paste extract for all textural classes
+A function for harmonizing electrical conductivity of a soil solution to that of the saturated paste extract for all textural classes
 }
 \description{
 This function converts electrical conductivity measurements of soil solution to that of soil paste extract. The ratio of soil:water mix for the solution and conversion method must be indicated
 }
 \usage{
-ECconversion2(ec, soilsolution, method)
+ECconversion2(ec, extract, method)
 }
 \arguments{
   \item{ec}{
 measured electrical conductivity of the soil solution in dS/m
 }
- \item{soilsolution}{
-ratio of soil:water mix when electrical conductivity was measured. Example is 1:1, 1:2, etc. The default is 1:1
+  \item{extract}{
+ratio of soil:water in extract solution for measuring electrical conductivity was measured. Example is 1:1, 1:2, etc. Default is 1:1
 }
- \item{method}{
+  \item{method}{
 method for converting electrical conductivity of the soil:water mix to that of the soil paste extract. The methods included are USDA, landon, kargas, ozkan, hogg, park, visconti, korsandi, shahid, klaustermeier, and he. The default is USDA
 }
 }
@@ -38,7 +38,7 @@ Christian Thine Omuto
 Models that work with soil solutions in 1:1 soil-water mix are: USDA, landon, kargas, ozkan,hogg, and zhang. Models for 1:2 solutions are: USDA and hogg. Models for 1:2.5 are: ozkan and shahid. landon model also works for 1:3 soil solution. Models for 1:5 are: USDA, landon, kargas, ozkan, chi, park, visconti, korsandi, klaustermeier, and he. The function only works for soil solution mix ratio handled by the respective model.
 }
 \seealso{
-ECconversion1, saltClass, saltRating
+\code{\link{ECconversion1}}, \code{\link{ECconversion3}}, \code{\link{ECconversion4}}
 }
 \examples{
 library(sp)

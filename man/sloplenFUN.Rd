@@ -13,10 +13,10 @@ sloplenFUN(ls,slope,method)
   \item{ls}{
 length of slope in metres
 }
- \item{slope}{
+  \item{slope}{
 slope of land in degrees
 }
- \item{method}{
+  \item{method}{
 method for deriving slope-length factor. The methods included are: WSmith, Renard, Remortel, Zhang, Nearing, Smith, Foster, David, Morgan, and Moore.
 }
 }
@@ -37,7 +37,6 @@ Christian Thine Omuto
 \note{
 The slope must be in degrees. The warning given is a reminder to that the slope is given in degrees
 }
-
 \seealso{
 erosivFUN, erodFUN, slopeSuit
 }

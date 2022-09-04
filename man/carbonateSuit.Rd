@@ -35,7 +35,7 @@ FAO Crop Suitability Requirements: http://ecocrop.fao.org/ecocrop/srv/en/home
 Christian Thine Omuto
 }
 \seealso{
-depthSuit, SOCSuit, suitability
+\code{\link{suitability}}, \code{\link{ESPSuit}}, \code{\link{fertilitySuit}}
 }
 \examples{
 library(sp)

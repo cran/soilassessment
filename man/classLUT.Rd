@@ -13,7 +13,7 @@ classLUT(fgrid,indicator)
   \item{fgrid}{
 Input classified map
 }
-\item{indicator}{
+  \item{indicator}{
 The soil condition indicator of interest as contained in the input map for example, "texture", "salinity", etc.
 }
 }
@@ -26,9 +26,8 @@ The output is a dataframe containing classes in the map and corresponding unique
 \author{
 Christian Thine Omuto
 }
-
 \seealso{
-classCode, classnames
+\code{\link{classCode}}, \code{\link{classnames}}
 }
 \examples{
 textrd=suitabinput["texture"]

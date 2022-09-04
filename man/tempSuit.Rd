@@ -13,7 +13,7 @@ tempSuit(value, crop)
   \item{value}{
 Input temperature in degrees Celsius.
 }
-\item{crop}{
+  \item{crop}{
 The crop of interest for which temperature suitability class is sought.
 }
 }
@@ -34,7 +34,6 @@ FAO Crop Suitability Requirements: http://ecocrop.fao.org/ecocrop/srv/en/home
 \author{
 Christian Thine Omuto
 }
-
 \seealso{
 carbonSuit, depthSuite, fertilitySuit
 }

@@ -1,25 +1,25 @@
 \name{saltSeverity}
 \alias{saltSeverity}
 \title{
-A function to classify severity levels of salt problems in the soil
+A function to classify salt intensity in soil
 }
 \description{
-This function classifies degree/severity of salt problems in the soil according to EC, pH and ESP levels
+This function classifies salt intensity in soil based on EC, pH and ESP levels
 }
 \usage{
-saltSeverity(ec,ph,ESP,method="FAO")
+saltSeverity(ec,ph,esp,criterion="FAO")
 }
 \arguments{
   \item{ec}{
 electrical conductivity in dS/m of saturated soil paste extract or its equivalent
 }
- \item{ph}{
+  \item{ph}{
 soil reaction (pH)
 }
- \item{ESP}{
+  \item{esp}{
 Exchangeable sodium percent
 }
- \item{method}{
+  \item{criterion}{
 classification method for severity/degree of salt problems. FAO, USDA and Amrhein methods are included. Default method is FAO
 }
 }
@@ -44,13 +44,11 @@ Christian Thine Omuto
 \note{
 The function strictly requires input EC, pH, and ESP
 }
-
 \seealso{
-saltClass, classCode, saltRating
+\code{\link{saltClass}}, \code{\link{saltRating}}, \code{\link{classCode}}
 }
 \examples{
 library(sp)
-library(rgdal)
 saltSeverity(4.5,7.8,11.6,"USDA")
 ec=suitabinput["ec"]
 ph=suitabinput["ph"]
@@ -58,9 +56,9 @@ soc=nutrindicator["soc"]
 clay=textureinput["clay"]
 texture=suitabinput["texture"]
 newmap=ec
-newmap$ph=ph$ph
-newmap$ECe=ECconversion1(ec$ec*0.1,soc$soc,clay$clay,texture$texture,"1:5", "FAO")
-newmap$salt=saltSeverity(newmap$ECe,newmap$ph,0.84,"FAO")
+newmap$ph=ph$ph-1
+newmap$ECe=ECconversion1(ec$ec*0.25,soc$soc,clay$clay,texture$texture,"1:5", "FAO")
+newmap$salt=saltSeverity(newmap$ECe,newmap$ph,6.84,"FAO")
 newmap$salineclass=classCode(newmap$salt,"saltseverity")
 spplot(newmap["salineclass"], main="Salinity Code")
 }

@@ -1,7 +1,7 @@
 createTexturedata=function(clay, silt, sand){
   total <- 20
   pb = txtProgressBar(min = 0, max = total, style = 3)
-  if(class(clay)=="SpatialGridDataFrame"){
+  if(is(clay,"SpatialGridDataFrame")){
     clay=as(clay,"RasterLayer")
     silt=as(silt, "RasterLayer")
     sand=as(sand, "RasterLayer")
@@ -18,7 +18,7 @@ createTexturedata=function(clay, silt, sand){
       setTxtProgressBar(pb, i)}
   }
 
-  else if(class(clay)=="RasterLayer"){
+  else if(is(clay,"RasterLayer")){
     soilc=stack(clay,silt,sand)
     soilp =as(soilc, 'SpatialPixelsDataFrame')
     names(soilp@data) =c('CLAY', 'SILT', 'SAND')

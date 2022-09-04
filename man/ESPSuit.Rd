@@ -11,14 +11,14 @@ ESPSuit(value, crop)
 }
 \arguments{
   \item{value}{
-Input Exchangeable Sodium Percent (ESP).
+Input Exchangeable Sodium Percent (ESP)
 }
-\item{crop}{
-The crop of interest for which ESP suitability class is sought.
+  \item{crop}{
+crop of interest for which ESP suitability class is sought
 }
 }
 \details{
-The input value can be map or just a numerical value of Exchangeable Sodium Percent (ESP).
+The input value can be map or just a numerical value of Exchangeable Sodium Percent (ESP)
 }
 \value{
 The output is ESP suitability class for the crop. The output is integer value for suitability class: 1- highly suitable; 2 - moderately suitable; 3 - marginally suitable; 4 - currently not suitable; 5 - not suitable
@@ -37,9 +37,8 @@ Christian Thine Omuto
 \note{
 If the input value is raster map, then the output will also be a raster map of ESP suitability for the crop of interest
 }
-
 \seealso{
-tempSuit, PHSuit, rainSuit
+\code{\link{suitability}}, \code{\link{rainSuit}}, \code{\link{fertilitySuit}}
 }
 \examples{
 ESPSuit(8.6,"broccoli")

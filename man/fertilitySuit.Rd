@@ -13,7 +13,7 @@ fertilitySuit(value, crop)
   \item{value}{
 Input soil fertility index.
 }
-\item{crop}{
+  \item{crop}{
 The crop of interest for which soil fertility suitability class is sought.
 }
 }
@@ -37,9 +37,8 @@ Christian Thine Omuto
 \note{
 If the input value is raster map, then the output will also be a raster map of fertility suitability for the crop of interest
 }
-
 \seealso{
-tempSuit, PHSuit, rainSuit
+\code{\link{suitability}}, \code{\link{ESPSuit}}, \code{\link{fertilityRating}}
 }
 \examples{
 library(sp)

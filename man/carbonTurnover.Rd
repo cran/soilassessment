@@ -13,22 +13,22 @@ carbonTurnover(tt,clay,C0,In,Dr=1.44,effcts,solver)
   \item{tt}{
 a vector of time in months or years for modelling carbon turnover in the soil
 }
- \item{clay}{
+  \item{clay}{
 Proportion of soil clay content in percent
 }
-\item{C0}{
+  \item{C0}{
 a vector containing five initial carbon pools in the five compartments C1 in DPM, C2 in RPM, C3 in BIO, C4 in HUM and C5 in IOM. They are arranged in the order C1,C2,C3,C4,C5 [C0=c(C1,C2,C3,C4,C5)].
 }
-\item{In}{
+  \item{In}{
 Input carbon amount. It can be a scalar constant or a 2-column dataframe containing time dependent organic matter input. The two columns are time and carbon input
 }
- \item{Dr}{
+  \item{Dr}{
 ratio of decomposable plant material (DPM) to resistant plant material (RPM). Default value is 1.44
 }
- \item{effcts}{
+  \item{effcts}{
 a constant or dataframe of environmental effects on carbon decomposition rates. If it's a dataframe of time-dependent variables, then the length of the dataframe should be similar to the length of time (t) vector
 }
- \item{solver}{
+  \item{solver}{
 name of subroutines for solving first order odinary differential equations for organic matter decay in the soil. The subroutines are lsoda, lsodes,rk4, euler,lsode, lsodar,ode23, radau,etc. from deSolve
 }
 }
@@ -46,9 +46,8 @@ Jenkinson, D. S., Andrew, S. P. S., Lynch, J. M., Goss, M. J., Tinker, P. B. 199
 \author{
 Christian Thine Omuto
 }
-
 \seealso{
-RotCmoiscorrection, RotCtempcorrection, NPPmodel
+\code{\link{RotCmoistcorrection}}, \code{\link{NPPmodel}}
 }
 \examples{
 library(deSolve)

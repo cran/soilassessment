@@ -1,5 +1,5 @@
 featureRep=function(fgrid,df){
- if(class(fgrid)=="RasterLayer"){
+ if(is(fgrid,"RasterLayer")){
   df$y=extract(fgrid,df)#x.over[,1]
   options(digits=1)
   dist.histbb <- histbackback(df$y, values(fgrid), font.lab=5 ,probability=TRUE, xlab=c("Sample Points","Feature Map"), ylab = "Data range")

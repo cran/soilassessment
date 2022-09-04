@@ -11,14 +11,14 @@ CECSuit(value, crop)
 }
 \arguments{
   \item{value}{
-Input cation Exchange Capacity (Cmol(+)/kg).
+input Cation Exchange Capacity (Cmol(+)/kg).
 }
-\item{crop}{
-The crop of interest for which CEC suitability class is sought
+  \item{crop}{
+crop of interest for which CEC suitability class is sought
 }
 }
 \details{
-The input value can be a map or just a numerical entry of CEC (cmol(+)/kg)
+input value can be a map or just a numerical entry of CEC (cmol(+)/kg)
 }
 \value{
 The output is CEC suitability class for the crop. The output is an integer value for suitability class: 1- highly suitable; 2 - moderately suitable; 3 - marginally suitable; 4 - currently not suitable; 5 - not suitable
@@ -37,9 +37,8 @@ Christian Thine Omuto
 \note{
 The output raster map of CEC suitability is given if the input value is raster map
 }
-
 \seealso{
-tempSuit, PHSuit, rainSuit
+\code{\link{suitability}}, \code{\link{tempSuit}}, \code{\link{rainSuit}}
 }
 \examples{
 CECSuit(22.4,"pineaple")

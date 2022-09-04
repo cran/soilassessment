@@ -13,7 +13,7 @@ classCode(value, indicator)
   \item{value}{
 Integer value of the soil condition indicator
 }
- \item{indicator}{
+  \item{indicator}{
 Soil condition whose class (x) is sought. The default = "fertility" if fertility is the soil condition
 }
 }
@@ -23,9 +23,8 @@ This is for interpretation of the integer codes of the soil conditions generated
 \value{
 Name of the level of soil condition
 }
-
 \seealso{
-classLUT, erodFUN, classnames
+\code{\link{classLUT}}, \code{\link{erodFUN}}, \code{\link{classnames}}
 }
 \examples{
 classCode(2,"texture")

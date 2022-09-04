@@ -1,13 +1,15 @@
-PHConversion=function(ph, model="kabala",phtype="cacl2"){
+PHConversion=function(ph, model="kabala",phtype="kcl"){
   if(phtype=="kcl"){
-    if(model=="kabala"){PHconvert=(-1.95)+11.58*log10(ph)}
-    else if(model=="sadovski"){PHconvert=1.53466+0.88787*ph}
+    if(model=="kabala"){PHconvert=harmonization(log10(ph),11.58,-1.95)}
+    else if (model=="sadovski"){PHconvert=harmonization(ph,0.88787,1.53466)}
   }
   else if(phtype=="cacl2"){
-    if(model=="miller"){PHconvert=0.9259259*((0.973+ph))}
-    else if(model=="davies"){PHconvert=0.9569378*(0.876+ph)}
-    else if(model=="brennan"){PHconvert=1.089325*(0.3556+ph)}
+    if(model=="miller"){PHconvert=harmonization(ph,0.9259259,0.9009259)}
+    else if(model=="davies"){PHconvert=harmonization(ph,0.9569378,0.8382775)}
+    else if(model=="brennan"){PHconvert=harmonization(ph,1.089325,0.387364)}
+    else if (model=="ahern"){PHconvert=harmonization(ph,1.083424,0.4041172)}
   }
-
+  PHconvert=round(PHconvert,3)
   return(PHconvert)
 }
+

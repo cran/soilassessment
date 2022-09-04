@@ -13,7 +13,7 @@ textureSuit(value, crop)
   \item{value}{
 Input textural class code.
 }
-\item{crop}{
+  \item{crop}{
 The crop of interest for which texture suitability class is sought.
 }
 }
@@ -37,7 +37,6 @@ Christian Thine Omuto
 \note{
 If the input value is raster map, then the output will also be a raster map of texture suitability for the crop of interest
 }
-
 \seealso{
 tempSuit, PHSuit, rainSuit
 }

@@ -13,13 +13,13 @@ erosivFUN(rain,A,B, model)
   \item{rain}{
 annual rainfall amounts in mm or Fourier index of rainfall
 }
- \item{A}{
+  \item{A}{
 independent constant of the algebraic relationship between rainfall mounts and erosive energy (Energy=A+-B*rainfall)
 }
- \item{B}{
+  \item{B}{
 rainfall coefficient of the algebraic relationship between rainfall mounts and erosive energy (Energy=A+-B*rainfall)
 }
- \item{model}{
+  \item{model}{
 model defining the algebraic relationship between rainfall mounts and erosive energy. The model can be linear, power, logarithmic, Fourier, and exponential
 }
 }
@@ -34,7 +34,7 @@ Benavidez R, Bethana J, Maxwell D, Norton K. 2018. A review of the (Revised) Uni
 Christian Thine
 }
 \seealso{
-erodFun, sloplenFun
+\code{\link{erodFUN}}, \code{\link{sloplenFUN}}
 }
 \examples{
 erosivFUN(587,151, 0.63, "linear")

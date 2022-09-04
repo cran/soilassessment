@@ -10,7 +10,6 @@ fertilityRating=function(value,indicator="nitrogen"){
   else if(indicator=="sulfur"){CLSS=ifelse(value<3,4,ifelse(value<10,3,ifelse(value<20,2,1)))}
   else if(indicator=="cec") {CLSS=ifelse(value<3,4,ifelse(value<10,3,ifelse(value<20,2,1)))}
   else if(indicator=="copper"){CLSS=ifelse(value<0.1,4,ifelse(value<0.3,3,ifelse(value<0.8,2,1)))}
-  #CLSS = 4 > Very Low; CLSS = 3 > Low; CLSS = 2 > Medium and CLSS = 1 > High
   return(CLSS)
 
 }
