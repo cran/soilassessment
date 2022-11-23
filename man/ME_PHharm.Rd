@@ -41,7 +41,7 @@ The function only works with USDA soil textural classes. Convert other soil text
 \code{\link{ME_ECharm}}, \code{\link{ECconversion1}}, \code{\link{ECconversion2}}
 }
 \examples{
-newdata=data.frame(ph=c(1,0.34,5.07,12.17, 2.219),tex=c("Cl","SaCl","LoSa", "Si","SaClLo"))
+newdata=data.frame(ph=c(1.6,8.3,5.7,12.1,2.2),tex=c("Cl","SaCl","LoSa", "Si","SaClLo"))
 newdata$pH2=ME_PHharm(newdata$ph,newdata$tex,"exponential","kcl")
 
 }

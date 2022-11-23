@@ -48,7 +48,7 @@ soc=(nutrindicator["soc"])
 clay=(textureinput["clay"])
 texture=(suitabinput["texture"])
 newmap=ec
-newmap$ECe=ECconversion1(ec$ec,soc$soc,clay$clay,texture$texture,"1:2.5", "FAO")
+newmap$ECe=ECconversion1(ec$ec,texture$texture,"FAO","1:2.5",soc$soc,clay$clay)
 newmap$wheat=ECSuit(newmap$ECe,"wheat")
 spplot(newmap["wheat"], main="EC suitability for wheat")
 summary(newmap$wheat)

@@ -28,5 +28,24 @@ saltSeverity=function(ec,ph,esp,criterion="FAO"){
     intenclass=ifelse(salt1<5,ifelse(negData("ec",ec)<0.75,4,ww1),ifelse(salt1<6,ww3,ifelse(salt1<13,12,ifelse(salt1<14,ww2,ww1))))
 
   }
+  else if(criterion=="PSALT"){
+    Classt=function(ec,ph,esp){
+      ec=ec*1
+      esp=esp*1
+      ph=ph*1
+      bb1=ifelse(negData("esp",esp)<15,4,13)
+      bb2=ifelse(negData("esp",esp)<15,14,5)
+      Classt=ifelse(negData("ec",ec)<0.25,bb1,bb2)
+      return(salinity=Classt)
+    }
+    psalt=Classt(ec,ph,esp)
+    sal=ifelse(ec<0.048,4,ifelse(ec<0.128,6,ifelse(ec<0.25,2,ifelse(ec<0.5,8,ifelse(ec<1,10,1)))))
+    sod=ifelse(esp<15,4,(ifelse(esp<30,7,ifelse(esp<50,3,ifelse(esp<70,9,11)))))
+    ww1=ifelse(negData("ph",ph)<8.2,sal,0)
+    ww2=ifelse(esp<15,4,(ifelse(esp<30,7,ifelse(esp<50,3,ifelse(esp<70,9,11)))))
+    ww3=ifelse(negData("ph",ph)<8.2,5,0)
+    intenclass=ifelse(psalt<5,ifelse(negData("ec",ec)<0.048,4,ww1),ifelse(psalt<6,ww3,ifelse(psalt<13,12,ifelse(psalt<14,ww2,ww1))))
+
+  }
   return(intenclass)
 }

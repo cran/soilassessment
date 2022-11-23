@@ -1,6 +1,6 @@
-ECconversion1=function(ec,oc,clay,texture,extract="1:5", method="FAO"){
-   OM = oc*1.721
-  { a1=ifelse(OM<0.5,5,ifelse(OM<1,6,ifelse(OM<2,8,ifelse(OM<4,13,ifelse(OM<8,21,35)))))
+ECconversion1=function(ec,texture,method="FAO", extract="1:5",oc=NULL,clay=NULL){
+     OM = oc*1.721
+   { a1=ifelse(OM<0.5,5,ifelse(OM<1,6,ifelse(OM<2,8,ifelse(OM<4,13,ifelse(OM<8,21,35)))))
     a2=ifelse(OM<0.5,8,ifelse(OM<1,9,ifelse(OM<2,11,ifelse(OM<4,16,ifelse(OM<8,24,38)))))
     a3=ifelse(OM<0.5,10,ifelse(OM<1,11,ifelse(OM<2,13,ifelse(OM<4,18,ifelse(OM<8,26,40)))))
     a4=ifelse(OM<0.5,14,ifelse(OM<1,15,ifelse(OM<2,17,ifelse(OM<4,22,ifelse(OM<8,30,45)))))
@@ -15,10 +15,11 @@ ECconversion1=function(ec,oc,clay,texture,extract="1:5", method="FAO"){
     a13= ifelse(OM<0.5,63,ifelse(OM<1,65,ifelse(OM<2,68,ifelse(OM<4,73,ifelse(OM<8,83,102)))))
     a14= ifelse(OM<0.5,105,ifelse(OM<1,107,ifelse(OM<2,110,ifelse(OM<4,116,ifelse(OM<8,126,147)))))
 
+  }
     a15=ifelse(clay<10,a4,a7)
     a16=ifelse(clay<10,a5,a9)
-  }
-  textu=ifelse(texture=="SaCl",3,ifelse(texture=="SiCl",3,
+  
+   textu=ifelse(texture=="SaCl",3,ifelse(texture=="SiCl",3,
                                         ifelse(texture=="Cl",3,ifelse(texture=="HCl",3,ifelse(texture=="SiCl",4,
                                                                                               ifelse(texture=="Si",2,ifelse(texture=="ClLo",2,ifelse(texture=="SaClLo",2,ifelse(texture=="SiClLo",2,1)))))))))
 
@@ -27,7 +28,9 @@ ECconversion1=function(ec,oc,clay,texture,extract="1:5", method="FAO"){
                                                                                                                              ifelse(texture=="SaLo",a15,ifelse(texture=="Lo",a8,ifelse(texture=="SaClLo",a10,ifelse(texture=="ClLo",a11,
                                                                                                                                                                                                                     ifelse(texture==8,a12,ifelse(texture==2,a13,ifelse(texture==3,a11,ifelse(texture==1,a13,a14))))))))))))))}
   if (method=="FAO")  {
-    if(extract=="1:1"){ElectConduct=ec*100/ccfactor}
+    if(is.null(oc))stop("OC is missing")
+    else if(is.null(clay))stop("Clay content is missing")
+    else if(extract=="1:1"){ElectConduct=ec*100/ccfactor}
     else if(extract=="1:1.25"){ElectConduct=ec*125/ccfactor}
     else if(extract=="1:1.5"){ElectConduct=ec*150/ccfactor}
     else if(extract=="1:2"){ElectConduct=ec*200/ccfactor}

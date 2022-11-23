@@ -18,7 +18,7 @@ the target salt measurement to be converted into equivalent electrical conductiv
 }
 }
 \details{
-The target is specified as TDS or TSS or mmho or Sodium Adsorption Ratio (SAR).
+The target is specified as TDS or TSS or mmho.
 }
 \value{
 The output is a numeric value of equivalent electrical conductivity (EC) in dS/m
@@ -36,5 +36,4 @@ TDS should be given in mg/l or ppm. TSS should be given in mmol/l. The function 
 ECconversion4(200,"TSS")
 ECconversion4(20,"TDS")
 ECconversion4(2,"mmho")
-ECconversion4(10.4,"SAR")
 }

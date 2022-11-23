@@ -20,11 +20,11 @@ soil reaction (pH)
 Exchangeable sodium percent
 }
   \item{criterion}{
-classification method for severity/degree of salt problems. FAO, USDA and Amrhein methods are included. Default method is FAO
+classification method for severity/degree of salt problems. FAO, USDA, Amrhein, and PSALT criteria are included. Default method is FAO.
 }
 }
 \details{
-This function requires input EC, pH and ESP values to process the classification. They can be maps or numerical entries
+This function requires input EC, pH and ESP values to process the classification. They can be maps or numerical entries. PSALT criterion uses percent salt content instead of EC.
 }
 \value{
 Integer classes of ranging between 1-17. The names of integer codes are obtained using classCode function
@@ -42,7 +42,7 @@ Richards LA. 1954. Diagnosis and improvements of saline and alkali soils. Agricu
 Christian Thine Omuto
 }
 \note{
-The function strictly requires input EC, pH, and ESP
+The function strictly requires input EC, pH, and ESP. Percent salt content can be used in place of EC if the criterion is PSALT
 }
 \seealso{
 \code{\link{saltClass}}, \code{\link{saltRating}}, \code{\link{classCode}}
@@ -57,7 +57,7 @@ clay=textureinput["clay"]
 texture=suitabinput["texture"]
 newmap=ec
 newmap$ph=ph$ph-1
-newmap$ECe=ECconversion1(ec$ec*0.25,soc$soc,clay$clay,texture$texture,"1:5", "FAO")
+newmap$ECe=ECconversion1(ec$ec*0.25,texture$texture,"FAO","1:5",soc$soc,clay$clay)
 newmap$salt=saltSeverity(newmap$ECe,newmap$ph,6.84,"FAO")
 newmap$salineclass=classCode(newmap$salt,"saltseverity")
 spplot(newmap["salineclass"], main="Salinity Code")

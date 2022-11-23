@@ -6,7 +6,7 @@ classCode=function(value,indicator="fertility"){
     #  #Salinity classes: 1-None; 2-Slight; 7-Very Slight; 3-Moderate; 4-Strong; 5-Very Strong; 6 - Extreme; 8 - Sodic; 9-Saline_sodic; 10-Alkaline
      class0=ifelse(value<13,"Alkaline", ifelse(value<14,"Sodic",ifelse(value<15,"Saline","NotClassified")))
      class01 =ifelse(value<9,"StrongSalinity",ifelse(value<10,"StrongSodicity",ifelse(value<11,"VeryStrongSalinity",ifelse(value<12,"VeryStrongSodicity",class0))))
-     class02=ifelse(value<4,"ModerateSodicity",ifelse(value<5,"None",ifelse(value<6,"Saline-sodic",ifelse(value<7,"SlightSalinity",ifelse(value<8,"SlightSOdicity",class01)))))
+     class02=ifelse(value<4,"ModerateSodicity",ifelse(value<5,"None",ifelse(value<6,"Saline-sodic",ifelse(value<7,"SlightSalinity",ifelse(value<8,"SlightSodicity",class01)))))
      classcode = ifelse(value<1,"NotClassified",ifelse(value<2,"ExtremeSalinity",ifelse(value<3,"ModerateSalinity",class02)))
     # classcode=ifelse(value<2,"ExtremeSalinity",ifelse(value<3,"ModerateSalinity",class02))
    }

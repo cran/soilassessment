@@ -1,7 +1,7 @@
 \name{PHConversion}
 \alias{PHConversion}
 \title{
-Models for converting soil pH (KCL or CaCl) to the equivalent pH (water)
+Models for converting soil pH (KCl or CaCl) to the equivalent pH (water)
 }
 \description{
 A suit of functions for converting soil pH (KCl or CaCl2) to the equivalent pH (water)

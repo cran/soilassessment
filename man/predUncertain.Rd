@@ -42,7 +42,7 @@ Christian Thine Omuto
 The input dataframe and predictors need to have similar coordinate reference system (CRS). In addition, the input dataframe should not have missing entrie (NAs)
 }
 \seealso{
-\code{\link{regmodelSuit}}, \code{\link{imageIndices}}
+\code{\link{regmodelSuit}}, \code{\link{imageIndices}},\code{\link{predAccuracy}}
 }
 \examples{
 library(raster)

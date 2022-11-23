@@ -23,5 +23,3 @@ importFrom(graphics, "box", "grid", "legend", "mtext", "par")
 importFrom(googledrive,"drive_deauth","drive_download","as_id")
 importFrom(png,"readPNG")
 importFrom(grid,"grid.raster")
-
-

@@ -7,17 +7,18 @@ A function for harmonizing electrical conductivity of a soil solution to that of
 This function converts electrical conductivity measurements of soil solution to that of soil paste extract. The ratio of soil:water mix for the solution and conversion method must be indicated
 }
 \usage{
-ECconversion2(ec, extract, method)
+ECconversion2(ec, method, extract)
 }
 \arguments{
   \item{ec}{
 measured electrical conductivity of the soil solution in dS/m
 }
+
+ \item{method}{
+method for converting electrical conductivity of the soil:water mix to that of the soil paste extract. The methods included are USDA, landon, kargas, ozkan, hogg, park, visconti, korsandi, shahid, klaustermeier, and he. The default is USDA
+}
   \item{extract}{
 ratio of soil:water in extract solution for measuring electrical conductivity was measured. Example is 1:1, 1:2, etc. Default is 1:1
-}
-  \item{method}{
-method for converting electrical conductivity of the soil:water mix to that of the soil paste extract. The methods included are USDA, landon, kargas, ozkan, hogg, park, visconti, korsandi, shahid, klaustermeier, and he. The default is USDA
 }
 }
 \details{
@@ -42,9 +43,9 @@ Models that work with soil solutions in 1:1 soil-water mix are: USDA, landon, ka
 }
 \examples{
 library(sp)
-ECconversion2(0.75,"1:1", "USDA")
+ECconversion2(0.75, "USDA","1:1")
 newmap = suitabinput["ec"]
-newmap$salinity=ECconversion2(newmap$ec,"1:1","hogg")
+newmap$salinity=ECconversion2(newmap$ec,"hogg","1:1")
 str(newmap$salinity)
 spplot(newmap["salinity"])
 }

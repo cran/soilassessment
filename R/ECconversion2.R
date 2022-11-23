@@ -1,4 +1,4 @@
-ECconversion2=function(ec,extract="1:1", method="USDA"){
+ECconversion2=function(ec, method="USDA", extract="1:1"){
 
   if(method=="landon"){
     if(extract=="1:1"){ElectConduct=harmonization(ec,2.2,0)}
