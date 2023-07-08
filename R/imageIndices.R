@@ -15,7 +15,7 @@ imageIndices=function(blue, green,red,nir,swir1,swir2,index="NDVI"){
     ratio=ifelse(rat<0,0,ifelse(rat1<0,0,(rat/(rat1))))
   }
   else if(index=="VSSI"){ratio=2*green-5*(red+nir)}
-  else if(index=="NDSI"){ratio=(red-nir/(red+nir))}
+  else if(index=="NDSI"){ratio=(red-nir)/(red+nir)}
   else if(index=="NDVI"){ratio=(nir-red)/(nir+red)}
   else if(index=="SR"){ratio=(green-red)/(blue+red)}
   else if(index=="CRSI"){

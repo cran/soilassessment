@@ -1,7 +1,8 @@
-f5b232c65480b34b26c5146e7768036d *DESCRIPTION
-26df2a6078595faf65f45d94e35ea1ed *NAMESPACE
+3c976dda2ec909bed12706f5a2ebaa78 *DESCRIPTION
+c7da14a08647f2468cdb51188f5a0e31 *NAMESPACE
 122e19ef03d5b3683ec2483701eab876 *R/CECSuit.R
-0a51be6ad9c8c11167112a5d369b3449 *R/DataAvailabilityIndex.R
+82d07f9a797ef448de403d4cf09e1274 *R/DataAvailabilityIndex.R
+1556436897eec621ca25f5731192565a *R/DataAvailabilityIndex0.R
 5b13c271edb580a851a935428bb0296e *R/ECSuit.R
 6b29481588f5e9f0d521f0440f3f657e *R/ECconversion1.R
 2104e8b5be60d24737e6ecb161f3d2bd *R/ECconversion2.R
@@ -27,7 +28,7 @@ a29ca62f8ccfb3a2c537daeaf8c5ae80 *R/SASdata_densityInfo.R
 ecc9971ffdf120909d2133404440e264 *R/appendTextureclass.R
 5b9b4919964b2921c0b0a53951bb7167 *R/carbonTurnover.R
 20e29049782c2c8a466fb5d4a4e51239 *R/carbonateSuit.R
-a592e8d29504f6ae7ae78a64c1e46a41 *R/classCode.R
+dbbed86767df81c7dea67258081bc60d *R/classCode.R
 2a29fc7ba7d2fd74232491f694ef6b12 *R/classLUT.R
 250c48ab909c9736fed40b8b78aa33cc *R/classnames.R
 324d35d9af0e5acd6af25605de09f17f *R/comparisonTable.R
@@ -43,7 +44,7 @@ a592e8d29504f6ae7ae78a64c1e46a41 *R/classCode.R
 0208739d952a8986d9b54b838049826c *R/fertilityRating.R
 6ad51d5f9f294b1288bea795335c1341 *R/fertilitySuit.R
 bc47a451f544f1b670b116a9f6456977 *R/harmonization.R
-08ba098a682e7b9df0d7b450b4145f9a *R/imageIndices.R
+a7a8029614ba7780ef3f2fdec80275d5 *R/imageIndices.R
 2c668fea3de7a49acece91b2c8868bbf *R/negData.R
 47cef409bb48370499e5d9d71c650bd7 *R/pedoTransfer.R
 1c39ecde6f06827516e625c0f9956e2c *R/permeabilityClass.R
@@ -54,7 +55,7 @@ fe077b1d7c25c7ee5753b10a3d451ede *R/rainSuit.R
 0eb0aab46298e6d3e7e4ed9b1858f65f *R/regmodelSuit.R
 ce0584046fe1c23cc1dee4a5ce11c68c *R/saltClass.R
 f06524b3a50aa872e4e360e1580e436d *R/saltRating.R
-65bc8a06448ee3be941b6aca1f7b227e *R/saltSeverity.R
+3d1a130a2a9522e3373afba957aa09af *R/saltSeverity.R
 b71e37e444c5d983a2d34f20e7d42cce *R/slopeSuit.R
 664ef8bead4288b52ae3f11c9a6ee07a *R/sloplenFUN.R
 8803504b9e86b66cf8998c4dc8feb7ff *R/stoneSuit.R
@@ -71,7 +72,7 @@ ce3a5f7762a525864eb1f2d9cf430a16 *data/nutrindicator.RData
 4b3794cc377f021c47e5498bf683a698 *data/suitabinput.RData
 9a4b2bb75f180d767d09c0f5a1056ddc *data/textureinput.RData
 20326b7399c464ae1216594a8f83745e *man/CECSuit.Rd
-c4f06c8f01c52d43b66a2ed331611ea0 *man/DataAvailabilityIndex.Rd
+18a02fc9984d72bd2620872807639e6f *man/DataAvailabilityIndex.Rd
 24435492da9d41f32c52488ce0acd53f *man/ECSuit.Rd
 f7e2d109d9909fe7133499fc46356553 *man/ECconversion1.Rd
 86bf276f1f22df0409fd03d5d12ae1c7 *man/ECconversion2.Rd
@@ -79,7 +80,7 @@ f7e2d109d9909fe7133499fc46356553 *man/ECconversion1.Rd
 0590976aa9708a14540f473e61fcab02 *man/ECconversion4.Rd
 ff2b96625ee0be9a9ee405176ece671a *man/ECharm_Info.Rd
 433ec44414338fc606a4eb63c4249169 *man/ESPSuit.Rd
-8fa905486b30ebb1686b36c7b34516dd *man/LGPSuit.Rd
+30ec23139aa207361f469db37e364a19 *man/LGPSuit.Rd
 2956d85849764c29a47b62bde2fd9aef *man/ME_ECharm.Rd
 7337292518fa6262a08fe75c124097b3 *man/ME_ECharmserve.Rd
 7ff4524472a2e54a53bdb07258db7004 *man/ME_PHharm.Rd

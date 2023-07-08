@@ -2,50 +2,26 @@ saltSeverity=function(ec,ph,esp,criterion="FAO"){
   esp=esp*1
   ec=ec*1
   ph=round(ph*1,2)
-  salt1=saltClass(ec,ph,esp)
   if(criterion=="FAO"){
-    sal=ifelse(ec<0.75,4,ifelse(ec<2,6,ifelse(ec<4,2,ifelse(ec<8,8,ifelse(ec<15,10,1)))))
-    sod=ifelse(esp<15,4,(ifelse(esp<30,7,ifelse(esp<50,3,ifelse(esp<70,9,11)))))
-    ww1=ifelse(negData("ph",ph)<8.2,sal,0)
-    ww2=ifelse(esp<15,4,(ifelse(esp<30,7,ifelse(esp<50,3,ifelse(esp<70,9,11)))))
-    ww3=ifelse(negData("ph",ph)<8.2,5,0)
-    intenclass=ifelse(salt1<5,ifelse(negData("ec",ec)<0.75,4,ww1),ifelse(salt1<6,ww3,ifelse(salt1<13,12,ifelse(salt1<14,ww2,ww1))))
-  }
+    sal=ifelse(negData("ec",ec)<0.75,1,ifelse(negData("ec",ec)<2,2,ifelse(negData("ec",ec)<4,3,ifelse(negData("ec",ec)<8,4,ifelse(negData("ec",ec)<15,5,6)))))
+    sod=ifelse(negData("esp",esp)<15,1,(ifelse(negData("esp",esp)<30,7,ifelse(negData("esp",esp)<50,8,ifelse(negData("esp",esp)<70,9,10)))))
+    intenclass=ifelse(negData("ph",ph)<8.2,ifelse(esp<15,sal,ifelse(ec<4,13,12)),ifelse(esp<15,ifelse(ec<4,11,13),ifelse(ec<4,sod,13)))
+   }
   if(criterion=="USDA"){
-    sal=ifelse(ec<0.75,4,ifelse(ec<2,6,ifelse(ec<4,2,ifelse(ec<8,8,ifelse(ec<15,10,1)))))
-    sod=ifelse(esp<15,4,(ifelse(esp<30,7,ifelse(esp<50,3,ifelse(esp<70,9,11)))))
-    ww1=ifelse(negData("ph",ph)<8.5,sal,0)
-    ww2=ifelse(esp<15,4,(ifelse(esp<30,7,ifelse(esp<50,3,ifelse(esp<70,9,11)))))
-    ww3=ifelse(negData("ph",ph)<8.5,5,0)
-    intenclass=ifelse(salt1<5,ifelse(negData("ec",ec)<0.75,4,ww1),ifelse(salt1<6,ww3,ifelse(salt1<13,12,ifelse(salt1<14,ww2,ww1))))
+    sal=ifelse(negData("ec",ec)<2,1,ifelse(negData("ec",ec)<4,2,ifelse(negData("ec",ec)<8,3,ifelse(negData("ec",ec)<16,4,6))))
+    sod=ifelse(negData("esp",esp)<15,1,(ifelse(negData("esp",esp)<30,7,ifelse(negData("esp",esp)<50,8,ifelse(negData("esp",esp)<70,9,10)))))
+    intenclass=ifelse(negData("ph",ph)<8.5,ifelse(negData("esp",esp)<15,sal,ifelse(negData("ec",ec)<4,13,12)),ifelse(negData("esp",esp)<15,ifelse(negData("ec",ec)<4,11,13),ifelse(negData("ec",ec)<4,sod,13)))
   }
   else if(criterion=="Amrhein"){
-    sal=ifelse(ec<0.75,4,ifelse(ec<2,6,ifelse(ec<4,2,ifelse(ec<8,8,ifelse(ec<15,10,1)))))
-    sod=ifelse(esp<15,4,(ifelse(esp<30,7,ifelse(esp<50,3,ifelse(esp<70,9,11)))))
-    ww1=ifelse(negData("ph",ph)<8.5,sal,0)
-    ww2=ifelse(esp<6,4,(ifelse(esp<10,7,ifelse(esp<15,3,ifelse(esp<25,9,11)))))
-    ww3=ifelse(negData("ph",ph)<8.5,5,0)
-    intenclass=ifelse(salt1<5,ifelse(negData("ec",ec)<0.75,4,ww1),ifelse(salt1<6,ww3,ifelse(salt1<13,12,ifelse(salt1<14,ww2,ww1))))
-
+    sal=ifelse(negData("ec",ec)<0.75,1,ifelse(negData("ec",ec)<2,2,ifelse(negData("ec",ec)<4,3,ifelse(negData("ec",ec)<8,4,ifelse(negData("ec",ec)<15,5,6)))))
+    sod=ifelse(negData("esp",esp)<6,1,(ifelse(negData("esp",esp)<10,7,ifelse(negData("esp",esp)<15,8,10))))
+    intenclass=ifelse(negData("ph",ph)<8.5,ifelse(negData("esp",esp)<15,sal,ifelse(negData("ec",ec)<4,13,12)),ifelse(negData("esp",esp)<15,ifelse(negData("ec",ec)<4,11,13),ifelse(negData("ec",ec)<4,sod,13)))
   }
   else if(criterion=="PSALT"){
-    Classt=function(ec,ph,esp){
-      ec=ec*1
-      esp=esp*1
-      ph=ph*1
-      bb1=ifelse(negData("esp",esp)<15,4,13)
-      bb2=ifelse(negData("esp",esp)<15,14,5)
-      Classt=ifelse(negData("ec",ec)<0.25,bb1,bb2)
-      return(salinity=Classt)
-    }
-    psalt=Classt(ec,ph,esp)
-    sal=ifelse(ec<0.048,4,ifelse(ec<0.128,6,ifelse(ec<0.25,2,ifelse(ec<0.5,8,ifelse(ec<1,10,1)))))
-    sod=ifelse(esp<15,4,(ifelse(esp<30,7,ifelse(esp<50,3,ifelse(esp<70,9,11)))))
-    ww1=ifelse(negData("ph",ph)<8.2,sal,0)
-    ww2=ifelse(esp<15,4,(ifelse(esp<30,7,ifelse(esp<50,3,ifelse(esp<70,9,11)))))
-    ww3=ifelse(negData("ph",ph)<8.2,5,0)
-    intenclass=ifelse(psalt<5,ifelse(negData("ec",ec)<0.048,4,ww1),ifelse(psalt<6,ww3,ifelse(psalt<13,12,ifelse(psalt<14,ww2,ww1))))
-
+    sal=ifelse(negData("ec",ec)<0.25,1,ifelse(negData("ec",ec)<0.5,2,ifelse(negData("ec",ec)<1,3,ifelse(negData("ec",ec)<2,4,6))))
+    sod=ifelse(negData("esp",esp)<15,1,(ifelse(negData("esp",esp)<30,7,ifelse(negData("esp",esp)<50,8,ifelse(negData("esp",esp)<70,9,10)))))
+    intenclass=ifelse(negData("ph",ph)<8.5,ifelse(negData("esp",esp)<15,sal,ifelse(negData("ec",ec)<0.25,13,12)),ifelse(negData("esp",esp)<15,ifelse(negData("ec",ec)<0.25,11,13),ifelse(negData("ec",ec)<0.25,sod,13)))
   }
   return(intenclass)
 }
+

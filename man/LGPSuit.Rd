@@ -42,7 +42,6 @@ If the input value is raster map, then the output will also be a raster map of L
 }
 \examples{
 library(sp)
-library(maptools)
 LGPSuit(138,"cotton")
 newmap = data.frame(LGP = c(1:6,158,160,211),
                     lon = c(1,1,1,2,2,2,3,3,3),

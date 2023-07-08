@@ -38,13 +38,15 @@ Scales less than 0.1 square km may be too small for search. Large scales (say 10
 \examples{
 \donttest{
 library(sp)
+library(raster)
+library(terra)
 x <- c(20.02,25.69,25.69,20.02)
 y <- c(-28.40,-32.76,-32.76,-34.84)
 yx=data.frame(cbind(x, y))
-CRs=CRS("+init=epsg:4326")
+CRs="+proj=longlat +datum=WGS84 +no_defs"
 Data=SASglobeData("ph","ZAF")
 coordinates(Data)=~Longitude+Latitude
-proj4string(Data)=CRs
+crs(Data)=CRs
 Index=DataAvailabilityIndex(yx,60,CRs,Data)
 plot(Index)
 }
