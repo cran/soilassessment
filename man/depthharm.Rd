@@ -57,8 +57,7 @@ soildata <- join(data.frame(id, top, bottom, Varn, horizon),
               data.frame(id, lat, lon), type='inner')
 depths(soildata) <- id ~ top + bottom
 site(soildata) <- ~ lat + lon
-coordinates(soildata) <- ~ lat + lon
-proj4string(soildata) <- CRS("+proj=longlat +datum=WGS84")
+initSpatial(soildata, crs = "EPSG:4326") <- ~ lat + lon
 depth.s = depthharm(soildata, var.name= "Varn",
 lam=0.01,d = t(c(0,10,40,80,100,150)))
 plot(soildata, color= "Varn", name="horizon")

@@ -7,7 +7,7 @@ A function for showing sampling point density map in a geographic area
 An index map of density of sampling points in a geographic area
 }
 \usage{
-DataAvailabilityIndex(Boundary, Scale, CP,Data)
+DataAvailabilityIndex(Boundary, Scale, CP, Data)
 }
 \arguments{
   \item{Boundary}{
@@ -24,7 +24,7 @@ input spatial spreadsheet database containing all possible point samples
 }
 }
 \details{
-The input spreadsheet database should contain spatial coordinates of available samples. Example input spatial spreadsheet database is the global soil database.The Scale should be provided in area units e.g., 0.5, 1, 20, 30 (square km). Large areas cover more data than small areas. Hence, they take time to process. Coordinate projection (CP) for Boundary polygon should be of formal class CRS (coordinate reference system). It's preferrable to provide CP for Boundary area similar to CP for input data
+The input spreadsheet database should contain spatial coordinates of available samples. Example input spatial spreadsheet database is the global soil database.The Scale should be provided in area units e.g., 0.5, 1, 20, 30 (square km). Large areas cover more data than small areas. Hence, they take time to process. Coordinate projection (CP) for Boundary polygon should be of formal class crs (coordinate reference system). It's preferrable to provide CP for Boundary area similar to CP for input data
 }
 \value{
 A spatial raster map of density of sample locations per unit (specified) area
@@ -40,6 +40,7 @@ Scales less than 0.1 square km may be too small for search. Large scales (say 10
 library(sp)
 library(raster)
 library(terra)
+library(sf)
 x <- c(20.02,25.69,25.69,20.02)
 y <- c(-28.40,-32.76,-32.76,-34.84)
 yx=data.frame(cbind(x, y))

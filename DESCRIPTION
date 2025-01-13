@@ -1,33 +1,30 @@
 Type: Package
 Package: soilassessment
-Title: Assessment Models for Agriculture Soil Conditions and Crop
+Title: Soil Health Assessment Models for Assessing Soil Conditions and
         Suitability
-Version: 0.2.6
-Description: Soil assessment builds information for improved decision in
-    soil management. It analyzes soil conditions with regard to
-    agriculture crop suitability requirements [such as those given by FAO
-    <https://www.fao.org/land-water/databases-and-software/crop-information/en/>]
-    soil fertility classes, soil erosion, and soil salinity classification
-    [<doi:10.1002/ldr.4211>]. Suitability requirements are for
-    crops grouped into cereal crops, nuts, legumes, fruits, vegetables,
-    industrial crops, and root crops.
+Version: 0.3.0
+Description: Soil health assessment builds information to improve decision in
+    soil management. It facilitates assessment of soil conditions for crop suitability [such as those given by FAO
+    <https://www.fao.org/land-water/databases-and-software/crop-information/en/>], 
+    groundwater recharge, fertility, erosion, salinization [<doi:10.1002/ldr.4211>], 
+    carbon sequestration, irrigation potential, and status of soil resources. 
 License: GPL
 Depends: R (>= 3.5.0)
 Imports: caret, deSolve, e1071, FuzzyAHP, googledrive, Hmisc, methods,
         nnet, png, randomForest, raster, soiltexture, sp, sf, terra,
         stats
 Suggests: arm, Cubist, aqp, kernlab, nlme, ranger, rpart, plyr, qrnn,
-        quantregForest
+        quantregForest, knitr, rmarkdown
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.2.2
+RoxygenNote: 7.3.2
 Authors@R: 
     person("Christian Thine", "Omuto", , "thineomuto@yahoo.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-5792-3485"))
 NeedsCompilation: no
-Packaged: 2023-07-08 05:45:37 UTC; Cthine
+Packaged: 2025-01-13 01:22:10 UTC; Cthine
 Author: Christian Thine Omuto [aut, cre]
     (<https://orcid.org/0000-0002-5792-3485>)
 Maintainer: Christian Thine Omuto <thineomuto@yahoo.com>
 Repository: CRAN
-Date/Publication: 2023-07-08 12:10:03 UTC
+Date/Publication: 2025-01-13 14:10:01 UTC

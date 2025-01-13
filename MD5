@@ -1,8 +1,7 @@
-3c976dda2ec909bed12706f5a2ebaa78 *DESCRIPTION
-c7da14a08647f2468cdb51188f5a0e31 *NAMESPACE
+e6879df2426dcd1c95a02202d6d54d23 *DESCRIPTION
+d77bedc10c37ffd9bf265835013886a9 *NAMESPACE
 122e19ef03d5b3683ec2483701eab876 *R/CECSuit.R
-82d07f9a797ef448de403d4cf09e1274 *R/DataAvailabilityIndex.R
-1556436897eec621ca25f5731192565a *R/DataAvailabilityIndex0.R
+46a9f41cfe84e423ee16d83b740f6df2 *R/DataAvailabilityIndex.R
 5b13c271edb580a851a935428bb0296e *R/ECSuit.R
 6b29481588f5e9f0d521f0440f3f657e *R/ECconversion1.R
 2104e8b5be60d24737e6ecb161f3d2bd *R/ECconversion2.R
@@ -15,6 +14,7 @@ ae8ff78fcb0caf88291e356091f69b25 *R/ESPSuit.R
 817163b19f7ae84ed3565ba060a30dd2 *R/ME_ECharmserve.R
 29b97bc602735daa3fe5f38a8bdbb64a *R/ME_PHharm.R
 817163b19f7ae84ed3565ba060a30dd2 *R/ME_PHharmserve.R
+7002f2d906719cbb49ca73782c93e682 *R/NDVIcoverfactor.R
 20d70f9f82c41af611ecc7ccb361f4c1 *R/NPPmodel.R
 817695044c839166742029be16ffe877 *R/PHConversion.R
 41962aec1e9f29c255f8f2729afc368c *R/PHSuit.R
@@ -25,6 +25,7 @@ a29ca62f8ccfb3a2c537daeaf8c5ae80 *R/SASdata_densityInfo.R
 525dc1dc29668cc6a3f2ff21756e656b *R/SASglobeData.R
 2ebadf4814871eaa9a3794b4cd4e21ef *R/SASmodels.R
 9c8d16806f1d74885ffd590b66173d4a *R/SOCSuit.R
+e16731506baf5afdd768b5d3dc3f1527 *R/VegCOv.R
 ecc9971ffdf120909d2133404440e264 *R/appendTextureclass.R
 5b9b4919964b2921c0b0a53951bb7167 *R/carbonTurnover.R
 20e29049782c2c8a466fb5d4a4e51239 *R/carbonateSuit.R
@@ -72,7 +73,7 @@ ce3a5f7762a525864eb1f2d9cf430a16 *data/nutrindicator.RData
 4b3794cc377f021c47e5498bf683a698 *data/suitabinput.RData
 9a4b2bb75f180d767d09c0f5a1056ddc *data/textureinput.RData
 20326b7399c464ae1216594a8f83745e *man/CECSuit.Rd
-18a02fc9984d72bd2620872807639e6f *man/DataAvailabilityIndex.Rd
+f79f72f021ed0f399d4c0315cd0995bc *man/DataAvailabilityIndex.Rd
 24435492da9d41f32c52488ce0acd53f *man/ECSuit.Rd
 f7e2d109d9909fe7133499fc46356553 *man/ECconversion1.Rd
 86bf276f1f22df0409fd03d5d12ae1c7 *man/ECconversion2.Rd
@@ -85,6 +86,7 @@ ff2b96625ee0be9a9ee405176ece671a *man/ECharm_Info.Rd
 7337292518fa6262a08fe75c124097b3 *man/ME_ECharmserve.Rd
 7ff4524472a2e54a53bdb07258db7004 *man/ME_PHharm.Rd
 18f2df719d3fe37f2bc53958ce564f28 *man/ME_PHharmserve.Rd
+6514e56d08f5e57bd1f943d4a24524ea *man/NDVIcoverfactor.Rd
 fde524c53b3562ff50a5c924aa850bd9 *man/NPPmodel.Rd
 26916e0fe072cf9e4f801d44dbd6846f *man/PHConversion.Rd
 6636a5db6cba65a1c7f6fe9651f87964 *man/PHSuit.Rd
@@ -95,6 +97,7 @@ e792f6a6157b5bb44663b31166f33399 *man/SASdata_densityInfo.Rd
 cde2f10dd9672f7037ad7a6497ea378d *man/SASglobeData.Rd
 0a7710eebb34e31c08dadbb3e5052028 *man/SASmodels.Rd
 a191f8d345f4b990c2944520f67c17f1 *man/SOCSuit.Rd
+4f07e2f11d010550b4a1cbc7be93cb58 *man/VegCOV.Rd
 392efea85d80494e33df948eeb149bdd *man/appendTextureclass.Rd
 7a9881a46472b5377a21bfc1d82c4a2e *man/carbonTurnover.Rd
 b16d6689951898fd059c2c8553b7c3e9 *man/carbonateSuit.Rd
@@ -105,7 +108,7 @@ b8ec9d5d50ae411fbbfe37a087283f45 *man/comparisonTable.Rd
 ad07495dc6e3d4d7e6255b72d50acf02 *man/conversion.Rd
 e488db60b59155c847b74444fd9463c8 *man/createTexturedata.Rd
 2098093c737d82e4158d62420604170d *man/depthSuit.Rd
-130cf08c1120289d4943de2b45bb09f6 *man/depthharm.Rd
+59282435b630f4044de1a0b04fc15827 *man/depthharm.Rd
 b36f8129923a53ef5d1873ee294b0fe8 *man/drainageSuit.Rd
 ac6b684370a88991faa070a1dd1cc9c3 *man/erodFUN.Rd
 044585a8e2672b99c5b019b7daf128d0 *man/erodibilityRisk.Rd

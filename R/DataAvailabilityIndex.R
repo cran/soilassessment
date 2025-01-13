@@ -25,7 +25,7 @@ DataAvailabilityIndex=function(Boundary, Scale, CP,Data){
     }
   }
   Boundary=st_as_sfc(Boundary)
-  st_crs(Boundary)=CP
+  st_crs(Boundary) = CP
   Boundary=st_transform(Boundary,4326)
   if(Scale<=0.1){stop("Selected assessment area is too small and must be greater than zero")}
 
