@@ -28,7 +28,7 @@ imageIndices=function(blue, green,red,nir,swir1,swir2,index="NDVI"){
   else if(index=="ROCK"){ratio=nir/swir1}
   else if(index=="NDBI"){ratio=(swir1-nir)/(swir1+nir)}
   else if(index=="NBR"){ratio=(swir1-swir2)/(swir1+swir2)}
-  else if(index=="CLAY"){ratio=swir1/swir1}
+  else if(index=="CLAY"){ratio=swir1/swir2}
   else if(index=="NDMI"){ratio=(nir-0.5*(swir1+swir2))/(nir+0.5*(swir1+swir2))}
   else if(index=="NDWI"){ratio=(green-nir)/(green+nir)}
   else if(index=="TNDVI"){
