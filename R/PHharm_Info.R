@@ -24,8 +24,8 @@ PHharm_Info=function(solution="cacl2"){
       withr::with_options(
         list(show.error.messages = FALSE),
         {
-          print("Stopped Execution")
-          stop()
+          print("Internet connectivity to server is needed")
+          stop(x)
         }
       )
     }

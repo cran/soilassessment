@@ -1,7 +1,7 @@
 \name{classnames}
 \alias{classnames}
 \title{
-A function to display class names and codes as used in the soilassessment package
+Display class names and codes as used in the soilassessment package
 }
 \description{
 This is a database function for displaying the class names and codes used in the soil assessment package

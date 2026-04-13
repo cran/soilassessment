@@ -1,7 +1,7 @@
 \name{featureRep}
 \alias{featureRep}
 \title{
-A function to assess how well landscape features are represented in descrete samples
+Assess how well landscape features are represented in descrete samples
 }
 \description{
 This function establishes graphical representation of the landscape feature in the sample points. An approximation of Kolmogorov-Smirnov similarity test (D-statistic) between the sampled feature distribution and the population feature distribution is also given.

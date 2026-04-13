@@ -1,7 +1,7 @@
 \name{depthharm}
 \alias{depthharm}
 \title{
-A function for harmonizing soil property between uniform depth intervals in observation pits
+Harmonizing soil property between uniform depth intervals in observation pits
 }
 \description{
 A function to harmonize soil property between uniform depth intervals in a set of observation pits

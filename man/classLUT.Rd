@@ -1,7 +1,7 @@
 \name{classLUT}
 \alias{classLUT}
 \title{
-A function for developing Look-up Table (LUT) for the soil condition class map
+Developing Look-up Table (LUT) for the soil condition class map
 }
 \description{
 This function develops a Look-Up Table (LUT) for the class type map of soil condition. LUT is important map legends or maps re-classification.

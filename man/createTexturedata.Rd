@@ -1,7 +1,7 @@
 \name{createTexturedata}
 \alias{createTexturedata}
 \title{
-A function for creating spatial dataframe of normalized soil texture proportions
+Creating spatial dataframe of normalized soil texture proportions
 }
 \description{
 The function creates spatial dataframe of normalized soil texture proportions. They are normalized to 100 percent

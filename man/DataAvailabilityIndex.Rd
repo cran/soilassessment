@@ -1,7 +1,7 @@
 \name{DataAvailabilityIndex}
 \alias{DataAvailabilityIndex}
 \title{
-A function for showing sampling point density map in a geographic area
+Showing sampling point density map in a geographic area
 }
 \description{
 An index map of density of sampling points in a geographic area

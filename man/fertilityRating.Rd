@@ -1,7 +1,7 @@
 \name{fertilityRating}
 \alias{fertilityRating}
 \title{
-A function for determining soil fertility levels for given soil property (fertility indicator)
+Determining soil fertility levels for given soil property (fertility indicator)
 }
 \description{
 This function determines the fertility levels given values of a soil property

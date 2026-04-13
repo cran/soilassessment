@@ -1,7 +1,7 @@
 \name{RotCtempcorrection}
 \alias{RotCtempcorrection}
 \title{
-A function for estimating temperature effects in organic matter decomposition rates in the soil
+Estimating temperature effects in organic matter decomposition rates in the soil
 }
 \description{
 This function estimates the scalar constant for temperature effects in RothC carbon turnover modelling in the soil

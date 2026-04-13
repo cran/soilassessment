@@ -1,7 +1,7 @@
 \name{saltRating}
 \alias{saltRating}
 \title{
-A function for classifying salt-affected soils using EC and PH only
+Classifying salt-affected soils using EC and PH only
 }
 \description{
 This function determines classes of salt-affected soils using Electrical Conductivity and pH according to FAO or USDA salt classification schemes

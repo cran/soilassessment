@@ -1,7 +1,7 @@
 \name{sloplenFUN}
 \alias{sloplenFUN}
 \title{
-A function for estimating slope-length factor for soil erosion
+Estimating slope-length factor for soil erosion
 }
 \description{
 Th function estimates slope length factor for erosion risk assessment. It has options for choosing different algorithms

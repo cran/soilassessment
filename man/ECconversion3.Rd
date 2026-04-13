@@ -1,7 +1,7 @@
 \name{ECconversion3}
 \alias{ECconversion3}
 \title{
-A function for developing own harmonization model
+Developing own harmonization model
 }
 \description{
 This function enables development of own function for harmonizing soil indicators to standard values

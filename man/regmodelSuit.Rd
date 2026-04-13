@@ -1,7 +1,7 @@
 \name{regmodelSuit}
 \alias{regmodelSuit}
 \title{
-A function for guiding selection of a predition model for modelling soil properties
+Guiding selection of a predition model for modelling soil properties
 }
 \description{
 This function evaluates suitability of most predition models in mapping soil properties using a set of predictors

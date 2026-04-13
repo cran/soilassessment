@@ -1,7 +1,7 @@
 \name{erodFUN}
 \alias{erodFUN}
 \title{
-A function to estimate soil erodibility factor
+Estimate soil erodibility factor
 }
 \description{
 A function to determine soil erodibility factor from a choice of different erodibility models

@@ -1,7 +1,7 @@
 \name{ECconversion1}
 \alias{ECconversion1}
 \title{
-A function for harmonizing electrical conductivity of a soil solution to that of the saturated paste extract
+Harmonizing electrical conductivity of a soil solution to that of the saturated paste extract
 }
 \description{
 This function converts electrical conductivity measurements of a soil solution to that of soil paste extract. It considers the influence of texture, organic matter content, and clay content on electrical conductivity conversion. These factors and ratio of soil:water mix for the solution and conversion method must be indicated.

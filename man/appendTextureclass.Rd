@@ -1,7 +1,7 @@
 \name{appendTextureclass}
 \alias{appendTextureclass}
 \title{
-A function for attaching soil textural classes
+Attaching soil textural classes
 }
 \description{
 This function attaches soil textural classes according to different soil texture classification systems

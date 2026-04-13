@@ -1,7 +1,7 @@
 \name{comparisonTable}
 \alias{comparisonTable}
 \title{
-A function for normalizing decision ranking table
+Normalizing decision ranking table
 }
 \description{
 This function normalizes the decision ranking table and determines consistency of the decisions

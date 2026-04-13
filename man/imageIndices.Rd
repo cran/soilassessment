@@ -1,7 +1,7 @@
 \name{imageIndices}
 \alias{imageIndices}
 \title{
-A function for developing remote sensing indices for soil assessment
+Developing remote sensing indices for soil assessment
 }
 \description{
 The function determines commonly used remote sensing indices with relationship with soil surface or vegetation cover characteristics.

@@ -1,7 +1,7 @@
 \name{stoneSuit}
 \alias{stoneSuit}
 \title{
-A function for assessing stoniness suitability requirements for certain crops and trees
+Assessing stoniness suitability requirements for certain crops and trees
 }
 \description{
 This function determines the suitability classes for stoniness requirements of selected agricultural crops and forest trees

@@ -1,7 +1,7 @@
 \name{SASglobeData}
 \alias{SASglobeData}
 \title{
-A function to query global SAS data
+Querying global SAS data
 }
 \description{
 A function to query soil data availability in the global SAS database

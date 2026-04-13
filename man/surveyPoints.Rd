@@ -1,7 +1,7 @@
 \name{surveyPoints}
 \alias{surveyPoints}
 \title{
-A function to generate georeferenced locations for monitoring soil conditions
+Generate georeferenced locations for monitoring soil conditions
 }
 \description{
 This function uses stratified random sampling to generate georeferenced locations for monitoring soil conditions

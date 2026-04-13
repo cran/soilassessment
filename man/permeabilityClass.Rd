@@ -1,7 +1,7 @@
 \name{permeabilityClass}
 \alias{permeabilityClass}
 \title{
-A function to determine permeability class
+Determine permeability class
 }
 \description{
 This function determines the soil permeability classes according to the USDA soil textural classes

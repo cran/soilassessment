@@ -1,7 +1,7 @@
 \name{ECSuit}
 \alias{ECSuit}
 \title{
-A function for assessing Electrical Conductivity suitability requirements for certain crops and trees
+Assessing Electrical Conductivity suitability requirements for certain crops and trees
 }
 \description{
 This function determines the suitability classes for Electrical Conductivity requirements for selected agricultural crops and forest trees

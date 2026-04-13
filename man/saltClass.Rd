@@ -1,7 +1,7 @@
 \name{saltClass}
 \alias{saltClass}
 \title{
-A function to classify types of salt-affected soils using EC, PH, and ESP
+Classify types of salt-affected soils using EC, PH, and ESP
 }
 \description{
 This function determines the major classes of salt-affected soils using Electrical Conductivity (EC), soil reaction (pH), and Exchangeable Sodium Percent (ESP) according to FAO or USDA classification schemes

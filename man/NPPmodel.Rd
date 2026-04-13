@@ -1,7 +1,7 @@
 \name{NPPmodel}
 \alias{NPPmodel}
 \title{
-A function for calculating net primary production using air temperature and mean rainfall amount
+Calculating net primary production using air temperature and mean rainfall amount
 }
 \description{
 This is an empirical function for deriving net primary production using climatic variables (mean temperature and rainfall amounts)

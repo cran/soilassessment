@@ -1,7 +1,7 @@
 \name{RotCmoistcorrection}
 \alias{RotCmoistcorrection}
 \title{
-A function for estimating moisture effects in RothC carbon turnover modelling
+Estimating moisture effects in RothC carbon turnover modelling
 }
 \description{
 This function estimates the scalar constant representing the moisture effects in RothC carbon turnover modelling in the soil

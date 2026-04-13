@@ -1,7 +1,7 @@
 \name{drainageSuit}
 \alias{drainageSuit}
 \title{
-A function for assessing drainage suitability requirements for certain crops and trees
+Assessing drainage suitability requirements for certain crops and trees
 }
 \description{
 This function determines the suitability classes for drainage requirements for selected agricultural crops and forest trees

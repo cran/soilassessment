@@ -1,7 +1,7 @@
 \name{erosivFUN}
 \alias{erosivFUN}
 \title{
-A function to estimate rainfall erosivity from annual rainfall amounts
+Estimate rainfall erosivity from annual rainfall amounts
 }
 \description{
 This function assumes an algebraic relationship between annual rainfall amounts and rainfall erosivity. The relationship has constants that may depend of certain regions.

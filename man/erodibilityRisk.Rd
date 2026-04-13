@@ -1,7 +1,7 @@
 \name{erodibilityRisk}
 \alias{erodibilityRisk}
 \title{
-A function to determine soil erodibility risk
+Determine soil erodibility risk
 }
 \description{
 This function classifies soil erodibility factor into classes of risk to erosion

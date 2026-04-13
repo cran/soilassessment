@@ -1,7 +1,7 @@
 \name{suitability}
 \alias{suitability}
 \title{
-A function to determine soil suitability for agricultural crops
+Determine soil suitability for agricultural crops
 }
 \description{
 This function determines soil condition classes (such as suitability, fertility, etc.) given a set of indicators.

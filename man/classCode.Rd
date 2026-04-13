@@ -1,7 +1,7 @@
 \name{classCode}
 \alias{classCode}
 \title{
-A function for displaying names of class codes of soil conditions in the soilassessment package
+Displaying names of class codes of soil conditions in the soilassessment package
 }
 \description{
 This function displays names of integer classes (or levels) of derived codes of soil conditions produced in the package

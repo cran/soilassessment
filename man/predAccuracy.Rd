@@ -1,7 +1,7 @@
 \name{predAccuracy}
 \alias{predAccuracy}
 \title{
-A function for accuracy assessment between an array of two variables
+Accuracy assessment between an array of two variables
 }
 \description{
 This function calculates statistical indices for accuracy between an array of two variables such as calibration and validation vectors. The indices are Bias, RMSE, R-squared, and NSE

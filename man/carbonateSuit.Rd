@@ -1,7 +1,7 @@
 \name{carbonateSuit}
 \alias{carbonateSuit}
 \title{
-A function for assessing calcium carbonate suitability requirements for certain crops and trees
+Assessing calcium carbonate suitability requirements for certain crops and trees
 }
 \description{
 This function determines the suitability classes for soil calcium carbonate requirements of selected agricultural crops and forest trees

@@ -1,7 +1,7 @@
 \name{suitabilityClass}
 \alias{suitabilityClass}
 \title{
-A function to determine suitability classes for given indicator values
+Determine suitability classes for given indicator values
 }
 \description{
 This function determines the suitability class to which a given indicator value falls based on the crop requirement

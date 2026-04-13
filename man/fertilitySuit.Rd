@@ -1,7 +1,7 @@
 \name{fertilitySuit}
 \alias{fertilitySuit}
 \title{
-A function for assessing soil fertility suitability requirements for certain crops
+Assessing soil fertility suitability requirements for certain crops
 }
 \description{
 This function determines the suitability classes for soil fertility requirements of selected agricultural crops

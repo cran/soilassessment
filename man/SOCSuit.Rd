@@ -1,7 +1,7 @@
 \name{SOCSuit}
 \alias{SOCSuit}
 \title{
-A function for assessing soil carbon suitability requirements for certain crops and trees
+Assessing soil carbon suitability requirements for certain crops and trees
 }
 \description{
 This function determines the suitability classes for soil organic carbon requirements of selected agricultural crops and forest trees

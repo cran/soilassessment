@@ -1,7 +1,7 @@
 \name{reclassifyMap}
 \alias{reclassifyMap}
 \title{
-A function for re-classifying raster maps based on input look-up table
+Re-classifying raster maps based on input look-up table
 }
 \description{
 This function re-classifies an input raster maps based on input look-up table that specifies transition from map classes (or range of classes) to a new class (or range of classes)
