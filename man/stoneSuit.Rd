@@ -38,7 +38,7 @@ Christian Thine Omuto
 Output raster map of stoniness for the crop of interest is given if the input value is raster map
 }
 \seealso{
-tempSuit, PHSuit, rainSuit
+\code{\link{tempSuit}}, \code{\link{PHSuit}}, \code{\link{rainSuit}}
 }
 \examples{
 stoneSuit(15,"grape")

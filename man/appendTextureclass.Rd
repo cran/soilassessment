@@ -11,14 +11,14 @@ appendTextureclass(df, method)
 }
 \arguments{
   \item{df}{
-spatial pixel dataframe with columns of soil textural proportions clay, silt, and sand in percentages
+dataframe with columns of soil textural proportions clay, silt, and sand in percentages
 }
   \item{method}{
 soil texture classification method for calculating soil texture. Default=USDA method
 }
 }
 \details{
-df is an output of createTexturedata with spatial reference or similar dataframe with normalized proportions summing to 100%.
+df is an output of createTexturedata or similar dataframe with normalized proportions summing to 100%.
 method is the texture classification method for textural class calculation. Exanple methods are USDA, FAO, Australian, German, etc.
 }
 \value{

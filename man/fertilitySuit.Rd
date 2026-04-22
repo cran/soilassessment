@@ -43,6 +43,7 @@ If the input value is raster map, then the output will also be a raster map of f
 \examples{
 library(sp)
 library(FuzzyAHP)
+library(raster)
 fertilitySuit(1.56, "melon")
 newmap=(nutrindicator)
 newmap$carbon=fertilityRating((nutrindicator$soc),"carbon")
@@ -65,7 +66,7 @@ nutriens=comparisonTable(nutrient)
 newmapT1$fertility=suitability(nutrient, valuT)
 newmap@data$fertility=newmapT1$fertility
 newmap$fertilityokra=fertilitySuit(newmap$fertility,"okra")
-str(newmap$fertilityokra)
-spplot(newmap["fertilityokra"], main="Fertility suitability map for Okra")
+fertility=raster(newmap$fertilityokra)
+spplot(fertility, main="Fertility suitability map for Okra")
 }
 }

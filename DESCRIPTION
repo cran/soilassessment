@@ -2,7 +2,7 @@ Type: Package
 Package: soilassessment
 Title: Soil Health Assessment Models for Assessing Soil Conditions and
         Suitability
-Version: 0.3.2
+Version: 1.3.0
 Description: Soil health assessment builds information to improve decision in
     soil management. It facilitates assessment of soil conditions for crop suitability [such as those given by FAO
     <https://www.fao.org/land-water/databases-and-software/crop-information/en/>], 
@@ -22,9 +22,9 @@ Authors@R:
     person("Christian Thine", "Omuto", , "thineomuto@yahoo.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-5792-3485"))
 NeedsCompilation: no
-Packaged: 2026-04-12 19:10:35 UTC; Cthine
+Packaged: 2026-04-22 10:39:22 UTC; Cthine
 Author: Christian Thine Omuto [aut, cre] (ORCID:
     <https://orcid.org/0000-0002-5792-3485>)
 Maintainer: Christian Thine Omuto <thineomuto@yahoo.com>
 Repository: CRAN
-Date/Publication: 2026-04-13 07:20:02 UTC
+Date/Publication: 2026-04-22 11:30:02 UTC

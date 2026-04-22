@@ -32,7 +32,7 @@ Christian Thine Omuto
 It's important to normalize and assess the adequacy of the decision matrix before using this function
 }
 \seealso{
-fertilityRating, suitabilityClass
+\code{\link{fertilityRating}}, \code{\link{suitabilityClass}}
 }
 \examples{
 library(sp)

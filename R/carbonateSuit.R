@@ -1,109 +1,24 @@
 carbonateSuit=function(value, crop="wheat"){
-  #Soil carbonate (%) suitability classes for cereals
-  if(crop=="wheat"){suitclass=ifelse(value>60,4,ifelse(value>40,3,ifelse(value>20,2,1)))}
-  else if(crop=="maize"){suitclass=ifelse(value>35,4,ifelse(value>15,3,ifelse(value>6,2,1)))}
-  else if(crop=="rice"){suitclass=ifelse(value>30,4,ifelse(value>20,3,ifelse(value>10,2,1)))}
-  else if(crop=="sorghum"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>3,2,1)))}
-  else if(crop=="millet"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>3,2,1)))}
-  else if(crop=="oat"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>3,2,1)))}
-  else if(crop=="barley"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>3,2,1)))}
+  cropp1 = c("pea","soybean","lentil","sesbania","acacia","leucaena","eucalyptus","maple","cabbage","grevillea","ash",
+           "sesame","bean","sunflower","oilpalm","castor","safflower","mustard","rapeseed","olive","alfalfa",
+           "cotton","sugarcane","tea","coffee","rubber","jute","saffron","pyrethrum","tobacco","teak")
+  cropp2 = c("rice","gram","calliandra","grape")
+  cropp3 = c("chilli","pepper","ginger","tumeric","vanilla","lemongrass","cardamom","onion",
+           "rosemary","parsley","rose","jasmine","yam","pumpkin","butternut","squash",
+           "vegetable","broccoli","cauliflower","okra")
+  cropp4 = c("sorghum","millet","oat","barley")
+  cropp5 = c("cassava","mango","citrus","tomato")
+  cropp6 = c("groundnut","poplar","cashew","coconut","almond","pistachio", "maize","wheat")
+  cropp7 = c("pomegranate","banana","watermelon","melon","pineaple","pawpaw","avocado",
+             "sweetpotato","potato","carrot","turnip","radish")
 
-  #Soil carbonate (%) suitability classes for legumes
-  else if(crop=="groundnut"){suitclass=ifelse(value>35,4,ifelse(value>25,3,ifelse(value>12,2,1)))}
-  else if(crop=="bean"){suitclass=ifelse(value>30,4,ifelse(value>25,3,ifelse(value>15,2,1)))}
-  else if(crop=="pea"){suitclass=ifelse(value>25,4,ifelse(value>15,3,ifelse(value>6,2,1)))}
-  else if(crop=="gram"){suitclass=ifelse(value>30,4,ifelse(value>20,3,ifelse(value>10,2,1)))}
-  else if(crop=="soybean"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>6,2,1)))}
-  else if(crop=="lentil"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>6,2,1)))}
-  
-  #Soil carbonate (%) suitability classes for Forest
-  else if(crop=="poplar"){suitclass=ifelse(value>35,4,ifelse(value>25,3,ifelse(value>12,2,1)))}
-  else if(crop=="grevillea"){suitclass=ifelse(value>30,4,ifelse(value>25,3,ifelse(value>15,2,1)))}
-  else if(crop=="sesbania"){suitclass=ifelse(value>25,4,ifelse(value>15,3,ifelse(value>6,2,1)))}
-  else if(crop=="calliandra"){suitclass=ifelse(value>30,4,ifelse(value>20,3,ifelse(value>10,2,1)))}
-  else if(crop=="leucaena"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>6,2,1)))}
-  else if(crop=="acacia"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>6,2,1)))}
-  else if(crop=="eucalyptus"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>6,2,1)))}
-  else if(crop=="teak"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>6,2,1)))}
-  else if(crop=="maple"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>6,2,1)))}
-  else if(crop=="ash"){suitclass=ifelse(value>35,4,ifelse(value>30,3,ifelse(value>20,2,1)))}
-  
-
-  #Soil carbonate (%) suitability classes for oil crop
-  else if(crop=="sesame"){suitclass=ifelse(value>25,4,ifelse(value>15,3,ifelse(value>6,2,1)))}
-  else if(crop=="sunflower"){suitclass=ifelse(value>25,4,ifelse(value>15,3,ifelse(value>6,2,1)))}
-  else if(crop=="oilpalm"){suitclass=ifelse(value>25,4,ifelse(value>15,3,ifelse(value>6,2,1)))}
-  else if(crop=="castor"){suitclass=ifelse(value>25,4,ifelse(value>15,3,ifelse(value>6,2,1)))}
-  else if(crop=="safflower"){suitclass=ifelse(value>25,4,ifelse(value>15,3,ifelse(value>6,2,1)))}
-  else if(crop=="mustard"){suitclass=ifelse(value>25,4,ifelse(value>15,3,ifelse(value>6,2,1)))}
-  else if(crop=="rapeseed"){suitclass=ifelse(value>25,4,ifelse(value>15,3,ifelse(value>6,2,1)))}
-  else if(crop=="olive"){suitclass=ifelse(value>25,4,ifelse(value>15,3,ifelse(value>6,2,1)))}
-
-  #Soil carbonate (%) suitability classes for nuts
-  else if(crop=="cashew"){suitclass=ifelse(value>35,4,ifelse(value>25,3,ifelse(value>10,2,1)))}
-  else if(crop=="coconut"){suitclass=ifelse(value>35,4,ifelse(value>25,3,ifelse(value>10,2,1)))}
-  else if(crop=="almond"){suitclass=ifelse(value>35,4,ifelse(value>25,3,ifelse(value>10,2,1)))}
-  else if(crop=="pistachio"){suitclass=ifelse(value>35,4,ifelse(value>25,3,ifelse(value>10,2,1)))}
-
-  #Soil carbonate (%) suitability classes for industrial
-  else if(crop=="cotton"){suitclass=ifelse(value>20,4,ifelse(value>10,3,ifelse(value>5,2,1)))}
-  else if(crop=="sugarcane"){suitclass=ifelse(value>20,4,ifelse(value>10,3,ifelse(value>5,2,1)))}
-  else if(crop=="tea"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>3,2,1)))}
-  else if(crop=="coffee"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>3,2,1)))}
-  else if(crop=="rubber"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>3,2,1)))}
-  else if(crop=="saffron"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>3,2,1)))}
-  else if(crop=="pyrethrum"){suitclass=ifelse(value>35,4,ifelse(value>24,3,ifelse(value>10,2,1)))}
-  else if(crop=="jute"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>3,2,1)))}
-  else if(crop=="tobacco"){suitclass=ifelse(value>25,4,ifelse(value>10,3,ifelse(value>3,2,1)))}
-
-  #Soil carbonate (%) suitability classes for tuber crops
-  else if(crop=="sweetpotato"){suitclass=ifelse(value>30,4,ifelse(value>15,3,ifelse(value>6,2,1)))}
-  else if(crop=="cassava"){suitclass=ifelse(value>10,4,ifelse(value>5,3,ifelse(value>1,2,1)))}
-  else if(crop=="potato"){suitclass=ifelse(value>30,4,ifelse(value>15,3,ifelse(value>5,2,1)))}
-  else if(crop=="carrot"){suitclass=ifelse(value>30,4,ifelse(value>15,3,ifelse(value>5,2,1)))}
-  else if(crop=="turnip"){suitclass=ifelse(value>30,4,ifelse(value>15,3,ifelse(value>5,2,1)))}
-  else if(crop=="radish"){suitclass=ifelse(value>30,4,ifelse(value>15,3,ifelse(value>5,2,1)))}
-
-  #Soil carbonate (%) suitability classes for fruits
-  else if(crop=="mango"){suitclass=ifelse(value>10,4,ifelse(value>5,3,ifelse(value>0.5,2,1)))}
-  else if(crop=="grape"){suitclass=ifelse(value>30,4,ifelse(value>20,3,ifelse(value>10,2,1)))}
-  else if(crop=="citrus"){suitclass=ifelse(value>10,4,ifelse(value>5,3,ifelse(value>0.5,2,1)))}
-  else if(crop=="pomegranate"){suitclass=ifelse(value>30,4,ifelse(value>20,3,ifelse(value>10,2,1)))}
-  else if(crop=="banana"){suitclass=ifelse(value>30,4,ifelse(value>15,3,ifelse(value>5,2,1)))}
-  else if(crop=="pineaple"){suitclass=ifelse(value>30,4,ifelse(value>15,3,ifelse(value>5,2,1)))}
-  else if(crop=="avocado"){suitclass=ifelse(value>30,4,ifelse(value>15,3,ifelse(value>5,2,1)))}
-  else if(crop=="watermelon"){suitclass=ifelse(value>30,4,ifelse(value>15,3,ifelse(value>5,2,1)))}
-  else if(crop=="melon"){suitclass=ifelse(value>30,4,ifelse(value>15,3,ifelse(value>5,2,1)))}
-  else if(crop=="pawpaw"){suitclass=ifelse(value>30,4,ifelse(value>15,3,ifelse(value>5,2,1)))}
-
-  #Soil carbonate (%) suitability classes for vegetables
-  else if(crop=="cabbage"){suitclass=ifelse(value>25,4,ifelse(value>15,3,ifelse(value>6,2,1)))}
-  else if(crop=="tomato"){suitclass=ifelse(value>10,4,ifelse(value>5,3,ifelse(value>3,2,1)))}
-  else if(crop=="vegetable"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>4,2,1)))}
-  else if(crop=="broccoli"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>4,2,1)))}
-  else if(crop=="okra"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>4,2,1)))}
-  else if(crop=="cauliflower"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>4,2,1)))}
-
-  #Soil carbonate (%) suitability for spices
-  else if(crop=="chilli"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>4,2,1)))}
-  else if(crop=="onion"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>4,2,1)))}
-  else if(crop=="pepper"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>4,2,1)))}
-  else if(crop=="ginger"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>4,2,1)))}
-  else if(crop=="vanilla"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>4,2,1)))}
-  else if(crop=="tumeric"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>4,2,1)))}
-  else if(crop=="lemongrass"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>4,2,1)))}
-  else if(crop=="cardamom"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>4,2,1)))}
-
-  #Soil carbonate (%) suitability for other crops
-  else if(crop=="alfalfa"){suitclass=ifelse(value>25,4,ifelse(value>15,3,ifelse(value>6,2,1)))}
-  else if(crop=="rose"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>4,2,1)))}
-  else if(crop=="jasmine"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>4,2,1)))}
-
-  #Soil carbonate suitability for fleshy crops
-  else if(crop=="yam"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>4,2,1)))}
-  else if(crop=="pumpkin"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>4,2,1)))}
-  else if(crop=="butternut"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>4,2,1)))}
-  else if(crop=="squash"){suitclass=ifelse(value>15,4,ifelse(value>10,3,ifelse(value>4,2,1)))}
-
+   if    (crop%in%cropp1){suitclass=getSuit(value,6,10,25,100)}
+  else if(crop%in%cropp2){suitclass=getSuit(value,10,20,30,100)}
+  else if(crop%in%cropp3){suitclass=getSuit(value,4,10,15,100)}
+  else if(crop%in%cropp4){suitclass=getSuit(value,3,10,25,100)}
+  else if(crop%in%cropp5){suitclass=getSuit(value,0.5,5,10,100)}
+  else if(crop%in%cropp6){suitclass=getSuit(value,12,25,35,100)}
+  else if(crop%in%cropp7){suitclass=getSuit(value,5,15,30,100)}
+  else {stop("No crop chosen or crop not yet included in database")}
   return(suitclass)
 }

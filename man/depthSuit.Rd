@@ -38,13 +38,5 @@ Christian Thine Omuto
 \code{\link{suitability}}, \code{\link{tempSuit}}, \code{\link{fertilitySuit}}
 }
 \examples{
-#data(suitabinput)
-library(sp)
-library(raster)
-LUT=data.frame(map=c(1,2,3,4,5,6),new=c(100,20,30,40,60,80))
-newmap=(suitabinput["depthcodes"])
-newmap$depth=reclassifyMap(newmap["depthcodes"],LUT)
-newmap$melon=depthSuit(newmap$depth,"melon")
-summary(newmap$depth)
-spplot(newmap["depth"])
+depthSuit(33,"cashew")
 }

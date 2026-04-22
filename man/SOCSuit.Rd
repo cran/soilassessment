@@ -35,12 +35,12 @@ FAO Crop Suitability Requirements: http://ecocrop.fao.org/ecocrop/srv/en/home
 Christian Thine Omuto
 }
 \seealso{
-depthSuit, carbonateSuit, suitability
+\code{\link{depthSuit}}, \code{\link{carbonateSuit}}, \code{\link{suitability}}
 }
 \examples{
-library(sp)
-soc1=nutrindicator["soc"]
+library(sp); library(raster); library(terra)
+soc1=rast(nutrindicator["soc"])
 soc1$pyrethrum=SOCSuit(soc1$soc,"pyrethrum")
 summary(soc1$pyrethrum)
-spplot(soc1["pyrethrum"])
+spplot(soc1$pyrethrum)
 }

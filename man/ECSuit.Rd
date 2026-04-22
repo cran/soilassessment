@@ -41,15 +41,5 @@ Should the input value be raster map, then the output will also be a raster map 
 \code{\link{suitability}}, \code{\link{PHSuit}}, \code{\link{fertilitySuit}}
 }
 \examples{
-library(sp)
-ECSuit(0.78,"yam")
-ec=(suitabinput["ec"])
-soc=(nutrindicator["soc"])
-clay=(textureinput["clay"])
-texture=(suitabinput["texture"])
-newmap=ec
-newmap$ECe=ECconversion1(ec$ec,texture$texture,"FAO","1:2.5",soc$soc,clay$clay)
-newmap$wheat=ECSuit(newmap$ECe,"wheat")
-spplot(newmap["wheat"], main="EC suitability for wheat")
-summary(newmap$wheat)
+ECSuit(0.78,"tomato")
 }

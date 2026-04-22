@@ -38,9 +38,5 @@ Christian Thine Omuto
 \code{\link{suitability}}, \code{\link{ESPSuit}}, \code{\link{fertilitySuit}}
 }
 \examples{
-library(sp)
-newmap=suitabinput
-newmap$saffron=carbonateSuit(newmap$cac03,"saffron")
-summary(newmap$saffron)
-spplot(newmap,"saffron")
+saffron=carbonateSuit(21,"saffron")
 }

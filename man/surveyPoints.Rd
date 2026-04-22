@@ -33,7 +33,7 @@ A spatial points dataframe with projection similar to the soil condition map pro
 Christian Thine Omuto
 }
 \seealso{
-featureRep, imageIndices, pedoTransfer, classCode
+\code{\link{featureRep}}, \code{\link{imageIndices}}, \code{\link{pedoTransfer}}
 }
 \examples{
 library(sp)
@@ -53,9 +53,7 @@ spplot(newmap["salineclass"], main="Salinity Code")
 summary(newmap$salt)
 summary(newmap$salineclass)
 salt=raster(newmap["salt"])
-salt1=newmap["salt"]
-n_points=surveyPoints(salt1,4,11,80)
-length(n_points$new)
-spplot(salt1, scales=list(draw=TRUE),sp.layout=list("sp.points",n_points,pch=8,col="cyan"))
+n_points=surveyPoints(salt,4,11,30)
+length(n_points$layer)
 spplot(salt, scales=list(draw=TRUE),sp.layout=list("sp.points",n_points,pch=8,col="cyan"))
 }

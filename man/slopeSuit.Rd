@@ -7,10 +7,10 @@ Assessing slope suitability requirements for certain crops and trees
 This function determines the suitability classes for slope requirements of selected agricultural crops and forest trees
 }
 \usage{
-slopeSuit(value, crop)
+slopeSuit(x, crop)
 }
 \arguments{
-  \item{value}{
+  \item{x}{
 Input land slope in degrees.
 }
   \item{crop}{
@@ -38,15 +38,15 @@ Christian Thine Omuto
 The input slope value must be in degrees
 }
 \seealso{
-LGPSuit, tempSuit, suitability
+\code{\link{LGPSuit}}, \code{\link{tempSuit}}, \code{\link{suitability}}
 }
 \examples{
 slopeSuit(23.4,"carrot")
 library(sp)
-slopeSuit(23.4,"carrot")
-slope=suitabinput["slope"]
+library(raster);library(terra)
+slope=rast(suitabinput["slope"])
 slope$tea=slopeSuit(slope$slope,"tea")
 slope$carrot=slopeSuit(slope$slope,"carrot")
 summary(slope$carrot)
-spplot(slope["carrot"])
+spplot(slope$carrot)
 }

@@ -35,7 +35,7 @@ FAO Crop Suitability Requirements: http://ecocrop.fao.org/ecocrop/srv/en/home
 Christian Thine Omuto
 }
 \seealso{
-carbonSuit, depthSuite, fertilitySuit
+\code{\link{carbonateSuit}}, \code{\link{depthSuit}}, \code{\link{fertilitySuit}}
 }
 \examples{
 tempgrape=tempSuit(23.5,"grape")

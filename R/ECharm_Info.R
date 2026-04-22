@@ -10,7 +10,7 @@ ECharm_Info=function(solution="1:2.5"){
     row.names(df1)=c("Africa","N.America","Asia","Europe","LAC","NENA","Pacific")
     regioncol=c("blue","red","cyan","magenta","green","gray", "yellow")
     par(mgp=c(3,0.6,0),mar=c(5,4.5,1,1)+0.1)
-    barplot(df1, las=2,beside = TRUE,xpd = F,col=regioncol,ylim=c(0,1.2),horiz = F, cex.names = 0.75,space = c(0.4, 4))
+    barplot(df1, las=2,beside = TRUE,xpd = FALSE,col=regioncol,ylim=c(0,1.2),horiz = FALSE, cex.names = 0.75,space = c(0.4, 4))
     grid (nx=NA, ny=NULL, lty = 6, col = "gray")
     legend("topleft", x.intersp=0.25,y.intersp=0,bg="transparent",text.width=11,legend = rownames(df1), fill = regioncol, box.lty = 0, cex = 0.6, horiz = TRUE)
     box(lty = 1, col = 'black')

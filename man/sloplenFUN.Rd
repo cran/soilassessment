@@ -38,7 +38,7 @@ Christian Thine Omuto
 The slope must be in degrees. The warning given is a reminder to that the slope is given in degrees
 }
 \seealso{
-erosivFUN, erodFUN, slopeSuit
+\code{\link{erosivFUN}}, \code{\link{erodFUN}}, \code{\link{slopeSuit}}
 }
 \examples{
 library(sp)
